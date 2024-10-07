@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonstay Profile</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            background-color: white;
+            padding: 0.5rem 1rem;
+        }
+
+        .navbar-brand img {
+            height: 30px;
+        }
+
+        .notification-icon {
+            font-size: 1.25rem;
+            color: black;
+            margin-right: 1rem;
+        }
+
+        .user-info img {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+
+        /* Profile and Main Content Styling */
+        .profile-pic {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 8px;
+        }
+
+        .btn-edit-profile {
+            background-color: #00ADEF;
+            color: white;
+            border: none;
+        }
+
+        .property-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .property-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .property-info {
+            padding: 1rem;
+        }
+
+        .property-title {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .property-meta {
+            font-size: 0.9rem;
+            color: gray;
+        }
+
+        .property-price {
+            font-weight: bold;
+            color: #00ADEF;
+        }
+
+        .star-rating {
+            color: #FFD700;
+        }
+
+        .verified-section {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .main-content {
+            padding: 2rem;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #F3F3F3;
+            padding: 0.75rem 1rem;
+        }
+
+        .footer a {
+            color: black;
+            margin: 0 0.5rem;
+        }
+
+        .footer .social-icons a {
+            font-size: 1.25rem;
+            margin: 0 0.25rem;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar d-flex justify-content-between align-items-center">
+            <!-- Left Side (Logo) -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="Assets/images/logo.png" alt="Bonstay Logo">
+            </a>
+
+            <!-- Center (Switch to Hosting Link) -->
+            <a class="nav-link" href="#">Switch to hosting</a>
+
+            <!-- Right Side (Notification and User Profile) -->
+            <div class="d-flex align-items-center">
+                <!-- Notification Icon -->
+                <span class="notification-icon">
+                    <i class="bi bi-bell"></i>
+                </span>
+
+                <!-- User Profile -->
+                <div class="user-info d-flex align-items-center">
+                    <img src="Assets/images/profile_pic.png" alt="User Avatar">
+                    <div class="ms-2">
+                        <span>Mark William</span>
+                        <small class="d-block">Employee</small>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="container my-5">
+            <div class="row">
+                <!-- Left Column -->
+                <div class="col-md-3">
+                    <img src="Assets/images/profile_page.png" alt="Profile Picture" class="profile-pic mb-3">
+                    <h4>Timo Und Jannis</h4>
+                    <p class="text-muted">Host</p>
+
+                    <div class="verified-section">
+                        <p><strong>Timo Und Jannis confirmed information</strong></p>
+                        <p><i class="bi bi-check-circle text-success"></i> Email address</p>
+                        <hr>
+                        <p><strong>Verify your identity</strong></p>
+                        <p class="text-muted">Before you book or host on Bonstay, you'll need to complete this step.</p>
+                        <button class="btn btn-outline-secondary">Get Verified</button>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="col-md-9">
+                    <div class="main-content">
+                        <!-- Profile Header -->
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3>About Timo Und Jannis</h3>
+                            <button class="btn btn-edit-profile">Edit Profile</button>
+                        </div>
+                        <p>
+                            Timo Und Jannis is a dedicated host and property owner, specializing in offering a variety
+                            of
+                            unique and comfortable accommodations for rent. From cozy cabins nestled in nature to modern
+                            homes and charming houses, Timo takes pride in providing exceptional experiences for guests.
+                            With a passion for hospitality and a keen eye for detail, Timo ensures that each property is
+                            well-maintained, welcoming, and ready to create lasting memories for those who stay.
+                        </p>
+
+                        <!-- Listed Homes -->
+                        <h4 class="mt-4">Listed Homes</h4>
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="property-card">
+                                    <img src="Assets/images/1 (1).png" alt="Property Image">
+                                    <div class="property-info">
+                                        <div class="property-title">Lorem Ipsum Island</div>
+                                        <div class="property-meta">2.4 Hectares</div>
+                                        <div class="d-flex justify-content-between align-items-center mt-2">
+                                            <div class="property-price">$320 Night</div>
+                                            <div class="star-rating"><i class="bi bi-star-fill"></i> 4.95</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="property-card">
+                                    <img src="Assets/images/1 (2).png" alt="Property Image">
+                                    <div class="property-info">
+                                        <div class="property-title">Lorem Ipsum Island</div>
+                                        <div class="property-meta">2.4 Hectares</div>
+                                        <div class="d-flex justify-content-between align-items-center mt-2">
+                                            <div class="property-price">$320 Night</div>
+                                            <div class="star-rating"><i class="bi bi-star-fill"></i> 4.95</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="property-card">
+                                    <img src="Assets/images/1 (3).png" alt="Property Image">
+                                    <div class="property-info">
+                                        <div class="property-title">Lorem Ipsum Island</div>
+                                        <div class="property-meta">2.4 Hectares</div>
+                                        <div class="d-flex justify-content-between align-items-center mt-2">
+                                            <div class="property-price">$320 Night</div>
+                                            <div class="star-rating"><i class="bi bi-star-fill"></i> 4.95</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Booked Homes -->
+                        <h4 class="mt-4">Booked Homes</h4>
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="property-card">
+                                    <img src="Assets/images/1 (1).png" alt="Property Image">
+                                    <div class="property-info">
+                                        <div class="property-title">Lorem Ipsum Island</div>
+                                        <div class="property-meta">2.4 Hectares</div>
+                                        <div class="d-flex justify-content-between align-items-center mt-2">
+                                            <div class="property-price">$320 Night</div>
+                                            <div class="star-rating"><i class="bi bi-star-fill"></i> 4.95</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="property-card">
+                                    <img src="Assets/images/1 (2).png" alt="Property Image">
+                                    <div class="property-info">
+                                        <div class="property-title">Lorem Ipsum Island</div>
+                                        <div class="property-meta">2.4 Hectares</div>
+                                        <div class="d-flex justify-content-between align-items-center mt-2">
+                                            <div class="property-price">$320 Night</div>
+                                            <div class="star-rating"><i class="bi bi-star-fill"></i> 4.95</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="property-card">
+                                    <img src="Assets/images/1 (3).png" alt="Property Image">
+                                    <div class="property-info">
+                                        <div class="property-title">Lorem Ipsum Island</div>
+                                        <div class="property-meta">2.4 Hectares</div>
+                                        <div class="d-flex justify-content-between align-items-center mt-2">
+                                            <div class="property-price">$320 Night</div>
+                                            <div class="star-rating"><i class="bi bi-star-fill"></i> 4.95</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Reviews Section -->
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h2 class="mt-4">Reviews</h2>
+                                <button class="btn btn-md btn-edit-profile">Feb 2024 to Aug 2024</button>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                        <h3 class="card-title  mb-3">Total Reviews</h3>
+                                        <h1 class="display-2 fw-bold text-success">10.0K <span
+                                                class="text-success fs-6"><i class="bi bi-arrow-up"></i>
+                                                20%</span></h1>
+                                        <p class="card-text">Growth in reviews on this year</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                        <h3 class="card-title  mb-3">Average Rating</h3>
+                                        <div class="rating mb-3">
+                                            <h1 class="display-3 fw-bold">4.0</h1>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star text-warning"></i>
+                                        </div>
+                                        <p class="card-text">Growth in reviews on this year</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button"
+                                        id="propertyTypeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Hotels
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="propertyTypeDropdown">
+                                        <li><a class="dropdown-item" href="#"></a></li>
+                                        <li><a class="dropdown-item" href="#"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button"
+                                        id="dateRangeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Cabins
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dateRangeDropdown">
+                                        <li><a class="dropdown-item" href="#"></a></li>
+                                        <li><a class="dropdown-item" href="#"></a></li>
+                                        <li>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Review Cards -->
+                            <div class="col-md-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <img src="Assets/images/profile_pic.png" alt="Profile Picture"
+                                                    class="rounded-circle">
+                                            </div>
+                                            <div class="col-md-11">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div>
+                                                        <h5 class="card-title mb-0">Mark William</h5>
+                                                        <p class="card-text small text-muted mb-0">Total Spend:
+                                                            $300</p>
+                                                        <p class="card-text small text-muted mb-0">Total
+                                                            Reviews: 14</p>
+                                                    </div>
+                                                    <div>
+                                                        <div class="rating">
+                                                            <i class="bi bi-star-fill text-warning"></i>
+                                                            <i class="bi bi-star-fill text-warning"></i>
+                                                            <i class="bi bi-star-fill text-warning"></i>
+                                                            <i class="bi bi-star-fill text-warning"></i>
+                                                            <i class="bi bi-star-fill text-warning"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="card-text">I recently had the pleasure of renting a
+                                                    home from Timo und
+                                                    Jannis, and I couldn't be more satisfied with the
+                                                    experience. From the
+                                                    moment I
+                                                    booked, Timo was incredibly responsive and made the entire
+                                                    process seamless.
+                                                    The
+                                                    home was exactly as described—clean, comfortable, and
+                                                    equipped with
+                                                    everything I
+                                                    needed for a relaxing stay. The attention to detail in the
+                                                    home was evident,
+                                                    and
+                                                    it truly felt like a home away from home.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="footer d-flex justify-content-between align-items-center">
+            <!-- Left Side (Links) -->
+            <div>
+                <span>© 2024 Bonstay</span>
+                <a href="#">Terms</a>
+                <a href="#">Sitemap</a>
+                <a href="#">Privacy</a>
+                <a href="#">Your Privacy Choices</a>
+            </div>
+
+            <!-- Center (Language and Currency) -->
+            <div class="d-flex align-items-center">
+                <i class="bi bi-globe"></i>
+                <span class="mx-1">English (US)</span>
+                <span>$USD</span>
+            </div>
+
+            <!-- Right Side (Social Icons) -->
+            <div class="social-icons">
+                <a href="#" class="bi bi-facebook"></a>
+                <a href="#" class="bi bi-twitter"></a>
+                <a href="#" class="bi bi-instagram"></a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

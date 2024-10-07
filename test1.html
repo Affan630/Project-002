@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonstay Navbar & Sidebar</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Styles for the sidebar */
+        .sidebar {
+            width: 225px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #f8f9fa;
+            border-right: 1px solid #e3e3e3;
+            padding-top: 20px;
+        }
+
+        .sidebar .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar .logo img {
+            width: 150px;
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .sidebar .active {
+            background-color: #007bff;
+            color: white;
+            border-radius: 30px;
+        }
+
+        .sidebar i {
+            margin-right: 10px;
+        }
+
+        /* Navbar Styles */
+        .navbar-custom {
+            margin-left: 225px; /* Same width as sidebar */
+            padding: 20px;
+            background-color: white;
+            border-bottom: 1px solid #e3e3e3;
+            z-index: 1;
+        }
+
+        .form-control-custom {
+            border-radius: 30px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .search-section {
+            width: 60%;
+        }
+
+        .search-section input {
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            margin-right: 10px;
+        }
+
+        .search-section button {
+            background-color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .navbar-end {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .navbar-end .nav-link {
+            color: #333;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .profile-info img {
+            border-radius: 50%;
+            width: 40px;
+        }
+
+        .notification {
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+
+        .active-link {
+            color: #007bff;
+            font-weight: 600;
+            border-bottom: 3px solid #007bff;
+        }
+
+        .divider {
+            width: 2px;
+            height: 24px;
+            background-color: #ddd;
+        }
+
+        /* Body container for the main content */
+        .card {
+            position: relative;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%; /* Ensures the image covers the full height */
+            object-fit: cover; /* Ensures the image covers the card without distortion */
+        }
+
+        .card-body {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            color: white; /* White text color */
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin: 0;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #f39c12;
+        }
+
+        .rating {
+            color: #f39c12;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="Assets/images/logo.png" alt="Bonstay Logo">
+            </div>
+            <a href="#" class="active"><i class="fas fa-home"></i> Cabins</a>
+            <a href="#"><i class="fas fa-water"></i> Beach Front</a>
+            <a href="#"><i class="fas fa-handshake"></i> Conference</a>
+            <a href="#"><img src="Assets/images/island_logo.png" alt=""> Islands</a>
+            <a href="#"><i class="fas fa-mountain"></i> Mountains</a>
+            <a href="#"><i class="fas fa-ship"></i> Lake</a>
+            <a href="#"><i class="fas fa-hotel"></i> Hotels</a>
+            <a href="#"><i class="fas fa-umbrella-beach"></i> Tropical</a>
+            <a href="#"><i class="fas fa-calendar"></i> Events</a>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-custom">
+            <div class="container-fluid">
+                <div class="row w-100 align-items-center">
+                    <!-- Left side: Search section -->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="search-box">
+                            <input type="text" class="form-control" placeholder="Where" aria-label="Where">
+                            <input type="text" class="form-control" placeholder="Check In" aria-label="Check In">
+                            <input type="text" class="form-control" placeholder="Check Out" aria-label="Check Out">
+                            <input type="text" class="form-control" placeholder="Who" aria-label="Who">
+                            <button type="button" class="btn btn-primary">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right side: Nav links, profile, and icons -->
+                    <div class="col-lg-6 col-md-12 d-flex justify-content-end align-items-center">
+                        <div class="navbar-end">
+                            <a href="#" class="nav-link active-link">Stays</a>
+                            <a href="#" class="nav-link">Rating System</a>
+                            <a href="#" class="nav-link">Switch to hosting</a>
+                            <div class="divider"></div>
+                            <i class="fas fa-bell notification"></i>
+                            <div class="profile-info">
+                                <img src="Assets/images/profile_pic2.png" alt="Profile Picture">
+                                <div>
+                                    <span>Timo Jannis</span><br>
+                                    <small>Employee</small>
+                                </div>
+                                <i class="fas fa-caret-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="container-fluid">
+            <div class="row mt-4">
+                <div class="col-md-9 offset-md-3">
+                    <!-- Cards Container -->
+                    <h2 class="mb-4">Feature</h2>
+                    <div class="row">
+                        <!-- Feature Card (Full width on mobile, half on tablet, quarter on large screens) -->
+                        <div class="col-md-6 col-lg-4 col-xl-3">
+                            <div class="card">
+                                <img src="Assets/images/1 (1).png" class="card-img-top" alt="Island Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorem Ipsum Island</h5>
+                                    <p class="card-text">2.4 Hectares<br>May 24-29</p>
+                                    <p class="price">$320/Night</p>
+                                    <p><span class="rating">★ 4.95</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Repeat similar cards for the feature section -->
+                    </div>
+
+                    <!-- Cabins Section -->
+                    <h2 class="mb-4">Cabins</h2>
+                    <div class="row">
+                        <!-- Card 1 -->
+                        <div class="col-md-6 col-lg-4 col-xl-3">
+                            <div class="card">
+                                <img src="https://via.placeholder.com/600x400.png?text=Lorem+Ipsum+Island" class="card-img-top"
+                                    alt="Island Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorem Ipsum Island</h5>
+                                    <p class="card-text">2.4 Hectares<br>May 24-29</p>
+                                    <p class="price">$320/Night</p>
+                                    <p><span class="rating">★ 4.95</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col-md-6 col-lg-4 col-xl-3">
+                            <div class="card">
+                                <img src="https://via.placeholder.com/600x400.png?text=Lorem+Ipsum+Island" class="card-img-top"
+                                    alt="Island Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorem Ipsum Island</h5>
+                                    <p class="card-text">2.4 Hectares<br>May 24-29</p>
+                                    <p class="price">$320/Night</p>
+                                    <p><span class="rating">★ 4.95</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col-md-6 col-lg-4 col-xl-3">
+                            <div class="card">
+                                <img src="https://via.placeholder.com/600x400.png?text=Lorem+Ipsum+Island" class="card-img-top"
+                                    alt="Island Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorem Ipsum Island</h5>
+                                    <p class="card-text">2.4 Hectares<br>May 24-29</p>
+                                    <p class="price">$320/Night</p>
+                                    <p><span class="rating">★ 4.95</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="col-md-6 col-lg-4 col-xl-3">
+                            <div class="card">
+                                <img src="https://via.placeholder.com/600x400.png?text=Lorem+Ipsum+Island" class="card-img-top"
+                                    alt="Island Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorem Ipsum Island</h5>
+                                    <p class="card-text">2.4 Hectares<br>May 24-29</p>
+                                    <p class="price">$320/Night</p>
+                                    <p><span class="rating">★ 4.95</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more cards as necessary -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

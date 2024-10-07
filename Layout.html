@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar and Footer Example</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Navbar Styling */
+    .navbar {
+      background-color: white;
+      padding: 0.5rem 1rem;
+    }
+    .navbar-brand img {
+      height: 30px;
+    }
+    .nav-link {
+      color: black;
+      margin-right: 1rem;
+    }
+    .notification-icon {
+      font-size: 1.25rem;
+      color: black;
+      margin-right: 1rem;
+    }
+    .user-info img {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+    }
+
+    /* Footer Styling */
+    .footer {
+      background-color: #f8f9fa;
+      padding: 0.75rem 1rem;
+    }
+    .footer a {
+      color: black;
+      margin: 0 0.5rem;
+    }
+    .footer .social-icons a {
+      font-size: 1.25rem;
+      margin: 0 0.25rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar d-flex justify-content-between align-items-center">
+  <!-- Left Side (Logo) -->
+  <a class="navbar-brand d-flex align-items-center" href="#">
+    <img src="Assets/images/logo.png" alt="Bonstay Logo">
+  </a>
+
+  <!-- Center (Switch to Hosting Link) -->
+  <a class="nav-link" href="#">Switch to hosting</a>
+
+  <!-- Right Side (Notification and User Profile) -->
+  <div class="d-flex align-items-center">
+    <!-- Notification Icon -->
+    <span class="notification-icon">
+      <i class="bi bi-bell"></i>
+    </span>
+    
+    <!-- User Profile -->
+    <div class="user-info d-flex align-items-center">
+      <img src="Assets/images/profile_pic.png" alt="User Avatar">
+      <div class="ms-2">
+        <span>Mark William</span>
+        <small class="d-block">Employee</small>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Footer -->
+<footer class="footer d-flex justify-content-between align-items-center">
+  <!-- Left Side (Links) -->
+  <div>
+    <span>© 2024 Bonstay</span>
+    <a href="#">Terms</a>
+    <a href="#">Sitemap</a>
+    <a href="#">Privacy</a>
+    <a href="#">Your Privacy Choices</a>
+  </div>
+
+  <!-- Center (Language and Currency) -->
+  <div class="d-flex align-items-center">
+    <i class="bi bi-globe"></i>
+    <span class="mx-1">English (US)</span>
+    <span>$USD</span>
+  </div>
+
+  <!-- Right Side (Social Icons) -->
+  <div class="social-icons">
+    <a href="#" class="bi bi-facebook"></a>
+    <a href="#" class="bi bi-twitter"></a>
+    <a href="#" class="bi bi-instagram"></a>
+  </div>
+</footer>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
