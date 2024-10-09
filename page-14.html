@@ -116,7 +116,8 @@
             justify-content: space-between;
             gap: 30px;
         }
-        .Custom_btn{
+
+        .Custom_btn {
             width: 100%;
             background-color: #00AAE5;
             color: #ffffff;
@@ -165,42 +166,96 @@
                 </div>
             </div>
         </nav>
+
         <!-- Main Content section  -->
-        <div class="container ">
-  
+        <div class="container">
+
             <!-- Progress Bar -->
             <div class="progress-container">
-              <div class="progress-step ">
-                <div class="progress-step completed">
+                <div class="progress-step ">
+                    <div class="progress-step completed">
+                    </div>
                 </div>
-              </div>
-              <div class="progress-step "></div>
-              <div class="progress-step"></div>
+                <div class="progress-step "></div>
+                <div class="progress-step"></div>
             </div>
-            <!-- Heading and Subheading -->
-            <h5 class="mb-2">Is the pin in the right spot?</h5>
-            <p class="text-muted mb-4">Your address is only shared with guests after they’ve made a reservation.</p>
-            
+            <!-- Address Confirmation Form -->
+            <div class=" Custom_card p-4 mb-4">
+                <h5 class="mb-3">Confirm your address</h5>
+                <p class="text-muted">Your address is only shared with guests after they've made a reservation.</p>
+
+                <form>
+                    <!-- Country/Region Dropdown -->
+                    <div class="mb-3">
+                        <label for="country" class="form-label"></label>
+                        <select class="form-select" id="country">
+                            <option  class="text-muted">United States–US</option>
+                            <!-- Add more options here -->
+                        </select>
+                    </div>
+
+                    <!-- Street Address -->
+                    <div>
+                        <label for="streetAddress" class="form-label"></label>
+                        <input type="text" class="form-control" id="streetAddress" placeholder="Street address">
+                    </div>
+
+                    <!-- Apartment, Floor, Building (optional) -->
+                    <div class="">
+                        <label for="apt" class="form-label"></label>
+                        <input type="text" class="form-control" id="apt" placeholder="Apt, floor, bldg. (if applicable).">
+                    </div>
+
+                    <!-- City / Town / Village -->
+                    <div class="">
+                        <label for="city" class="form-label"></label>
+                        <input type="text" class="form-control" id="city" placeholder="City / town / village">
+                    </div>
+
+                    <!-- Province / State / Territory -->
+                    <div class="">
+                        <label for="province" class="form-label"></label>
+                        <input type="text" class="form-control" id="province"
+                            placeholder="Province / state / territory">
+                    </div>
+
+                    <!-- Postal Code -->
+                    <div class="">
+                        <label for="postalCode" class="form-label"></label>
+                        <input type="text" class="form-control" id="postalCode" placeholder="Postal code (if applicable)">
+                    </div>
+
+                    <!-- Show specific location toggle -->
+                    <div class="form-check form-switch ">
+                        <input class="form-check-input" type="checkbox" id="locationToggle" checked>
+                        <label class="form-check-label" for="locationToggle">Show your specific location</label>
+                    </div>
+                    <small class="text-muted">
+                        Make it clear to guests where your place is located. We'll only share your address after they've
+                        made a reservation.
+                    </small>
+                </form>
+            </div>
             <!-- Map Section with Search Bar -->
             <div class="map-container">
-              <!-- Search Bar -->
-              <div class="search-bar">
-                <i class="fas fa-map-marker-alt"></i>
-                <input type="text" placeholder="1751 67TH ST APT F11 BROOKLYN NY 11204-4332 USA">
-              </div>
-              
-              <!-- Icon on Top Right Corner -->
-              <div class="map-icon">
-                <i class="fas fa-street-view"></i>
-              </div>
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" placeholder="Enter Your Address">
+                </div>
+
+                <!-- Icon on Top Right Corner -->
+                <div class="map-icon">
+                    <i class="fas fa-street-view"></i>
+                </div>
             </div>
-          
+
             <!-- Navigation Buttons -->
-            <div class="btn-container mt-4 mb-4 ">
-              <button type="button" class="btn  Custom_btn">Back</button>
-              <button type="button" class="btn  Custom_btn">Next</button>
+            <div class="btn-container mt-4 mb-4">
+                <button type="button" class="btn Custom_btn">Back</button>
+                <button type="button" class="btn Custom_btn">Next</button>
             </div>
-          </div>
+        </div>
 
         <!-- Footer -->
         <footer class="footer d-flex justify-content-between align-items-center">

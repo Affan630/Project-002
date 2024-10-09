@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonstay Form</title>
+    <title>Bonstay Hosting</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 
@@ -41,7 +41,7 @@
 
         /* Main Content CSS */
         .container {
-            max-width: 600px;
+            max-width: 800px;
             margin-top: 20px;
         }
 
@@ -50,6 +50,7 @@
             justify-content: space-between;
             margin-bottom: 20px;
             padding: 0 15px;
+            gap: 20px;
         }
 
         .progress-step {
@@ -59,32 +60,55 @@
         }
 
         .progress-step.completed {
-            background-color: #007bff;
+            background-color: #00AAE5;
         }
 
-        .option-card {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 15px;
+        .map-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            background-image: url('Assets/images/map.png');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70%;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            cursor: pointer;
+            padding: 10px;
+            border-radius: 20px;
+            background-color: white;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
         }
 
-        .option-card h6 {
-            margin: 0;
-            font-weight: bold;
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding-left: 10px;
         }
 
-        .option-card p {
-            margin: 0;
+        .search-bar i {
             color: #6c757d;
         }
 
-        .icon {
-            font-size: 1.5rem;
+        .map-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            border-radius: 50%;
+            padding: 10px;
+            font-size: 18px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            color: #007bff;
         }
 
         .btn-container {
@@ -94,6 +118,8 @@
         }
         .Custom_btn{
             width: 100%;
+            background-color: #00AAE5;
+            color: #ffffff;
         }
 
         /* Footer Styling */
@@ -131,7 +157,7 @@
 
                 <!-- User Profile -->
                 <div class="user-info d-flex align-items-center">
-                    <img src="Assets/images/profile_pic.png" alt="User Avatar">
+                    <img src="Assets/images/profile_pic2.png" alt="User Avatar">
                     <div class="ms-2">
                         <span>Timo Jannis</span>
                         <small class="d-block">Employee</small>
@@ -144,51 +170,35 @@
   
             <!-- Progress Bar -->
             <div class="progress-container">
-              <div class="progress-step completed"></div>
+              <div class="progress-step ">
+                <div class="progress-step completed">
+                </div>
+              </div>
+              <div class="progress-step "></div>
               <div class="progress-step"></div>
-              <div class="progress-step"></div>
+            </div>
+            <!-- Heading and Subheading -->
+            <h5 class="mb-2">Where's your place located?</h5>
+            <p class="text-muted mb-4">Your address is only shared with guests after they’ve made a reservation.</p>
+            
+            <!-- Map Section with Search Bar -->
+            <div class="map-container">
+              <!-- Search Bar -->
+              <div class="search-bar">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" placeholder="Enter Your Address">
+              </div>
+              
+              <!-- Icon on Top Right Corner -->
+              <div class="map-icon">
+                <i class="fas fa-street-view"></i>
+              </div>
             </div>
           
-            <!-- Form Heading -->
-            <h5 class="mb-4">What type of place will guests have?</h5>
-            
-            <!-- Option Cards -->
-            <div class="option-card">
-              <div>
-                <h6>An Entire Place</h6>
-                <p>Guest have the whole place to themselves</p>
-              </div>
-              <div class="icon">🏠</div>
-            </div>
-            
-            <div class="option-card">
-              <div>
-                <h6>A room</h6>
-                <p>Guests have their own room in a home, plus access to shared spaces.</p>
-              </div>
-              <div class="icon">🚪</div>
-            </div>
-            
-            <div class="option-card">
-              <div>
-                <h6>A shared room</h6>
-                <p>Guests sleep in a room or common area that may be shared with you or others.</p>
-              </div>
-              <div class="icon">🏘️</div>
-            </div>
-            
-            <div class="option-card">
-              <div>
-                <h6>Hotels</h6>
-                <p>Experience the entirety of the hotel with your amazing room accommodations.</p>
-              </div>
-              <div class="icon">🏨</div>
-            </div>
-            
             <!-- Navigation Buttons -->
-            <div class="btn-container mt-4 mb-4">
-              <button type="button" class="btn btn-primary Custom_btn">Back</button>
-              <button type="button" class="btn btn-primary Custom_btn">Next</button>
+            <div class="btn-container mt-4 mb-4 ">
+              <button type="button" class="btn  Custom_btn">Back</button>
+              <button type="button" class="btn  Custom_btn">Next</button>
             </div>
           </div>
 
