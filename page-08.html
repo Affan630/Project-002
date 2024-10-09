@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonstay Reservation</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Navbar Styles */
+        .search-bar .form-control {
+            border-right: 1px solid #ccc;
+            border-radius: 0;
+        }
+
+        .search-bar .form-control:last-child {
+            border-right: none;
+        }
+
+        .search-bar .btn-primary {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            background-color: #007bff;
+            border: none;
+        }
+
+        .navbar-brand img {
+            height: auto;
+        }
+
+        /* Notification icon styling */
+        .bi-bell-fill {
+            color: #007bff;
+        }
+
+        /* Notification dot */
+        .position-absolute {
+            top: 0;
+            right: 0;
+            width: 8px;
+            height: 8px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        /* Profile picture and dropdown */
+        .dropdown-toggle img {
+            margin-right: 8px;
+        }
+
+        .dropdown-menu {
+            min-width: 200px;
+        }
+
+        /* Main Content Styling */
+        .details-section {
+            padding: 20px;
+        }
+
+        .photo-grid {
+            display: flex;
+        }
+
+        .photo-main {
+            width: 45%;
+            border-radius: 5px;
+        }
+
+        .side-photos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            width: 33%;
+            margin-left: 10px;
+            align-content: center;
+        }
+
+        .side-photos img {
+            border-radius: 5px;
+            height: auto;
+        }
+
+        .photo-overlay {
+            position: relative;
+        }
+
+        .photo-overlay .overlay-text {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .booking-details {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .booked-detail-header {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        button.btn.btn-booked.mt-3 {
+            background-color: #007bff;
+            color: white;
+            border-radius: 20px;
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            background-color: #e7f1ff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .credit-text {
+            color: #30a6e6;
+            font-weight: bold;
+        }
+
+        .rating i {
+            color: #30a6e6;
+        }
+
+        .report {
+            color: #6c757d;
+            cursor: pointer;
+        }
+
+        /* modal css */
+        .modal-header {
+            border-bottom: none;
+        }
+
+        .modal-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            letter-spacing: 0px;
+            color: #222222;
+            opacity: 1;
+        }
+
+        .modal-body p {
+            text-align: center;
+            font: normal normal normal 22px/33px Poppins;
+            letter-spacing: 0px;
+        }
+
+        .modal-body i {
+            color: #00AAE5;
+        }
+
+        .profile-img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        button.btn.btn-booked {
+            background-color: #007bff;
+            color: white;
+            border-radius: 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="Assets/images/logo.png" alt="Bonstay" width="120">
+                </a>
+
+                <!-- Search bar -->
+                <form class="d-flex align-items-center search-bar ms-3">
+                    <div class="input-group">
+                        <!-- Where -->
+                        <input type="text" class="form-control" placeholder="Search Destination" aria-label="Where">
+                        <!-- Check-In -->
+                        <input type="text" class="form-control" placeholder="Add Dates" aria-label="Check In">
+                        <!-- Check-Out -->
+                        <input type="text" class="form-control" placeholder="Add Dates" aria-label="Check Out">
+                        <!-- Who -->
+                        <input type="text" class="form-control" placeholder="Add Guests" aria-label="Who">
+                        <!-- Search Button -->
+                        <button class="btn btn-primary" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Right side - Hosting, Notifications, User Profile -->
+                <div class="d-flex align-items-center ms-auto">
+                    <!-- Switch to hosting -->
+                    <a class="nav-link me-3" href="#">Switch to hosting</a>
+
+                    <!-- Notifications Icon -->
+                    <a href="#" class="nav-link position-relative me-3">
+                        <i class="bi bi-bell-fill" style="font-size: 1.5rem; color: #007bff;"></i>
+                        <!-- Notification Dot -->
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </a>
+
+                    <!-- User Profile -->
+                    <div class="dropdown">
+                        <a class="d-flex align-items-center text-decoration-none" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="Assets/images/profile_pic2.png" alt="Profile Picture" class="rounded-circle"
+                                width="40" height="40">
+                            <span class="ms-2">Timo Jannis</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Log Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Main Content Area -->
+        <div class="container details-section">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="photo-grid">
+                        <!-- Main Image -->
+                        <img src="Assets/images/island_1.png" alt="Main Island View" class="photo-main">
+
+                        <!-- Side Photos -->
+                        <div class="side-photos">
+                            <img src="Assets/images/Island_2.png" alt="Photo 2">
+                            <img src="Assets/images/Island_3.png" alt="Photo 3">
+                            <img src="Assets/images/Island_4.png" alt="Photo 4">
+                            <div class="photo-overlay">
+                                <img src="Assets/images/island_5.png" alt="Photo 5">
+                                <div class="overlay-text">Show All Photos</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h1>Majorsgrund - Private Island</h1>
+                        <h4>Island in Malax, Finland </h4>
+                        <p>14 guests3 bedrooms13 beds1.5 baths</p>
+                        <p>Total <span class="credit-text">$3499 Bonstay Credit Earned</span></p>
+                        <p class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i> 4.95
+                        </p>
+                    </div>
+                </div>
+                <!-- Booking Details SideBar -->
+                <div class="col-md-4">
+                    <div class="booking-details">
+                        <div class="booked-detail-header">Checked Out</div>
+                        <div class="icon-circle mx-auto mb-3">
+                            <i class="bi bi-check-circle-fill" style="font-size: 3rem; color: #007bff;"></i>
+                        </div>
+                        <p class="card-text text-center">For spending your Precious Time with Us</p>
+                        <!-- Feedback Button -->
+                        <button type="button" class="btn btn-booked mt-3" data-bs-toggle="modal"
+                            data-bs-target="#feedbackModal">Give Feedback</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Feedback Modal -->
+            <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h4 class="modal-title mb-3" id="voicePostModalLabel"><b>Your Feedback Matters!</b></h4>
+                            <img src="Assets/images/tick.png" alt="profile image" class="profile-img mb-2">
+                            <p>Share your experience with your tenants and help them earn BonStay credits! Your feedback
+                                builds
+                                a trusted community. Leave a review today and make a difference in their next booking!
+                            </p>
+                            <div>
+                                <h4 id="voicePostModalLabel"><b>Rate US</b></h4>
+                                <div>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="form-outline" data-mdb-input-init>
+                                <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-booked" type="button">Give Feedback</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap v5 & Bootstrap Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+</body>
+
+</html>

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonstay - Private Island Booking</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar-custom {
+            margin-left: 213px;
+            padding: 20px;
+            background-color: white;
+            border-bottom: 1px solid #e3e3e3;
+            z-index: 1;
+        }
+
+        .form-control-custom {
+            border-radius: 30px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .search-section {
+            width: 60%;
+        }
+
+        .search-section input {
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            margin-right: 10px;
+        }
+
+        .search-section button {
+            background-color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .navbar-end {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .navbar-end .nav-link {
+            color: #333;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .profile-info img {
+            border-radius: 50%;
+            width: 40px;
+        }
+
+        .notification {
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+
+        .active-link {
+            color: #007bff;
+            font-weight: 600;
+            border-bottom: 3px solid #007bff;
+        }
+
+
+        .details-section {
+            padding: 20px;
+        }
+
+        .photo-grid {
+            display: flex;
+        }
+
+        .photo-main {
+            width: 45%;
+            border-radius: 5px;
+        }
+
+        .side-photos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            width: 33%;
+            margin-left: 10px;
+            align-content: center;
+        }
+
+        .side-photos img {
+            border-radius: 5px;
+            height: auto;
+        }
+
+        .photo-overlay {
+            position: relative;
+        }
+
+        .photo-overlay .overlay-text {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .booking-details {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .booked-detail-header {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .info-box {
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .calendar1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .calendar1 .month {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .calendar1 .days {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        .calendar1 .days div {
+            width: 13%;
+            padding: 8px 0;
+            border-radius: 4px;
+        }
+
+        .calendar1 .days .highlighted {
+            background-color: #30a6e6;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-booked {
+            background-color: #007bff;
+            color: white;
+            border-radius: 20px;
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .credit-text {
+            color: #30a6e6;
+            font-weight: bold;
+        }
+
+        .rating i {
+            color: #30a6e6;
+        }
+
+        .report {
+            color: #6c757d;
+            cursor: pointer;
+        }
+
+        .feature-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .feature-item i {
+            font-size: 24px;
+            color: #30a6e6;
+        }
+
+        /* Middle Section Styles */
+        .middle-section {
+            margin: 30px 0;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: start;
+        }
+
+        .middle-section h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .middle-section p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .sleep-section {
+            margin-top: 20px;
+        }
+
+        .sleep-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .sleep-options {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sleep-option {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            width: 23%;
+        }
+
+        .sleep-option i {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #30a6e6;
+        }
+
+        /* Calendar and Rating Styles */
+        .calendar {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calendar .days,
+        .calendar .dates {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            text-align: center;
+        }
+
+        .calendar .days span {
+            font-weight: bold;
+            color: #6c757d;
+        }
+
+        .calendar .dates span {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+        }
+
+        .calendar .dates span.highlighted {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        /* Rating Section */
+        h1 {
+            font-size: 48px;
+            color: #007bff;
+        }
+
+        .rating-section h5 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* Rating Breakdown */
+        .row.text-center .col-md-2 {
+            border-right: 1px solid #ccc;
+            padding: 15px;
+        }
+
+        .row.text-center .col-md-2:last-child {
+            border-right: none;
+        }
+
+        .row.text-center h6 {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .row.text-center p {
+            font-size: 18px;
+            margin-top: -10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-custom">
+        <div class="container-fluid">
+            <div class="row w-100 align-items-center">
+                <!-- Left side: Search section -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="search-box">
+                        <input type="text" class="form-control" placeholder="Where" aria-label="Where">
+                        <input type="text" class="form-control" placeholder="Check In" aria-label="Check In">
+                        <input type="text" class="form-control" placeholder="Check Out" aria-label="Check Out">
+                        <input type="text" class="form-control" placeholder="Who" aria-label="Who">
+                        <button type="button" class="btn btn-primary">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right side: Nav links, profile, and icons -->
+                <div class="col-lg-6 col-md-12 d-flex justify-content-end align-items-center">
+                    <div class="navbar-end">
+                        <a href="#" class="nav-link active-link">Stays</a>
+                        <a href="#" class="nav-link">Rating System</a>
+                        <a href="#" class="nav-link">Switch to hosting</a>
+                        <div class="divider"></div>
+                        <i class="fas fa-bell notification"></i>
+                        <div class="profile-info">
+                            <img src="Assets/images/profile_pic2.png" alt="Profile Picture">
+                            <div>
+                                <span>Timo Jannis</span><br>
+                                <small>Employee</small>
+                            </div>
+                            <i class="fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Content Section -->
+    <div class="container details-section">
+        <div class="row">
+            <div class="col-md-8">
+                <!-- Photo Grid -->
+                <div class="photo-grid">
+                    <!-- Main Image -->
+                    <img src="Assets/images/island_1.png" alt="Main Island View" class="photo-main">
+
+                    <!-- Side Photos -->
+                    <div class="side-photos">
+                        <img src="Assets/images/Island_2.png" alt="Photo 2">
+                        <img src="Assets/images/Island_3.png" alt="Photo 3">
+                        <img src="Assets/images/Island_4.png" alt="Photo 4">
+                        <div class="photo-overlay">
+                            <img src="Assets/images/island_5.png" alt="Photo 5">
+                            <div class="overlay-text">Show All Photos</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1>Majorsgrund - Private Island</h1>
+                    <h4>Island in Malax, Finland </h4>
+                    <p>14 guests3 bedrooms13 beds1.5 baths</p>
+                    <p>Total <span class="credit-text">$3499 Bonstay Credit Earned</span></p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i> 4.95
+                    </p>
+                </div>
+
+                <!-- Feature Section -->
+                <div class="feature-section mt-4">
+                    <div class="feature-item">
+                        <i class="fas fa-laptop"></i>
+                        <p>Dedicated workspace</p>
+                        <small>A room with WiFi that's well-suited for working.</small>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Great location</p>
+                        <small>100% of recent guests gave the location a 5-star rating.</small>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <p>Free cancellation before May 23</p>
+                        <small>Get a full refund if you change your mind.</small>
+                    </div>
+                </div>
+                <div class="middle-section">
+                    <p>
+                        Welcome you adventurers, nature lovers, and island lovers!
+                        Living on a lonely island like Robinson Crusoe,
+                        enjoying the midnight sun, being enchanted by silence and beautiful nature?
+                        Majorsgrund is your chance to make this dream come true.
+                        Our picturesque private island is located in one of the most exciting regions of Finland.
+                    </p>
+                </div>
+                <!-- Where You'll Sleep Section -->
+                <div class="sleep-section">
+                    <h2 class="sleep-title">Where you'll sleep</h2>
+                    <div class="sleep-options">
+                        <div class="sleep-option">
+                            <img src="Assets/images/q_bed.png" alt=""><img src="Assets/images/q_bed.png" alt=""><img
+                                src="Assets/images/s_bed.png" alt=""><img src="Assets/images/s_bed.png" alt="">
+                            <p>Bedroom 1</p>
+                            <small>1 queen bed, 1 double bed, 2 single beds</small>
+                        </div>
+                        <div class="sleep-option">
+                            <img src="Assets/images/q_bed.png" alt=""><img src="Assets/images/b_bed.png" alt="">
+                            <p>Bedroom 2</p> <b></b>
+                            <small>1 Queen bed,<br> 1 Bunk bed </small>
+                        </div>
+                        <div class="sleep-option">
+                            <img src="Assets/images/sofa.png" alt=""><img src="Assets/images/sofa.png" alt="">
+                            <p>Living Room 1</p>
+                            <small>2 sofa beds</small>
+                        </div>
+                        <div class="sleep-option">
+                            <img src="Assets/images/q_bed.png" alt=""><img src="Assets/images/s_bed.png" alt="">
+                            <p>Bedroom 3</p>
+                            <small>1 Double bed, <br> 1 Single Bed</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Calendar and Guest Rating Section -->
+                <div class="container mt-5">
+                    <!-- Stay dates -->
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h5>5 nights in Malax</h5>
+                            <p>May 24, 2024 - May 29, 2024</p>
+                        </div>
+                    </div>
+
+                    <!-- Calendar -->
+                    <div class="row justify-content-center">
+                        <!-- May Calendar -->
+                        <div class="col-md-4 text-center">
+                            <h4>May</h4>
+                            <div class="calendar">
+                                <div class="days">
+                                    <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+                                </div>
+                                <div class="dates">
+                                    <span></span><span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span>
+                                    <span
+                                        class="highlighted">5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span>
+                                    <span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span>
+                                    <span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span>
+                                    <span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- June Calendar -->
+                        <div class="col-md-4 text-center">
+                            <h4>June</h4>
+                            <div class="calendar">
+                                <div class="days">
+                                    <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+                                </div>
+                                <div class="dates">
+                                    <span></span><span></span><span></span><span></span><span></span><span></span><span>1</span>
+                                    <span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span>
+                                    <span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+                                    <span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span>
+                                    <span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span>
+                                    <span>30</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Guest Rating Section -->
+                    <div class="row text-center mt-5">
+                        <div class="col-md-12">
+                            <h1 style="color:#007bff; font-size:48px;">4.95</h1>
+                            <h5>Guest favorite</h5>
+                            <p>One of the most loved homes on Bonstay based on ratings, reviews, and reliability.</p>
+                        </div>
+                    </div>
+
+                    <!-- Rating Breakdown -->
+                    <div class="row text-center mt-4 justify-content-center">
+                        <div class="col-md-2">
+                            <h6>Overall rating</h6>
+                            <p>4.5</p>
+                        </div>
+                        <div class="col-md-2">
+                            <h6>Cleanliness</h6>
+                            <p>4.8</p>
+                        </div>
+                        <div class="col-md-2">
+                            <h6>Accuracy</h6>
+                            <p>4.8</p>
+                        </div>
+                        <div class="col-md-2">
+                            <h6>Check-in</h6>
+                            <p>4.9</p>
+                        </div>
+                        <div class="col-md-2">
+                            <h6>Communication</h6>
+                            <p>5.0</p>
+                        </div>
+                        <div class="col-md-2">
+                            <h6>Location</h6>
+                            <p>5.0</p>
+                        </div>
+                        <div class="col-md-2">
+                            <h6>Value</h6>
+                            <p>4.8</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Booking Details SideBar -->
+            <div class="col-md-4">
+                <div class="booking-details">
+                    <div class="booked-detail-header">Booked Detail</div>
+                    <!-- Booking Info -->
+                    <div class="info-box">
+                        <span>Booking ID</span> <span>#123456</span>
+                    </div>
+                    <div class="info-box">
+                        <span>Check In</span> <span>09/10/2024</span>
+                    </div>
+                    <div class="info-box">
+                        <span>Check Out</span> <span>09/20/2024</span>
+                    </div>
+                    <div class="info-box">
+                        <span>Check-in Time</span> <span>03:00 PM</span>
+                    </div>
+                    <div class="info-box">
+                        <span>Check-out Time</span> <span>11:00 AM</span>
+                    </div>
+                    <div class="info-box">
+                        <span>Duration</span> <span>5 Nights</span>
+                    </div>
+
+                    <!-- Calendar -->
+                    <div class="calendar1">
+                        <div class="month">SEPTEMBER</div>
+                        <div class="days">
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                            <div>4</div>
+                            <div>5</div>
+                            <div>6</div>
+                            <div>7</div>
+                            <div>8</div>
+                            <div>9</div>
+                            <div class="highlighted">10</div>
+                            <div class="highlighted">11</div>
+                            <div class="highlighted">12</div>
+                            <div class="highlighted">13</div>
+                            <div class="highlighted">14</div>
+                            <div class="highlighted">15</div>
+                            <div class="highlighted">16</div>
+                            <div class="highlighted">17</div>
+                            <div class="highlighted">18</div>
+                            <div class="highlighted">19</div>
+                            <div class="highlighted">20</div>
+                            <div>21</div>
+                            <div>22</div>
+                            <div>23</div>
+                            <div>24</div>
+                            <div>25</div>
+                            <div>26</div>
+                            <div>27</div>
+                            <div>28</div>
+                            <div>29</div>
+                            <div>30</div>
+                        </div>
+                    </div>
+
+                    <!-- Booked Button -->
+                    <button class="btn btn-booked mt-3">Booked</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
