@@ -10,11 +10,6 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        * {
-            margin: 0%;
-            padding: 0%;
-        }
-
         /* Navbar Styling */
         .navbar {
             background-color: white;
@@ -44,6 +39,10 @@
         }
 
         /* Main Content CSS */
+        .header-section h5 {
+            font-weight: 600;
+        }
+
         .progress-container {
             display: flex;
             justify-content: space-between;
@@ -62,30 +61,43 @@
             background-color: #00AAE5;
         }
 
-        .upload-box {
-            border: 2px dashed #D3D3D3;
-            border-radius: 8px;
-            padding: 50px;
-            text-align: center;
-            color: #666;
-            transition: all 0.3s ease;
+        .mt-4{
+            margin-left: 9%;
         }
 
-        .upload-box:hover {
-            border-color: #00AAE5;
-            color: #00AAE5;
+        .header-section p {
+            color: #6c757d;
         }
 
-        .upload-box i {
-            font-size: 48px;
-            color: #666;
+        .counter-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
         }
 
-        .upload-box a {
-            color: #00AAE5;
-            text-decoration: none;
+        .counter-controls {
+            display: flex;
+            align-items: center;
         }
 
+        .counter-controls button {
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            background-color: #fff;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+        }
+
+        .counter-controls span {
+            margin: 0 15px;
+            font-weight: 500;
+        }
 
         .btn-container {
             display: flex;
@@ -178,30 +190,53 @@
         <!-- Main Content Section -->
         <div class="container mt-4">
             <div class="row">
-                <!-- Add-Pic Section (Right) -->
+                <!-- Counter Form (Right) -->
                 <div class="col-md-8">
                     <div class="progress-container mb-4">
                         <div class="progress-step completed"></div>
-                        <div class="progress-step completed"></div>
+                        <div class="progress-step"></div>
                         <div class="progress-step"></div>
                     </div>
-                    <div class="container my-5">
-                        <!-- Header Section -->
-                        <div class="mb-4">
-                            <a href="#" class="text-dark text-decoration-none"><i class="fas fa-arrow-left"></i></a>
-                            <h4 class="d-inline-block ms-2">Now, let's give your house a title</h4>
-                            <p class="mt-2">Short titles work best. Have fun with it you can always change it later.</p>
+                    <h5 class="mb-2">Share some basics about your place</h5>
+                    <p class="text-muted mb-4">You'll add more details later, like bed types.</p>
+
+                    <div class="counter-row">
+                        <span>Guests</span>
+                        <div class="counter-controls">
+                            <button type="button" onclick="updateCounter('guests', -1)">-</button>
+                            <span id="guests">1</span>
+                            <button type="button" onclick="updateCounter('guests', 1)">+</button>
                         </div>
-                        <!-- Upload Box -->
-                        <div class="upload-box mb-5">
+                    </div>
+                    <div class="counter-row">
+                        <span>Bedrooms</span>
+                        <div class="counter-controls">
+                            <button type="button" onclick="updateCounter('bedrooms', -1)">-</button>
+                            <span id="bedrooms">0</span>
+                            <button type="button" onclick="updateCounter('bedrooms', 1)">+</button>
                         </div>
-                        <p class="">00 / 32 Words</p>
-                        <div class="btn-container mt-4 mb-4">
-                            <button type="button" class="btn Custom_btn">Back</button>
-                            <button type="button" class="btn Custom_btn">Next</button>
+                    </div>
+                    <div class="counter-row">
+                        <span>Beds</span>
+                        <div class="counter-controls">
+                            <button type="button" onclick="updateCounter('beds', -1)">-</button>
+                            <span id="beds">0</span>
+                            <button type="button" onclick="updateCounter('beds', 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="counter-row">
+                        <span>Bathroom</span>
+                        <div class="counter-controls">
+                            <button type="button" onclick="updateCounter('bathrooms', -1)">-</button>
+                            <span id="bathrooms">0</span>
+                            <button type="button" onclick="updateCounter('bathrooms', 1)">+</button>
                         </div>
                     </div>
 
+                    <div class="btn-container mt-4 mb-4">
+                        <button type="button" class="btn Custom_btn">Back</button>
+                        <button type="button" class="btn Custom_btn">Next</button>
+                    </div>
                 </div>
                 <!-- Sidebar (Left) -->
                 <div class="col-md-4" style="margin-left: auto;">
@@ -226,7 +261,6 @@
                             <i class="fas fa-phone"></i>
                             (555) 123-4567
                         </div>
-
                         <div class="info-item">
                             <i class="fas fa-envelope"></i>
                             email@example.com
@@ -264,6 +298,14 @@
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- JavaScript to handle counter update -->
+    <script>
+        function updateCounter(id, value) {
+            let counter = document.getElementById(id);
+            let currentValue = parseInt(counter.innerText);
+            currentValue += value;
+            counter.innerText = Math.max(0, currentValue); // Ensure no negative values
+        }
+    </script>
 </body>
 
 </html>

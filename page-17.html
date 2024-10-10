@@ -10,11 +10,10 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        * {
+        *{
             margin: 0%;
             padding: 0%;
         }
-
         /* Navbar Styling */
         .navbar {
             background-color: white;
@@ -44,6 +43,12 @@
         }
 
         /* Main Content CSS */
+        .container {
+            max-width: 900px;
+            margin-top: 20px !important;
+            margin-left: 25%;
+        }
+
         .progress-container {
             display: flex;
             justify-content: space-between;
@@ -62,30 +67,23 @@
             background-color: #00AAE5;
         }
 
-        .upload-box {
-            border: 2px dashed #D3D3D3;
-            border-radius: 8px;
-            padding: 50px;
-            text-align: center;
-            color: #666;
-            transition: all 0.3s ease;
+        .map-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            background-color: #c1c1c1;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
 
-        .upload-box:hover {
-            border-color: #00AAE5;
-            color: #00AAE5;
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding-left: 10px;
         }
-
-        .upload-box i {
-            font-size: 48px;
-            color: #666;
-        }
-
-        .upload-box a {
-            color: #00AAE5;
-            text-decoration: none;
-        }
-
 
         .btn-container {
             display: flex;
@@ -178,30 +176,23 @@
         <!-- Main Content Section -->
         <div class="container mt-4">
             <div class="row">
-                <!-- Add-Pic Section (Right) -->
+                <!-- Counter Form (Right) -->
                 <div class="col-md-8">
                     <div class="progress-container mb-4">
                         <div class="progress-step completed"></div>
                         <div class="progress-step completed"></div>
                         <div class="progress-step"></div>
                     </div>
-                    <div class="container my-5">
-                        <!-- Header Section -->
-                        <div class="mb-4">
-                            <a href="#" class="text-dark text-decoration-none"><i class="fas fa-arrow-left"></i></a>
-                            <h4 class="d-inline-block ms-2">Now, let's give your house a title</h4>
-                            <p class="mt-2">Short titles work best. Have fun with it you can always change it later.</p>
-                        </div>
-                        <!-- Upload Box -->
-                        <div class="upload-box mb-5">
-                        </div>
-                        <p class="">00 / 32 Words</p>
-                        <div class="btn-container mt-4 mb-4">
-                            <button type="button" class="btn Custom_btn">Back</button>
-                            <button type="button" class="btn Custom_btn">Next</button>
-                        </div>
+                    <h5 class="mb-2">Make your place stand out</h5>
+                    <p class="text-muted mb-4">In this step, you’ll add some of the amenities your place offers, plus 5
+                        or more photos. Then, you’ll create a title and description.</p>
+                    <!-- Map Section with Search Bar -->
+                    <div class="map-container">
                     </div>
-
+                    <div class="btn-container mt-4 mb-4">
+                        <button type="button" class="btn Custom_btn">Back</button>
+                        <button type="button" class="btn Custom_btn">Next</button>
+                    </div>
                 </div>
                 <!-- Sidebar (Left) -->
                 <div class="col-md-4" style="margin-left: auto;">
@@ -226,7 +217,6 @@
                             <i class="fas fa-phone"></i>
                             (555) 123-4567
                         </div>
-
                         <div class="info-item">
                             <i class="fas fa-envelope"></i>
                             email@example.com

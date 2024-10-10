@@ -62,30 +62,60 @@
             background-color: #00AAE5;
         }
 
-        .upload-box {
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            border-radius: 10px;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .image-item {
+            position: relative;
+        }
+
+        .image-options {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            padding: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .add-more {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             border: 2px dashed #D3D3D3;
-            border-radius: 8px;
-            padding: 50px;
-            text-align: center;
+            border-radius: 10px;
+            padding: 40px 0;
             color: #666;
-            transition: all 0.3s ease;
+            cursor: pointer;
         }
 
-        .upload-box:hover {
+        .add-more:hover {
+            color: #00AAE5;
             border-color: #00AAE5;
-            color: #00AAE5;
         }
-
-        .upload-box i {
-            font-size: 48px;
-            color: #666;
-        }
-
-        .upload-box a {
-            color: #00AAE5;
-            text-decoration: none;
-        }
-
 
         .btn-container {
             display: flex;
@@ -189,13 +219,44 @@
                         <!-- Header Section -->
                         <div class="mb-4">
                             <a href="#" class="text-dark text-decoration-none"><i class="fas fa-arrow-left"></i></a>
-                            <h4 class="d-inline-block ms-2">Now, let's give your house a title</h4>
-                            <p class="mt-2">Short titles work best. Have fun with it you can always change it later.</p>
+                            <h4 class="d-inline-block ms-2">Ta-da! How does this look?</h4>
+                            <p class="mt-2">Drag to reorder</p>
                         </div>
-                        <!-- Upload Box -->
-                        <div class="upload-box mb-5">
+
+                        <!-- Image Grid Section -->
+                        <div class="image-grid mb-5">
+                            <!-- Image 1 -->
+                            <div class="image-item">
+                                <img src="Assets/images/island_1.png" alt="Cover Photo">
+                                <div class="image-overlay">Cover Photo</div>
+                                <div class="image-options"><i class="fas fa-ellipsis-h"></i></div>
+                            </div>
+                            <!-- Image 2 -->
+                            <div class="image-item">
+                                <img src="Assets/images/Island_2.png" alt="Image 2">
+                                <div class="image-options"><i class="fas fa-ellipsis-h"></i></div>
+                            </div>
+                            <!-- Image 3 -->
+                            <div class="image-item">
+                                <img src="Assets/images/island_3.png" alt="Image 3">
+                                <div class="image-options"><i class="fas fa-ellipsis-h"></i></div>
+                            </div>
+                            <!-- Image 4 -->
+                            <div class="image-item">
+                                <img src="Assets/images/island_4.png" alt="Image 4">
+                                <div class="image-options"><i class="fas fa-ellipsis-h"></i></div>
+                            </div>
+                            <!-- Image 5 -->
+                            <div class="image-item">
+                                <img src="Assets/images/island_5.png" alt="Image 5">
+                                <div class="image-options"><i class="fas fa-ellipsis-h"></i></div>
+                            </div>
+                            <!-- Add More -->
+                            <div class="add-more">
+                                <i class="fas fa-plus fa-2x"></i>
+                                <p class="mt-2 mb-0">Add more</p>
+                            </div>
                         </div>
-                        <p class="">00 / 32 Words</p>
                         <div class="btn-container mt-4 mb-4">
                             <button type="button" class="btn Custom_btn">Back</button>
                             <button type="button" class="btn Custom_btn">Next</button>
