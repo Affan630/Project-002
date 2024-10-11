@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonstay Hosting</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: white;
+            padding: 0.5rem 1rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .navbar-brand img {
+            height: 30px;
+        }
+
+        .nav-link {
+            color: black;
+            margin-right: 1rem;
+        }
+
+        .notification-icon {
+            font-size: 1.25rem;
+            color: black;
+            margin-right: 1rem;
+        }
+
+        .user-info img {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+
+        /* Main Content CSS */
+        .progress-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 0 15px;
+            gap: 20px;
+        }
+
+        .progress-step {
+            flex: 1;
+            height: 4px;
+            background-color: #e0e0e0;
+        }
+
+        .progress-step.completed {
+            background-color: #00AAE5;
+        }
+
+        .upload-box {
+            border: 2px dashed #D3D3D3;
+            border-radius: 8px;
+            padding: 50px;
+            text-align: start;
+            color: #666;
+            transition: all 0.3s ease;
+        }
+
+        
+
+        .upload-box i {
+            font-size: 48px;
+            color: #666;
+        }
+
+        .upload-box a {
+            color: #00AAE5;
+            text-decoration: none;
+        }
+
+
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .Custom_btn {
+            width: 100%;
+            background-color: #00AAE5;
+            color: #ffffff;
+        }
+
+        /* SideBar CSS */
+        .sidebar {
+            max-width: 300px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+
+        .sidebar h5 {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .sidebar img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .sidebar p {
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .sidebar .info-item {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar .info-item i {
+            margin-right: 10px;
+            color: #666;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 0.75rem 1rem;
+        }
+
+        .footer a {
+            color: black;
+            margin: 0 0.5rem;
+        }
+
+        .footer .social-icons a {
+            font-size: 1.25rem;
+            margin: 0 0.25rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Navbar -->
+        <nav class="navbar d-flex justify-content-between align-items-center">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="Assets/images/logo.png" alt="Bonstay Logo">
+            </a>
+            <div class="d-flex align-items-center">
+                <span class="notification-icon">
+                    <i class="bi bi-bell"></i>
+                </span>
+                <div class="user-info d-flex align-items-center">
+                    <img src="Assets/images/profile_pic2.png" alt="User Avatar">
+                    <div class="ms-2">
+                        <span>Timo Jannis</span>
+                        <small class="d-block">Employee</small>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Section -->
+        <div class="container mt-4">
+            <div class="row">
+                <!-- Add-Pic Section (Right) -->
+                <div class="col-md-8">
+                    <div class="progress-container mb-4">
+                        <div class="progress-step completed"></div>
+                        <div class="progress-step completed"></div>
+                        <div class="progress-step"></div>
+                    </div>
+                    <div class="container my-5">
+                        <!-- Header Section -->
+                        <div class="mb-4">
+                            <a href="#" class="text-dark text-decoration-none"><i class="fas fa-arrow-left"></i></a>
+                            <h4 class="d-inline-block ms-2">Create your description</h4>
+                            <p class="mt-2">Share what makes your place special.</p>
+                        </div>
+                        <!-- Upload Box -->
+                        <div class="upload-box mb-5">
+                            <p>You'll have a great time at this comfortable place to stay.</p>
+                        </div>
+                        <p class="">59 / 500 Words</p>
+                        <div class="btn-container mt-4 mb-4">
+                            <button type="button" class="btn Custom_btn">Back</button>
+                            <button type="button" class="btn Custom_btn">Next</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Sidebar (Left) -->
+                <div class="col-md-4" style="margin-left: auto;">
+                    <div class="sidebar">
+                        <h5>Your Top Designers & Decorator Are 50 Miles away</h5>
+                        <img src="Assets/images/room.png" alt="Interior Design">
+                        <h6>Your Local Interior Design Specialists</h6>
+                        <em>Transform Your Space with Local Experts!</em>
+                        <p>
+                            Discover the perfect blend of style and functionality. Schedule a consultation today and let
+                            us bring your vision to life!
+                        </p>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Suite 956 26375 Cassandra Terrace, Lake Migdalia, TX 42901
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-couch"></i>
+                            Residential & Commercial Design, Space Planning, Custom Furniture
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            (555) 123-4567
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            email@example.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer d-flex justify-content-between align-items-center mt-4">
+            <div>
+                <span>© 2024 Bonstay</span>
+                <a href="#">Terms</a>
+                <a href="#">Sitemap</a>
+                <a href="#">Privacy</a>
+                <a href="#">Your Privacy Choices</a>
+            </div>
+            <div class="d-flex align-items-center">
+                <i class="bi bi-globe"></i>
+                <span class="mx-1">English (US)</span>
+                <span>$USD</span>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="bi bi-facebook"></a>
+                <a href="#" class="bi bi-twitter"></a>
+                <a href="#" class="bi bi-instagram"></a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript to handle counter update -->
+</body>
+
+</html>
