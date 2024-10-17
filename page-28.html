@@ -62,47 +62,21 @@
             background-color: #00AAE5;
         }
 
-        .back-link {
-            font-weight: 600;
-            color: black;
-            text-decoration: none;
+        .card {
+            border: none;
         }
 
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        .listing-header {
-            font-size: 1rem;
-            margin-top: 10px;
-        }
-
-        .listing-title {
-            font-size: 1.75rem;
+        .step-header {
+            font-size: 1.25rem;
             font-weight: bold;
-            margin-top: 15px;
         }
 
-        .host-info {
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-        }
-
-        .host-info img {
-            border-radius: 50%;
-            width: 45px;
-            height: 45px;
-            margin-right: 10px;
-        }
-
-        .guest-details {
-            font-size: 0.95rem;
-            color: #666;
+        .form-check-label {
+            font-size: 1rem;
         }
 
         .important-info {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #666;
         }
 
@@ -115,17 +89,6 @@
             text-decoration: underline;
         }
 
-        .location-info {
-            font-size: 0.9rem;
-        }
-
-        .location-info strong {
-            font-size: 1rem;
-        }
-
-        .container {
-            max-width: 800px;
-        }
 
         .btn-container {
             display: flex;
@@ -218,82 +181,96 @@
         <!-- Main Content Section -->
         <div class="container mt-4">
             <div class="row">
-                <!-- Progress Bar -->
-                <div class="col-lg-10">
+                <!-- Add-Pic Section (Right) -->
+                <div class="col-md-8">
                     <div class="progress-container mb-4">
                         <div class="progress-step completed"></div>
                         <div class="progress-step completed"></div>
                         <div class="progress-step"></div>
                     </div>
                     <!-- Main content area -->
-                    <div class="container ">
-                        <div class=" p-4 ">
-                            <!-- Review Your Posting Section -->
-                            <div class="container mt-5">
-                                <!-- Back Link Section -->
-                                <div class="mb-3">
-                                    <a href="#" class="back-link">
-                                        <i class="fas fa-chevron-left"></i> Review your listing
-                                    </a>
-                                    <p class="listing-header">Here’s what we’ll show to guests. Make sure everything
-                                        looks good.</p>
-                                </div>
-
-                                <!-- Image Section -->
-                                <div class="mb-4">
-                                    <img src="Assets/images/1 (2).png" class="img-fluid rounded"
-                                        alt="Water Villa Image">
-                                </div>
-
-                                <!-- Listing Title Section -->
-                                <div>
-                                    <p class="listing-title">Water Villa with Private Pool & Slide</p>
-
-                                    <!-- Host Info Section -->
-                                    <div class="host-info">
-                                        <img src="Assets/images/profile_pic2.png" alt="Host Image">
-                                        <div>
-                                            Entire home hosted by Timo Jannis
-                                            <div class="guest-details">
-                                                1 guest · Studio · 1 bed · Half-bath
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Description -->
-                                <div class="mt-4">
-                                    <p>You’ll have a great time at this comfortable place to stay.</p>
-                                </div>
-
-                                <!-- Location Section -->
-                                <hr>
-                                <div class="location-info">
-                                    <strong>Location</strong>
-                                    <p>1751 67TH ST APT F11 BROOKLYN NY 11204-4332 USA</p>
-                                    <p>We’ll only share your address with guests who are booked as outlined in our <a
-                                            href="#">privacy policy</a>.</p>
-                                </div>
-                                <hr>
-                                <div class="location-info">
-                                    <strong>What's next?</strong>
-                                    <p><b>Confirm a few details and publish</b> <br>
-                                        We’ll let you know if you need to verify your identity or register with the
-                                        local government. <br>
-                                        <b>Set up your calendar</b><br>
-                                        Choose which dates your listing is available. It will be visible 24 hours after
-                                        you publish. <br>
-                                        <b>Adjust your settings</b><br>
-                                        Set house rules, select a cancellation policy, choose how guests book, and more.
-                                    </p>
-                                </div>
+                    <div class="container mt-5">
+                        <div class="card p-4 shadow-sm">
+                            <!-- Main Question -->
+                            <div class="mb-4">
+                                <a href="#" class="text-dark text-decoration-none"><i class="fas fa-arrow-left"></i></a>
+                                <h4 class="d-inline-block ms-2" style="font-weight: bold;">Just one last step!</h4>
                             </div>
+                            <form>
+                                <!-- Question Text -->
+                                <p>Does your place have any of these?</p>
+
+                                <!-- Checkbox Options -->
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="securityCameras">
+                                    <label class="form-check-label" for="securityCameras">
+                                        Exterior security cameras
+                                    </label>
+                                </div>
+
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="noiseDecibelMonitors">
+                                    <label class="form-check-label" for="noiseDecibelMonitors">
+                                        Noise decibel monitors
+                                    </label>
+                                </div>
+
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="weapons">
+                                    <label class="form-check-label" for="weapons">
+                                        Weapons
+                                    </label>
+                                </div>
+
+                                <!-- Divider -->
+                                <hr>
+
+                                <!-- Important Information -->
+                                <p class="important-info">
+                                    <strong>Important things to know</strong><br>
+                                    Security cameras that monitor indoor spaces are not allowed even if they’re turned
+                                    off.
+                                    All exterior security cameras must be disclosed.<br><br>
+                                    Be sure to comply with your <a href="#">local laws</a> and review Bonstay’s
+                                    <a href="#">anti-discrimination policy</a> and <a href="#">guest and Host fees</a>.
+                                </p>
+                            </form>
                         </div>
                     </div>
-                    <!-- Buttons -->
+
                     <div class="btn-container mt-4 mb-4">
                         <button type="button" class="btn Custom_btn">Back</button>
                         <button type="button" class="btn Custom_btn">Next</button>
+                    </div>
+                </div>
+                <!-- Sidebar (Left) -->
+                <div class="col-md-4" style="margin-left: auto;">
+                    <div class="sidebar">
+                        <h5>Your Top Designers & Decorator Are 50 Miles away</h5>
+                        <img src="Assets/images/room.png" alt="Interior Design">
+                        <h6>Your Local Interior Design Specialists</h6>
+                        <em>Transform Your Space with Local Experts!</em>
+                        <p>
+                            Discover the perfect blend of style and functionality. Schedule a consultation today and let
+                            us bring your vision to life!
+                        </p>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Suite 956 26375 Cassandra Terrace, Lake Migdalia, TX 42901
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-couch"></i>
+                            Residential & Commercial Design, Space Planning, Custom Furniture
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            (555) 123-4567
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            email@example.com
+                        </div>
                     </div>
                 </div>
             </div>

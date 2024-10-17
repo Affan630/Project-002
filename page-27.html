@@ -62,69 +62,47 @@
             background-color: #00AAE5;
         }
 
-        .back-link {
-            font-weight: 600;
-            color: black;
-            text-decoration: none;
+        .discount-section {
+            font-weight: normal;
         }
 
-        .back-link:hover {
-            text-decoration: underline;
+        .discount-box {
+            border: 1px solid #D3D3D3;
+            border-radius: 8px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            background-color: #F8F9FA;
         }
 
-        .listing-header {
-            font-size: 1rem;
+        .discount-box .discount-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .discount-box .discount-details {
+            font-size: 16px;
+            color: #000;
+        }
+
+        .discount-box .fa-circle {
+            color: #000;
+            font-size: 18px;
+        }
+
+        .small-text {
+            font-size: 14px;
+            color: #808080;
+            text-align: center;
             margin-top: 10px;
         }
 
-        .listing-title {
-            font-size: 1.75rem;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-
-        .host-info {
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-        }
-
-        .host-info img {
-            border-radius: 50%;
-            width: 45px;
-            height: 45px;
-            margin-right: 10px;
-        }
-
-        .guest-details {
-            font-size: 0.95rem;
-            color: #666;
-        }
-
-        .important-info {
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        .important-info a {
-            text-decoration: none;
-            color: #007bff;
-        }
-
-        .important-info a:hover {
+        .small-text a {
+            color: #808080;
             text-decoration: underline;
-        }
-
-        .location-info {
-            font-size: 0.9rem;
-        }
-
-        .location-info strong {
-            font-size: 1rem;
-        }
-
-        .container {
-            max-width: 800px;
         }
 
         .btn-container {
@@ -218,82 +196,102 @@
         <!-- Main Content Section -->
         <div class="container mt-4">
             <div class="row">
-                <!-- Progress Bar -->
-                <div class="col-lg-10">
+                <!-- Add-Pic Section (Right) -->
+                <div class="col-md-8">
                     <div class="progress-container mb-4">
                         <div class="progress-step completed"></div>
                         <div class="progress-step completed"></div>
                         <div class="progress-step"></div>
                     </div>
-                    <!-- Main content area -->
-                    <div class="container ">
-                        <div class=" p-4 ">
-                            <!-- Review Your Posting Section -->
-                            <div class="container mt-5">
-                                <!-- Back Link Section -->
-                                <div class="mb-3">
-                                    <a href="#" class="back-link">
-                                        <i class="fas fa-chevron-left"></i> Review your listing
-                                    </a>
-                                    <p class="listing-header">Here’s what we’ll show to guests. Make sure everything
-                                        looks good.</p>
-                                </div>
-
-                                <!-- Image Section -->
-                                <div class="mb-4">
-                                    <img src="Assets/images/1 (2).png" class="img-fluid rounded"
-                                        alt="Water Villa Image">
-                                </div>
-
-                                <!-- Listing Title Section -->
-                                <div>
-                                    <p class="listing-title">Water Villa with Private Pool & Slide</p>
-
-                                    <!-- Host Info Section -->
-                                    <div class="host-info">
-                                        <img src="Assets/images/profile_pic2.png" alt="Host Image">
-                                        <div>
-                                            Entire home hosted by Timo Jannis
-                                            <div class="guest-details">
-                                                1 guest · Studio · 1 bed · Half-bath
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Description -->
-                                <div class="mt-4">
-                                    <p>You’ll have a great time at this comfortable place to stay.</p>
-                                </div>
-
-                                <!-- Location Section -->
-                                <hr>
-                                <div class="location-info">
-                                    <strong>Location</strong>
-                                    <p>1751 67TH ST APT F11 BROOKLYN NY 11204-4332 USA</p>
-                                    <p>We’ll only share your address with guests who are booked as outlined in our <a
-                                            href="#">privacy policy</a>.</p>
-                                </div>
-                                <hr>
-                                <div class="location-info">
-                                    <strong>What's next?</strong>
-                                    <p><b>Confirm a few details and publish</b> <br>
-                                        We’ll let you know if you need to verify your identity or register with the
-                                        local government. <br>
-                                        <b>Set up your calendar</b><br>
-                                        Choose which dates your listing is available. It will be visible 24 hours after
-                                        you publish. <br>
-                                        <b>Adjust your settings</b><br>
-                                        Set house rules, select a cancellation policy, choose how guests book, and more.
-                                    </p>
-                                </div>
+                    <!-- Price Discount Cards -->
+                    <div class="container my-5 discount-section">
+                        <!-- Header Section -->
+                        <div class="mb-4">
+                            <a href="#" class="text-dark text-decoration-none"><i class="fas fa-arrow-left"></i></a>
+                            <h4 class="d-inline-block ms-2" style="font-weight: bold;">Add discounts</h4>
+                            <p class="mt-2">Help your place stand out to get booked faster and earn your first reviews.</p>
+                        </div>
+                
+                        <!-- Discount Options -->
+                        <div class="discount-box">
+                            <div>
+                                <div class="discount-value">20%</div>
+                            </div>
+                            <div class="ms-3">
+                                <div class="discount-details" style="font-weight: bold;">New listing promotion</div>
+                                <div>Offer 20% off your first 3 bookings</div>
+                            </div>
+                            <div>
+                                <i class="fas fa-circle"></i>
                             </div>
                         </div>
+                
+                        <div class="discount-box">
+                            <div>
+                                <div class="discount-value">10%</div>
+                            </div>
+                            <div class="ms-3">
+                                <div class="discount-details" style="font-weight: bold;">New listing promotion</div>
+                                <div>Offer 20% off your first 3 bookings</div>
+                            </div>
+                            <div>
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                
+                        <div class="discount-box">
+                            <div>
+                                <div class="discount-value">15%</div>
+                            </div>
+                            <div class="ms-3">
+                                <div class="discount-details" style="font-weight: bold;">New listing promotion</div>
+                                <div>Offer 20% off your first 3 bookings</div>
+                            </div>
+                            <div>
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                
+                        <!-- Footer Note -->
+                        <p class="small-text">
+                            Only one discount will be applied per stay. <a href="#">Learn more</a>
+                        </p>
                     </div>
-                    <!-- Buttons -->
+
+
                     <div class="btn-container mt-4 mb-4">
                         <button type="button" class="btn Custom_btn">Back</button>
                         <button type="button" class="btn Custom_btn">Next</button>
+                    </div>
+                </div>
+                <!-- Sidebar (Left) -->
+                <div class="col-md-4" style="margin-left: auto;">
+                    <div class="sidebar">
+                        <h5>Your Top Designers & Decorator Are 50 Miles away</h5>
+                        <img src="Assets/images/room.png" alt="Interior Design">
+                        <h6>Your Local Interior Design Specialists</h6>
+                        <em>Transform Your Space with Local Experts!</em>
+                        <p>
+                            Discover the perfect blend of style and functionality. Schedule a consultation today and let
+                            us bring your vision to life!
+                        </p>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Suite 956 26375 Cassandra Terrace, Lake Migdalia, TX 42901
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-couch"></i>
+                            Residential & Commercial Design, Space Planning, Custom Furniture
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            (555) 123-4567
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            email@example.com
+                        </div>
                     </div>
                 </div>
             </div>
