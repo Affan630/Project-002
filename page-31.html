@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonstay Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            padding-top: 20px;
+        }
+
+        .sidebar .nav-link {
+            color: #000;
+            font-weight: 500;
+            margin: 10px 0;
+        }
+
+        .sidebar .nav-link.active {
+            background-color: #007bff;
+            color: white;
+            border-radius: 25px;
+            padding: 10px 20px;
+        }
+
+        .sidebar .nav-link:hover {
+            background-color: #007bff;
+            color: white;
+            border-radius: 25px;
+        }
+
+        .sidebar .nav-link i {
+            margin-right: 10px;
+        }
+
+        .sidebar .nav-link.text-primary {
+            color: #007bff !important;
+        }
+
+        .logo {
+            text-align: center;
+            padding: 5px;
+        }
+
+        .logo img {
+            max-width: 120px;
+        }
+
+        /* Top Navbar */
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: white;
+            padding: 13px 2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .navbar-brand img {
+            height: 30px;
+        }
+
+        .nav-link {
+            color: black;
+            margin-right: 1rem;
+        }
+
+        .notification-icon {
+            font-size: 1.25rem;
+            color: black;
+            margin-right: 1rem;
+        }
+
+        .user-info img {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 20px;
+        }
+
+        .card {
+            border-radius: 10px;
+        }
+
+        /* Earnings section styling */
+        .earnings-section {
+            padding: 30px;
+        }
+
+        .earnings-header {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .earnings-value {
+            font-size: 2rem;
+            color: #000;
+        }
+
+        .summary-card {
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        .summary-header {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .summary-value {
+            font-weight: bold;
+        }
+
+        .no-reservations {
+            margin-top: 30px;
+            color: #6c757d;
+        }
+
+        .icon-placeholder {
+            width: 24px;
+            height: 24px;
+            background-color: #6c757d;
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Main Container -->
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <nav class="sidebar d-flex flex-column p-3">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="Assets/images/logo.png" alt="Bonstay Logo">
+                <hr>
+            </div>
+            <hr>
+
+            <!-- Manage Listing Section -->
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <i class="fas fa-th-list"></i> Manage Listing
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Today</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Calendar</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Listing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Message</a>
+                </li>
+
+                <!-- Menu Section -->
+                <li class="nav-item mt-4">
+                    <a href="#" class="nav-link active">
+                        <i class="fas fa-bars"></i> Menu
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">2024 Summer Release Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Reservations</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-primary">Earnings</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Create a new Listing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Market Me</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="flex-grow-1">
+            <!-- Top Navbar -->
+            <nav class="navbar d-flex justify-content-between align-items-center">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                </a>
+                <div class="d-flex align-items-center">
+                    <span class="notification-icon">
+                        <i class="bi bi-bell"></i>
+                    </span>
+                    <div class="user-info d-flex align-items-center">
+                        <img src="Assets/images/profile_pic2.png" alt="User Avatar">
+                        <div class="ms-2">
+                            <span>Timo Jannis</span>
+                            <small class="d-block">Employee</small>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Content Section -->
+            <div class="container earnings-section">
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="mb-4">
+                      <h2 class="earnings-header">Earnings</h2>
+                      <p class="earnings-value">You've made $0.00 this month</p>
+                    </div>
+                    <div class="chart-placeholder">
+                      <!-- Placeholder for chart, this can be integrated with a charting library -->
+                      <div class="p-5" style="border: 1px solid #dee2e6; height: 200px; background-color: #fff;"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="summary-card">
+                      <p class="summary-header">Year-to-date summary</p>
+                      <p>Jan 1 - May 30, 2024</p>
+                      <div class="d-flex justify-content-between">
+                        <span>Gross earnings</span>
+                        <span class="summary-value">$0.00</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <span>Adjustments</span>
+                        <span class="summary-value">$0.00</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <span>Service fee</span>
+                        <span class="summary-value">$0.00</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <span>Taxes withheld</span>
+                        <span class="summary-value">$0.00</span>
+                      </div>
+                      <hr>
+                      <div class="d-flex justify-content-between">
+                        <span>Total (USD)</span>
+                        <span class="summary-value">$0.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="no-reservations mt-4">
+                  <h3>Upcoming</h3>
+                  <p>No upcoming reservations at the moment.</p>
+                </div>
+            
+                <div class="paid-section mt-4">
+                  <h3>Paid</h3>
+                  <p>Payouts are sent after guests check in. <a href="#">Learn how payouts work</a></p>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
