@@ -1,0 +1,356 @@
+
+/* Navbar css start*/
+
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font to all elements */
+    
+}
+body{
+    height: 100%; /* Ensures the body and html elements take up full height */
+    margin: 0; /* Remove default margins */
+}
+
+
+/* Navbar Styles */
+
+.navbar-brand img {
+    height: auto;
+}
+
+/* Notification icon styling */
+.bi-bell-fill {
+    color: #007bff;
+}
+
+/* Notification dot */
+.position-absolute {
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* Profile picture and dropdown */
+.dropdown-toggle img {
+    margin-right: 8px;
+}
+
+.dropdown-menu {
+    min-width: 200px;
+}
+@media (max-width: 320px) {
+    .dropdown .ms-2 {
+        font-size: 0.8rem; /* Adjust the font size as needed */
+    }
+
+    .dropdown .fa-sharp {
+        font-size: 0.8rem; /* Adjust the icon size as needed */
+    }
+}
+
+
+/* side bar css */
+
+.sidebar {
+    height: 93vh;
+    background-color:#F5F6FA; /* White background */
+    border-right: 1px solid #e0e0e0; /* Right border */
+   
+}
+
+.sidebar h5 {
+    font-weight: bold; /* Bold for heading */
+    color: #007bff; /* Primary color */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+.menu-item {
+    padding: 10px 0px 10px 113px; /* Space for each menu item */
+    cursor: pointer; /* Pointer on hover */
+}
+
+.Menu-hover:hover {
+    color:      #007bff; /* Color on hover */
+    background-color: #e9ecef; /* Light gray background on hover */
+}
+
+.active {
+    background-color: #007bff; /* Active item background */
+    color: white; /* Active item text color */
+    border-radius: 0px 20px 20px 0px;
+}
+/* Off canvas */
+.offcanvas {
+    width: 250px; /* Set width for offcanvas */
+}
+
+/* Optional: Add hover effect for menu items */
+.menu-item {
+    transition: background-color 0.3s;
+}
+
+.menu-hover:hover {
+    background-color: #dadddf; /* Light gray background on hover */
+}
+
+/* Hamburger */
+.navbar-toggler {
+    border: none; /* Remove default border */
+}
+
+.navbar-toggler-icon {
+    background-color: #007bff; /* Customize the color of the hamburger icon */
+    width: 30px; /* Width of the icon */
+    height: 30px; /* Height of the icon */
+}
+
+/* media query for side bar */
+/* Responsive Styles */
+@media (max-width: 768px){
+    .container {
+        padding: 15px; /* Less padding on smaller screens */
+        width: 209%; /* Ensure it takes up more width on smaller screens */
+    }
+    .sidebar{
+        display: none;
+    }
+    .main-content{
+     padding: 5px; 
+    }
+}
+/* Base Styles (You can add your existing styles here) */
+
+@media (max-width: 1440px) {
+    .container {
+        margin-left: auto; /* Center the container */
+        margin-right: auto; /* Center the container */
+        padding: 15px; /* Less padding on smaller screens */
+        width: 100%; /* Use full width on smaller screens */
+        max-width: 600px; /* Keep a max width for better layout */
+    }
+
+    .btn-link {
+        font-size: 0.9rem; /* Slightly smaller buttons */
+        margin: 2px; /* Less margin on mobile */
+        flex: 1 1 auto; /* Allow buttons to take available space */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller heading */
+    }
+
+    .reservations-box {
+        min-height: 120px; /* Adjust height */
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 15px; /* Less padding on smaller screens */
+        width: 100%; /* Full width */
+        max-width: 600px; /* Keep max-width consistent */
+    }
+
+    .btn-link {
+        font-size: 0.9rem; /* Slightly smaller buttons */
+        margin: 2px; /* Less margin on mobile */
+        flex: 1 1 auto; /* Allow buttons to take available space */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller heading */
+    }
+
+    .reservations-box {
+        min-height: 120px; /* Adjust height */
+    }
+}
+
+
+@media (max-width: 425px) {
+    .container {
+        max-width: 90%; /* Wider container on very small screens */
+    }
+
+    h2 {
+        font-size: 1.25rem; /* Smaller heading for very small screens */
+    }
+    .main-content{
+        padding: 5px; 
+       }
+}
+
+/* nav and .sidebar css End here */
+
+
+/* Mid Section */
+.container {
+    max-width: 800px; /* Increase width for better readability */
+    margin: 50px auto; /* Center the container */
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: center; /* Center align the heading */
+}
+
+/* Adjust card styles */
+.card-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s; /* Add transition for hover effects */
+}
+
+.card-2:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+.complete-card {
+    border: 2px solid #32CD32; /* Green border for complete card */
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.status {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.complete {
+    color: #32CD32; /* Green for 'Complete' */
+}
+
+.required {
+    color: red; /* Red for 'Required' */
+}
+
+.icon-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px; /* Ensures icons have enough space */
+}
+
+.check-icon,
+.arrow-icon {
+    font-size: 24px;
+    color: #32CD32;
+}
+
+.arrow-icon {
+    color: #000; /* Color for arrow icon */
+}
+
+/* Right section */
+.villa-card {
+    width: 100%; /* Full width for responsiveness */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensure child elements do not overflow */
+    transition: transform 0.2s; /* Smooth transition on hover */
+    margin-bottom: 20px; /* Space between cards */
+}
+
+.villa-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.villa-image {
+    height: 331px; /* Fixed height for the image */
+    object-fit: cover; /* Cover image */
+}
+
+.villa-rating {
+    color: #FFA500; /* Orange color for the stars */
+}
+
+.superhost {
+    color: #007BFF; /* Blue for the Superhost text */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+.villa-title {
+    font-size: 1.5rem; /* Larger font size for the title */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .container {
+        padding: 15px; /* Less padding on smaller screens */
+        max-width: 90vw; /* Full width on tablets */
+    }
+
+    .card-2 {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: flex-start; /* Align to start */
+    }
+
+    .icon-right {
+        margin-top: 10px; /* Add margin for spacing */
+    }
+
+    h2 {
+        font-size: 20px; /* Smaller heading on tablets */
+    }
+
+    .reservations-box {
+        height: auto; /* Allow box to adjust height */
+    }
+
+    .btn-link {
+        font-size: 1rem; /* Adjust button text size */
+    }
+
+    .villa-card {
+        margin: 0; /* Reset margin for villa card */
+    }
+}
+
+@media (max-width: 768px) {
+    .btn-link {
+        font-size: 0.9rem; /* Smaller text on mobile */
+        margin-right: 10px; /* Adjust spacing on mobile */
+    }
+
+    .reservations-box {
+        height: auto; /* Allow box to adjust height */
+    }
+
+    .card-2 {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+    }
+
+    .icon-right {
+        margin-top: 10px; /* Add margin for spacing */
+    }
+}

@@ -1,0 +1,143 @@
+/* Navbar css start*/
+
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font to all elements */
+}
+
+
+
+* Navbar Styles */
+
+.navbar-brand img {
+    height: auto;
+}
+
+/* Notification icon styling */
+.bi-bell-fill {
+    color: #007bff;
+}
+
+/* Notification dot */
+.position-absolute {
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* Profile picture and dropdown */
+.dropdown-toggle img {
+    margin-right: 8px;
+}
+
+.dropdown-menu {
+    min-width: 200px;
+}
+@media (max-width: 320px) {
+    .dropdown .ms-2 {
+        font-size: 0.8rem; /* Adjust the font size as needed */
+    }
+
+    .dropdown .fa-sharp {
+        font-size: 0.8rem; /* Adjust the icon size as needed */
+    }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0; /* Padding for mobile */
+    }
+
+    .navbar-brand img {
+        width: 150px; /* Smaller logo for mobile */
+    }
+
+    .dropdown .text-end {
+        text-align: left; /* Align text to the left on mobile */
+    }
+
+    .dropdown-menu {
+        position: absolute; /* Dropdown appears above other content */
+    }
+}
+
+
+
+.container {
+    max-width: 900px; /* Increased width of the container */
+    margin: auto; /* Center the container */
+    padding: 40px; /* Add some padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: white; /* White background for the card */
+}
+
+.upload-box {
+    border: 2px dashed black; /* Change border color to black */
+    padding: 60px; /* Increase padding for height */
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    height: 150px; /* Set a fixed height */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+}
+
+.upload-box:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Light background on hover */
+}
+
+.file-input {
+    display: none; /* Hide the default file input */
+}
+
+.container {
+    max-width: 800px; /* Increase the width of the container */
+    margin: auto; /* Center the container */
+    padding: 30px; /* Add some padding */
+}
+
+.btn {
+    min-width: 100px; /* Make buttons wider */
+    font-size: 1.3rem; /* Increase button text size */
+    padding: 10px; /* Increase button padding */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover */
+}
+
+.btn-primary {
+    background-color: #0091FF; /* Primary button color */
+    border: none; /* Remove border */
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Secondary button color */
+    border: none; /* Remove border */
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268; /* Darker secondary button color on hover */
+}
+
+.btn-primary:hover {
+    background-color: rgb(0, 106, 145); /* Darker primary button color on hover */
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .btn {
+        min-width: 150px; /* Increase button width on larger devices */
+    }
+}

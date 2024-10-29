@@ -1,0 +1,267 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font to all elements */
+}
+
+
+
+/* Navbar Styles */
+
+.navbar-brand img {
+    height: auto;
+}
+
+/* Notification icon styling */
+.bi-bell-fill {
+    color: #007bff;
+}
+
+/* Notification dot */
+.position-absolute {
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* Profile picture and dropdown */
+.dropdown-toggle img {
+    margin-right: 8px;
+}
+
+.dropdown-menu {
+    min-width: 200px;
+}
+@media (max-width: 320px) {
+    .dropdown .ms-2 {
+        font-size: 0.8rem; /* Adjust the font size as needed */
+    }
+
+    .dropdown .fa-sharp {
+        font-size: 0.8rem; /* Adjust the icon size as needed */
+    }
+}
+
+
+/* side bar css */
+
+.sidebar {
+    background-color:#F5F6FA; /* White background */
+    border-right: 1px solid #e0e0e0; /* Right border */
+    height: auto; /* Full height */
+}
+
+.sidebar h5 {
+    font-weight: bold; /* Bold for heading */
+    color: #007bff; /* Primary color */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+.menu-item {
+    padding: 10px 0px 10px 113px; /* Space for each menu item */
+    cursor: pointer; /* Pointer on hover */
+}
+
+.Menu-hover:hover {
+    color:      #007bff; /* Color on hover */
+    background-color: #e9ecef; /* Light gray background on hover */
+}
+
+.active {
+    background-color: #007bff; /* Active item background */
+    color: white; /* Active item text color */
+    border-radius: 0px 20px 20px 0px;
+}
+/* Off canvas */
+.offcanvas {
+    width: 250px; /* Set width for offcanvas */
+}
+
+/* Optional: Add hover effect for menu items */
+.menu-item {
+    transition: background-color 0.3s;
+}
+
+.menu-hover:hover {
+    background-color: #dadddf; /* Light gray background on hover */
+}
+
+/* Hamburger */
+.navbar-toggler {
+    border: none; /* Remove default border */
+}
+
+.navbar-toggler-icon {
+    background-color: #007bff; /* Customize the color of the hamburger icon */
+    width: 30px; /* Width of the icon */
+    height: 30px; /* Height of the icon */
+}
+/* main */
+
+.main-content {
+    padding: 90px; /* Padding for main content */
+}
+/* Graph */
+.earnings-summary {
+    background-color: #ffffff; /* White background for earnings summary */
+    padding: 20px; /* Padding inside earnings summary */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px; /* Space below earnings summary */
+}
+
+.summary-header {
+    margin-bottom: 10px; /* Space below header */
+}
+
+.chart {
+    height: 200px; /* Height for the earnings chart */
+    border-radius: 5px; /* Rounded corners for chart */
+    display: flex; /* Flexbox for centering content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    font-size: 1.5rem; /* Font size for chart text */
+    color: #6c757d; /* Gray text color */
+}
+
+.upcoming {
+    margin-top: 40px; /* Space above upcoming section */
+}
+
+
+/* Card css */
+.card-body{
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.year-to-date-summary {
+    width: fit-content;
+    border: 1px solid #e0e0e0; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    /* background-color: #ffffff; White background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.summary-item {
+    padding: 10px 0; /* Space between items */
+}
+
+.card-title {
+    font-weight: bold; /* Bold title */
+    font-size: 1.2rem; /* Title size */
+}
+
+.card-subtitle {
+    font-size: 0.9rem; /* Smaller subtitle */
+}
+
+hr {
+    margin: 10px 0; /* Margin for horizontal rule */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px        ){
+    .container {
+        padding: 15px; /* Less padding on smaller screens */
+        width: 209%; /* Ensure it takes up more width on smaller screens */
+    }
+    .sidebar{
+        display: none;
+    }
+    .main-content{
+     padding: 5px; 
+    }
+}
+/* Base Styles (You can add your existing styles here) */
+
+@media (max-width: 1440px) {
+    .container {
+        margin-left: auto; /* Center the container */
+        margin-right: auto; /* Center the container */
+        padding: 15px; /* Less padding on smaller screens */
+        width: 100%; /* Use full width on smaller screens */
+        max-width: 600px; /* Keep a max width for better layout */
+    }
+
+    .btn-link {
+        font-size: 0.9rem; /* Slightly smaller buttons */
+        margin: 2px; /* Less margin on mobile */
+        flex: 1 1 auto; /* Allow buttons to take available space */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller heading */
+    }
+
+    .reservations-box {
+        min-height: 120px; /* Adjust height */
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 15px; /* Less padding on smaller screens */
+        width: 100%; /* Full width */
+        max-width: 600px; /* Keep max-width consistent */
+    }
+
+    .btn-link {
+        font-size: 0.9rem; /* Slightly smaller buttons */
+        margin: 2px; /* Less margin on mobile */
+        flex: 1 1 auto; /* Allow buttons to take available space */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller heading */
+    }
+
+    .reservations-box {
+        min-height: 120px; /* Adjust height */
+    }
+}
+
+
+@media (max-width: 425px) {
+    .container {
+        max-width: 90%; /* Wider container on very small screens */
+    }
+
+    h2 {
+        font-size: 1.25rem; /* Smaller heading for very small screens */
+    }
+    .main-content{
+        padding: 5px; 
+       }
+}
+
+
+
+/* footer css */
+
+.footer {
+    margin: 0 auto; /* Center the footer */
+    max-width: 100%; /* Ensure it doesn’t exceed the width */
+    background-color:#F3F3F3; /* Light background for footer */
+    padding: 40px 0; /* Vertical padding */
+    border-top: 1px solid #e0e0e0; /* Light top border */
+    overflow: hidden; /* Prevent overflow */
+}
+.footer h5 {
+    font-weight: bold; /* Bold titles */
+}
+.footer a {
+    color: #000; /* Black color for links */
+    text-decoration: none; /* Remove underline */
+}
+.footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+.footer .social-icons a {
+    margin: 0 10px; /* Space between social icons */
+    color: #000; /* Black color for social icons */
+}

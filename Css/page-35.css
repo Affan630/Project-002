@@ -1,0 +1,392 @@
+
+/* Navbar css start*/
+
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font to all elements */
+}
+
+
+
+/* Navbar Styles */
+
+/* Navbar Styles */
+
+.navbar-brand img {
+    height: auto;
+}
+
+/* Notification icon styling */
+.bi-bell-fill {
+    color: #007bff;
+}
+
+/* Notification dot */
+.position-absolute {
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* Profile picture and dropdown */
+.dropdown-toggle img {
+    margin-right: 8px;
+}
+
+.dropdown-menu {
+    min-width: 200px;
+}
+@media (max-width: 320px) {
+    .dropdown .ms-2 {
+        font-size: 0.8rem; /* Adjust the font size as needed */
+    }
+
+    .dropdown .fa-sharp {
+        font-size: 0.8rem; /* Adjust the icon size as needed */
+    }
+}
+
+
+/* side bar css */
+
+.sidebar {
+    background-color:#F5F6FA; /* White background */
+    border-right: 1px solid #e0e0e0; /* Right border */
+    height: auto; /* Full height */
+}
+
+.sidebar h5 {
+    font-weight: bold; /* Bold for heading */
+    color: #007bff; /* Primary color */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+.menu-item {
+    padding: 10px 0px 10px 113px; /* Space for each menu item */
+    cursor: pointer; /* Pointer on hover */
+}
+
+.Menu-hover:hover {
+    color:      #007bff; /* Color on hover */
+    background-color: #e9ecef; /* Light gray background on hover */
+}
+
+.active {
+    background-color: #007bff; /* Active item background */
+    color: white; /* Active item text color */
+    border-radius: 0px 20px 20px 0px;
+}
+/* Off canvas */
+.offcanvas {
+    width: 250px; /* Set width for offcanvas */
+}
+
+/* Optional: Add hover effect for menu items */
+.menu-item {
+    transition: background-color 0.3s;
+}
+
+.menu-hover:hover {
+    background-color: #dadddf; /* Light gray background on hover */
+}
+
+/* Hamburger */
+.navbar-toggler {
+    border: none; /* Remove default border */
+}
+
+.navbar-toggler-icon {
+    background-color: #007bff; /* Customize the color of the hamburger icon */
+    width: 30px; /* Width of the icon */
+    height: 30px; /* Height of the icon */
+}
+
+/* media query for side bar */
+/* Responsive Styles */
+@media (max-width: 768px){
+    .container {
+        padding: 15px; /* Less padding on smaller screens */
+        width: 209%; /* Ensure it takes up more width on smaller screens */
+    }
+    .sidebar{
+        display: none;
+    }
+    .main-content{
+     padding: 5px; 
+    }
+}
+/* Base Styles (You can add your existing styles here) */
+
+@media (max-width: 1440px) {
+    .container {
+        margin-left: auto; /* Center the container */
+        margin-right: auto; /* Center the container */
+        padding: 15px; /* Less padding on smaller screens */
+        width: 100%; /* Use full width on smaller screens */
+        max-width: 600px; /* Keep a max width for better layout */
+    }
+
+    .btn-link {
+        font-size: 0.9rem; /* Slightly smaller buttons */
+        margin: 2px; /* Less margin on mobile */
+        flex: 1 1 auto; /* Allow buttons to take available space */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller heading */
+    }
+
+    .reservations-box {
+        min-height: 120px; /* Adjust height */
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 15px; /* Less padding on smaller screens */
+        width: 100%; /* Full width */
+        max-width: 600px; /* Keep max-width consistent */
+    }
+
+    .btn-link {
+        font-size: 0.9rem; /* Slightly smaller buttons */
+        margin: 2px; /* Less margin on mobile */
+        flex: 1 1 auto; /* Allow buttons to take available space */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller heading */
+    }
+
+    .reservations-box {
+        min-height: 120px; /* Adjust height */
+    }
+}
+
+
+@media (max-width: 425px) {
+    .container {
+        max-width: 90%; /* Wider container on very small screens */
+    }
+
+    h2 {
+        font-size: 1.25rem; /* Smaller heading for very small screens */
+    }
+    .main-content{
+        padding: 5px; 
+       }
+}
+
+
+
+.card-container {
+    max-width: 600px; /* Increased the width */
+    margin-top: 70px;
+    text-align: left;
+}
+
+h1 {
+    font-size: 2rem; /* Increased heading size */
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-left: 20px; /* Adjusted for mobile */
+}
+
+.welcome-card {
+    margin: 20px 0; /* Added margin for spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Aligns content and exclamation inline */
+    padding: 20px; /* Increased padding for better appearance */
+    border: 2px solid #000; /* Black border */
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    transition: transform 0.3s; /* Hover effect */
+}
+
+.welcome-card:hover {
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.card-content {
+    flex-grow: 1;
+    margin-right: 10px; /* Space between content and exclamation */
+}
+
+.bold,
+.red-text,
+.light-text,
+.start-link {
+    margin-bottom: 3px;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 1.2rem; /* Increased font size */
+}
+
+.red-text {
+    color: red;
+    font-size: 1rem; /* Adjusted font size */
+}
+
+.light-text {
+    color: gray;
+    font-size: 1rem; /* Adjusted font size */
+}
+
+.start-link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem; /* Adjusted font size */
+}
+
+.exclamation-mark {
+    font-size: 30px; /* Increased size */
+    color: red;
+    border: 2px solid red;
+    border-radius: 50%;
+    width: 50px; /* Size */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.container {
+    max-width: 800px; /* Adjust as needed */
+    margin: 40px auto; /* Center container */
+    padding: 20px;
+}
+
+.btn-group {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-start; /* Align buttons to start */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.btn-link {
+    margin: 5px; /* Space between buttons */
+    font-size: 1rem; /* Base font size for buttons */
+    text-decoration: none; /* Remove underline */
+    color: #007bff; /* Primary color for buttons */
+    flex: 1 1 auto; /* Allow buttons to grow and shrink */
+}
+
+.btn-link.active {
+    color: #00AAE5; 
+    border-bottom: 2px solid #00AAE5; /* Active link underline */
+}
+
+/* Responsive adjustments */
+@media (min-width: 992px) { /* For larger devices */
+    .btn-group {
+        flex-wrap: nowrap; /* Keep buttons inline */
+    }
+
+    .btn-link {
+        flex: 0 1 auto; /* Prevent buttons from growing */
+    }
+}
+
+@media (max-width: 768px) {
+    .btn-link {
+        font-size: 0.9rem; /* Smaller font size on mobile */
+        flex: 1 1 45%; /* Allow buttons to take up to 45% of width */
+        text-align: center; /* Center align text in buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-link {
+        font-size: 0.8rem; /* Further reduce font size on small screens */
+        flex: 1 1 100%; /* Full width on very small screens */
+    }
+}
+
+
+.reservations-box {
+    width: 100%; /* Full width for responsiveness */
+    min-height: 150px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.feedback {
+    margin-top: 20px;
+    width: 100%; /* Full width for responsiveness */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-container {
+        margin-top: 30px; /* Adjust top margin for mobile */
+    }
+
+    .welcome-card {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align to the left */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Smaller heading on mobile */
+        margin-left: 10px; /* Adjusted margin for mobile */
+    }
+
+    .reservations-box {
+        min-height: auto; /* Allow box to adjust height */
+        padding: 10px; /* Reduced padding on mobile */
+    }
+
+    .btn-link {
+        font-size: 0.9rem; /* Smaller text on mobile */
+        margin-right: 10px; /* Adjust spacing on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .exclamation-mark {
+        font-size: 24px; /* Smaller size for exclamation */
+        width: 40px; /* Smaller width */
+        height: 40px; /* Smaller height */
+    }
+}
+
+
+
+/* footer css */
+
+.footer {
+    margin: 0 auto; /* Center the footer */
+    max-width: 100%; /* Ensure it doesn’t exceed the width */
+    background-color:#F3F3F3; /* Light background for footer */
+    padding: 40px 0; /* Vertical padding */
+    border-top: 1px solid #e0e0e0; /* Light top border */
+    overflow: hidden; /* Prevent overflow */
+}
+.footer h5 {
+    font-weight: bold; /* Bold titles */
+}
+.footer a {
+    color: #000; /* Black color for links */
+    text-decoration: none; /* Remove underline */
+}
+.footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+.footer .social-icons a {
+    margin: 0 10px; /* Space between social icons */
+    color: #000; /* Black color for social icons */
+}

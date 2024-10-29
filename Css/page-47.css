@@ -1,0 +1,410 @@
+body {
+    
+    
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #FCFCFC;
+}
+
+/* Full screen layout for the container */
+.main-layout {
+    /* height: 100vh;  */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar styles */
+
+
+/* Main content area */
+.content-wrapper {
+    display: flex;
+    flex-grow: 1;
+    height: calc(100vh - 60px); /* Account for navbar height */
+}
+
+/* Sidebar styles */
+.sidebar{
+    /* background-color: #343a40; */
+    /* color: #fff; */
+    height: 100%;
+    padding: 20px;
+    position: relative;
+    transition: width 0.4s ease;
+    width: 30%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-right: 1px solid black;
+}
+
+/* Collapsed Sidebar */
+.sidebar.collapsed {
+    width: 0; /* Collapse sidebar to 0 width */
+    padding: 0; /* Remove padding when collapsed */
+}
+
+/* Middle and right sections */
+.middle-section, .right-section {
+    padding: 20px;
+    /* background-color: #ffffff; */
+    
+    transition: all 0.4s ease;
+}
+
+.middle-section {
+    width: 30%;
+    border-left: 1px solid #ddd;
+}
+
+.right-section {
+    width: 50%;
+    border-left: 1px solid #ddd;
+}
+
+/* Chevron button to open the sidebar */
+#openSidebarIcon {
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    background-color: #0091FF;
+    color: white;
+    height: 100%;
+    width: 5%; /* Small column width */
+}
+
+/* Show the chevron button when sidebar is hidden on large screens only */
+@media (min-width: 992px) {
+    #openSidebarIcon {
+        display: flex;
+    }
+}
+
+/* Close icon */
+#closeSidebar {
+    cursor: pointer;
+    /* color: #fff; */
+}
+
+/* Sidebar menu items */
+.sidebar ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    margin: 10px 0;
+    /* background-color: #495057; */
+    border-radius: 4px;
+    transition: background-color 0.4s ease;
+}
+
+.sidebar ul li:hover {
+    background-color:#EEEEEE;
+}
+
+/* Hamburger icon for mobile */
+.offcanvas-btn {
+    display: none;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+/* setting Icon */
+.setting-icon{
+background-color: #EEEEEE;
+padding: 10px;
+border-radius: 20%;
+}
+
+.your-space{
+background-color: #00AAE5;
+color: #EEEEEE;
+padding: 10px; 
+}
+.arrival{
+background-color: white;
+color: #EEEEEE;
+padding: 10px; 
+}
+
+
+
+
+/* Mobile-specific layout */
+@media (max-width: 992px) {
+    /* Sidebar becomes off-canvas */
+    .sidebar {
+        width: 250px;
+        position: absolute;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease;
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    /* Mobile hamburger icon below the navbar */
+    .offcanvas-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px; /* Space below navbar */
+    }
+
+    /* Middle and right sections stack vertically */
+    .middle-section, .right-section {
+        width: 100%;
+        border-left: none;
+        padding: 10px;
+    }
+
+    .right-section {
+        margin-top: 10px; /* Spacing between sections on mobile */
+        border-bottom:1px solid black ;
+    }
+
+    /* Hide desktop chevron toggle on mobile */
+    #openSidebarIcon {
+        display: none !important;
+    }
+}
+
+
+/* sidebar css */
+ .sidebar::-webkit-scrollbar {
+display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.sidebar {
+scrollbar-width: none; /* For Firefox */
+}
+
+/* Hide scrollbar for IE and Edge */
+.sidebar {
+-ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+/* Main content section adjustments */
+
+/* Status card styles */
+.status-card {
+border: 1px solid #ddd;
+border-radius: 10px;
+padding: 15px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+transition: all 0.3s ease;
+transition: all 0.3s ease; /* Smooth transition for hover */
+}
+.status-card:hover {
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+transform: translateY(-5px); /* Lift the card slightly on hover */
+}
+
+.status-card:hover {
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.status-header {
+display: flex;
+align-items: center;
+}
+
+.status-card:hover {
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Dot inside status card */
+.status-dot {
+width: 12px;
+height: 12px;
+background-color: red;
+border-radius: 50%;
+margin-right: 10px;
+justify-content: flex-start;
+}
+
+/* Custom card styles */
+.custom-card {
+border: none;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+margin-bottom: 20px;
+padding: 15px;
+transition: all 0.3s ease; /* Smooth transition for hover */
+}
+
+.custom-card:hover {
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+transform: translateY(-5px); /* Lift the card slightly on hover */
+}
+
+/* Middle Section */
+.policy-section { 
+padding-right: 20px;    
+max-width: auto;
+margin: 0 auto;
+}
+.policy-section h6 {
+font-weight: bold;
+margin-bottom: 10px;
+}
+.policy-section p {
+color: #555;
+margin-bottom: 20px;
+}
+.card-policy {
+border: 1px solid #ddd;
+border-radius: 10px;
+padding: 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+}
+.card-policy h6 {
+font-weight: bold;
+margin-bottom: 10px;
+}
+.card-policy p {
+margin: 0;
+font-size: 14px;
+color: #555;
+}
+.edit-icon, .toggle-switch {
+background-color: #eeeeee;
+border-radius: 50%;
+padding: 10px;
+cursor: pointer;
+}
+.switch {
+display: flex;
+align-items: center;
+cursor: pointer;
+}
+.switch input {
+display: none;
+}
+.slider {
+width: 34px;
+height: 20px;
+background-color: #ccc;
+border-radius: 34px;
+position: relative;
+transition: background-color 0.3s ease;
+}
+.slider:before {
+content: "";
+position: absolute;
+width: 14px;
+height: 14px;
+background-color: white;
+border-radius: 50%;
+top: 3px;
+left: 3px;
+transition: transform 0.3s ease;
+}
+input:checked + .slider {
+background-color: #007bff;
+}
+input:checked + .slider:before {
+transform: translateX(14px);
+}
+.divider {
+border-bottom: 1px solid black;
+margin: 20px 0;
+}
+.learn-more {
+color: #007bff;
+font-weight: bold;
+cursor: pointer;
+text-decoration: underline;
+}
+
+
+/* right section */
+
+.container-right {
+    max-width: 600px;
+    padding: 20px;
+    margin-left: 0;
+    margin-right: auto;
+    border-left: 1px solid black;
+}
+
+.policy-option {
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to top */
+}
+
+.policy-option h6 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.policy-option p {
+    margin: 0;
+    /* color: #6c757d; */
+}
+
+.btn-group {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the start */
+    gap: 20px;
+}
+
+.btn-group .btn {
+    width: auto;
+    font-weight: bold;
+    padding: 12px 20px;
+    font-size: 1rem;
+}
+
+.custom-radio {
+border: 2px solid #000;
+border-radius: 50%;
+height: 24px;
+width: 24px;
+display: inline-block;
+position: relative;
+cursor: pointer;
+}
+
+.custom-radio.selected {
+background-color: #000; /* Black when selected */
+}
+
+.custom-radio::before {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+height: 12px;
+width: 12px;
+background-color: #fff; /* Inner circle */
+border-radius: 50%;
+}
+
+
+/* Ensure text wraps correctly without overlapping the radio button */
+.policy-text {
+    flex: 1; /* Take up remaining space */
+    padding-right: 20px;
+}
+
+
+
