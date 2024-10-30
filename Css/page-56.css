@@ -1,0 +1,101 @@
+/* Main container: Centered vertically and horizontally */
+.guest-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full viewport width */
+}
+
+/* Guest Box Styling */
+.guest-box {
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 40px;
+    max-height: 800px;
+    max-width: 800px;
+    width: 100%; /* Set width to full */
+    overflow: hidden; /* Hide overflow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adding subtle shadow */
+    border-radius: 10px; /* Rounded corners for a smoother look */
+}
+
+/* Guest Image */
+.guest-image {
+    width: auto;
+    height: 100%;
+    margin: 5px;
+}
+
+/* Guest Icons Container */
+.guest-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows the images to wrap to the next line */
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+/* Counter Controls */
+.counter-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.counter-btn {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.counter-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.count-display {
+    font-size: 3rem;
+    font-weight: bold;
+    width: 50px;
+}
+
+/* Label */
+.label {
+    font-size: 2.0rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .guest-box {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    .guest-image {
+        width: auto;
+        height: 100%;
+    }
+
+    .counter-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    .count-display {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}

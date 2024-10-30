@@ -1,0 +1,111 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font to all elements */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+
+/* Navbar Styles */
+
+.navbar-brand img {
+    height: auto;
+}
+
+/* Notification icon styling */
+.bi-bell-fill {
+    color: #007bff;
+}
+
+/* Notification dot */
+.position-absolute {
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* Profile picture and dropdown */
+.dropdown-toggle img {
+    margin-right: 8px;
+}
+
+.dropdown-menu {
+    min-width: 200px;
+}
+@media (max-width: 320px) {
+    .dropdown .ms-2 {
+        font-size: 0.8rem; /* Adjust the font size as needed */
+    }
+
+    .dropdown .fa-sharp {
+        font-size: 0.8rem; /* Adjust the icon size as needed */
+    }
+}
+
+/* Global Styles */
+body {
+    background-color: #f8f9fa;
+}
+
+.upload-area {
+    height: 50vh;
+    width: 100%; /* Full width */
+    border: 2px dashed #080808; /* Dashed border */
+    display: flex; /* Center text within the area */
+    flex-direction: column; /* Center text vertically */
+    justify-content: center; /* Center text vertically */
+    align-items: center; /* Center text horizontally */
+    transition: background-color 0.2s; /* Transition effect for hover */
+}
+
+.upload-area:hover {
+    background-color: #e7f0ff; /* Light background on hover */
+}
+
+/* Upload label styling */
+.upload-label {
+    cursor: pointer; /* Makes label clickable */
+    color: #007bff; /* Link color */
+    text-align: center; /* Center text */
+}
+
+/* Button Styles */
+.btn-wide {
+    min-width: 150px; /* Wider buttons */
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.5rem; /* Smaller heading for small devices */
+    }
+    
+    .upload-area {
+        height: 150px; /* Adjusted height for smaller devices */
+    }
+
+    .upload-label {
+        font-size: 0.9rem; /* Smaller font for upload instructions */
+    }
+
+    .btn-wide {
+        width: 100%; /* Full width buttons on small devices */
+        margin-bottom: 2px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .upload-area {
+        height: 180px; /* Adjusted height for medium devices */
+    }
+    
+    .btn-wide {
+        width: 120px; /* Fixed width for medium devices */
+    }
+}

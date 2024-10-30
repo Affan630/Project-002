@@ -1,0 +1,418 @@
+body {
+    
+    
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    
+    background-color: #FCFCFC;
+}
+
+/* Main Layout and Content Wrapper */
+.main-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-grow: 1;
+    height: calc(100vh - 60px); /* Account for navbar height */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100vh;
+    padding: 20px;
+    position: relative;
+    transition: width 0.4s ease;
+    width: 30%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-right: 1px solid black;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Webkit browsers */
+}
+
+.sidebar.collapsed {
+    width: 0;
+    padding: 0;
+}
+
+/* Sidebar Menu Items */
+.sidebar ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    transition: background-color 0.4s ease;
+}
+
+.sidebar ul li:hover {
+    background-color: #EEEEEE;
+}
+
+/* Middle and Right Sections */
+.middle-section, .right-section {
+    padding: 20px;
+    transition: all 0.4s ease;
+}
+
+.middle-section {
+    width: 30%;
+    border-left: 1px solid #ddd;
+}
+
+.right-section {
+    width: 50%;
+    border-left: 1px solid #ddd;
+}
+
+/* Chevron Button for Sidebar */
+#openSidebarIcon {
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    background-color: #0091FF;
+    color: white;
+    height: 100vh;
+    width: 5%;
+}
+
+#closeSidebar {
+    cursor: pointer;
+}
+
+@media (min-width: 992px) {
+    #openSidebarIcon {
+        display: flex;
+    }
+}
+
+/* Off-canvas for Mobile */
+.offcanvas-btn {
+    display: none;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 250px;
+        position: absolute;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease;
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    .offcanvas-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .middle-section, .right-section {
+        width: 100%;
+        border-left: none;
+        padding: 10px;
+    }
+
+    .right-section {
+        margin-top: 10px;
+        border-bottom: 1px solid black;
+    }
+
+    #openSidebarIcon {
+        display: none !important;
+    }
+}
+
+/* Status Card */
+.status-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.status-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Custom Cards */
+.custom-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.custom-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Other Elements */
+.setting-icon {
+    background-color: #EEEEEE;
+    padding: 10px;
+    border-radius: 20%;
+}
+
+.your-space {
+    background-color: #00AAE5;
+    color: #EEEEEE;
+    padding: 10px;
+}
+
+.arrival {
+    background-color: white;
+    color: #EEEEEE;
+    padding: 10px;
+}
+
+
+/* Middle Section */
+.guest-safety-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.guest-safety-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.guest-safety-description {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Card styles */
+.guest-safety-card {
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between; /* Space between text and chevron */
+    align-items: center; /* Vertically center chevron and text */
+    cursor: pointer;
+}
+
+/* Left-side text (heading and paragraph) */
+.guest-safety-card-text {
+    flex: 1; /* Take up remaining space */
+}
+
+.guest-safety-card-text h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.guest-safety-card-text p {
+    font-size: 0.9rem;
+    color: #999;
+    margin: 0;
+}
+
+/* Chevron Icon */
+.guest-safety-card i {
+    font-size: 1rem;
+    color: #333;
+}
+
+.guest-safety-card:last-child {
+    border-bottom: none; /* Remove border from the last card */
+}
+
+
+/* right section */
+
+.safety-container {
+    position: relative;
+    max-width: 700px;
+    height: 100vh; /* Full height of the viewport */
+    margin: 0 auto;
+    overflow-y: auto; /* Vertical scroll */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 1px solid black;
+}
+
+/* Hide scrollbars */
+.safety-container::-webkit-scrollbar {
+    display: none; /* For WebKit browsers */
+}
+
+.safety-container {
+    -ms-overflow-style: none;  /* For IE and Edge */
+    scrollbar-width: none;     /* For Firefox */
+}
+
+.safety-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.safety-description {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.safety-card {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+}
+
+.safety-card:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+.safety-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.safety-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.safety-content p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0 0 10px;
+}
+
+.safety-content .learn-more {
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Buttons for X and check */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.action-buttons button {
+    border: 2px solid #999;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Different styles for active/inactive buttons */
+.action-buttons .x-button {
+    color: #999;
+}
+
+.action-buttons .check-button {
+    color: #007bff;
+}
+
+.action-buttons .x-button:hover {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.action-buttons .check-button:hover {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+/* Button section */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.button-group .btn {
+    width: 48%;
+    font-weight: bold;
+    padding: 15px 0;
+    font-size: 1rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn-primary {
+    background-color: #007bff;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+@media  (max-width: 768px) {
+    .sidebar {
+
+        border-bottom: 1px solid black;
+
+    }
+    .safety-container{
+        border-left: none;
+        border-top: 1px solid black;
+    }
+}

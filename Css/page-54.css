@@ -1,0 +1,185 @@
+
+/* Main container */
+.description-container {
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+/* border-right: 1px solid black; */
+
+
+}
+
+/* Heading styles */
+.description-heading {
+font-size: 1.8rem;
+font-weight: bold;
+margin-bottom: 20px;
+color: #333;
+}
+
+/* Description item container */
+.description-item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+border: 1px solid black;
+border-radius: 10px;
+margin-bottom: 15px;
+background-color: white;
+transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.description-item:hover {
+background-color: #f9f9f9;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Content inside the item */
+.item-content h4 {
+font-size: 1.2rem;
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+.item-content p {
+margin: 0;
+font-size: 1rem;
+color: #555;
+}
+
+/* Icon for chevron */
+.item-icon {
+font-size: 1.2rem;
+color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .description-container{
+        border-bottom: 1px solid black;
+        width: 100%;
+}
+
+
+.description-heading {
+ font-size: 1.5rem;
+}
+
+.description-item {
+ padding: 15px;
+}
+
+.item-content h4 {
+ font-size: 1rem;
+}
+
+.item-content p {
+ font-size: 0.9rem;
+}
+
+.item-icon {
+ font-size: 1rem;
+}
+.description-box {
+
+    width: 100%;
+}
+}
+
+/* Main Container */
+.description-box {
+max-width: 500px;
+margin: 0 auto;
+padding: 30px;
+background-color: white;
+
+border-left: 1px solid black;
+}
+
+/* Heading */
+.description-box h2 {
+font-size: 1.6rem;
+font-weight: bold;
+margin-bottom: 15px;
+}
+
+/* Character Count */
+.char-count {
+font-size: 0.9rem;
+color: #7f8c8d;
+margin-bottom: 20px;
+}
+
+/* Description Text */
+.description-text {
+font-size: 1rem;
+margin-bottom: 50%;
+}
+
+/* Button Group */
+.btn-container {
+display: flex;
+gap: 10px;
+}
+
+.btn {
+padding: 12px 30px;
+font-size: 1rem;
+border-radius: 8px;
+cursor: pointer;
+border: none;
+font-weight: bold;
+}
+
+.btn-cancel {
+background-color: #f0f0f0;
+color: #333;
+}
+
+.btn-save {
+background-color: #007bff;
+color: white;
+}
+
+.btn-cancel:hover {
+background-color: #e0e0e0;
+}
+
+.btn-save:hover {
+background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .description-box {
+        padding: 20px;
+        border-left: none;
+        width: 100%;
+    }
+
+.description-box h2 {
+ font-size: 1.4rem;
+}
+
+.char-count {
+ font-size: 0.8rem;
+}
+
+.description-text {
+ font-size: 0.9rem;
+}
+
+.btn-container {
+ flex-direction: column;
+}
+
+.btn {
+ width: 100%;
+ padding: 12px;
+}
+}
+
+
+
+

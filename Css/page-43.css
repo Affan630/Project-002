@@ -1,0 +1,136 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 20px;
+    /* background-color: #f7f7f7; */
+}
+
+.content {
+    background-color: #fff;
+    padding: 40px;
+    width: 100%;
+    max-width: 700px;  /* Increased the width */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    text-align: left;  /* Text aligned to the left */
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.verification-text {
+    font-size: 1.125rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.phone-number {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.code-input-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.fancy-input {
+    width: 65px;
+    height: 75px;
+    font-size: 1.75rem;
+    text-align: center;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.fancy-input:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.verify-btn {
+    display: block;
+    width: 100%; /* Button takes full width */
+    padding: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.verify-btn:hover {
+    background-color: #0056b3;
+}
+
+.resend-text {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 15px;
+}
+
+.resend-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.resend-text a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .fancy-input {
+        width: 55px;
+        height: 65px;
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p, .verification-text {
+        font-size: 1rem;
+    }
+
+    .verify-btn {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .fancy-input {
+        width: 45px;
+        height: 55px;
+        font-size: 1.25rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    p, .verification-text {
+        font-size: 0.9rem;
+    }
+
+    .verify-btn {
+        font-size: 1rem;
+    }
+}

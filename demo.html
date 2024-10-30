@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Listings</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Page container */
+        .listings-container {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* Heading and new listing link */
+        .listings-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .listings-heading {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .create-listing-link {
+            font-weight: bold;
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .create-listing-link:hover {
+            color: #0056b3;
+        }
+
+        /* Flex container for cards */
+        .cards-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Space between cards */
+        }
+
+        /* Card styling */
+        .listing-card {
+            width: 250px; /* Fixed width for inline layout */
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .listing-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .listing-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        /* Card content */
+        .card-content {
+            padding: 20px;
+        }
+
+        .listing-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .listing-address {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .listing-rating {
+            color: #ffc107;
+            font-size: 1rem;
+        }
+
+        .superhost-text {
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Button styling */
+        .market-button {
+            background-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .market-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .listings-heading {
+                font-size: 1.5rem;
+            }
+            .listing-card {
+                width: 200px;
+            }
+            .listing-image {
+                height: 130px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container listings-container">
+    <!-- Heading and Create New Listing Link -->
+    <div class="listings-header">
+        <h2 class="listings-heading">Your listings</h2>
+        <a href="#" class="create-listing-link">Create New Listing</a>
+    </div>
+
+    <!-- Listings Flexbox Wrapper -->
+    <div class="cards-wrapper">
+        <!-- Card Item -->
+        <div class="card listing-card">
+            <img src="https://via.placeholder.com/300x200" alt="Listing Image" class="listing-image">
+            <div class="card-content">
+                <h5 class="listing-title">Water Villa with Private Pool & Slide</h5>
+                <p class="listing-address">1751 67TH ST APT F11 BRO...</p>
+                <div class="d-flex align-items-center mb-3">
+                    <span class="listing-rating">★★★★★ 4.95</span>
+                    <span class="superhost-text ms-2">• Superhost</span>
+                </div>
+                <button class="market-button">Market Property</button>
+            </div>
+        </div>
+        <!-- Repeat Card Item as Needed -->
+        <div class="card listing-card">
+            <img src="https://via.placeholder.com/300x200" alt="Listing Image" class="listing-image">
+            <div class="card-content">
+                <h5 class="listing-title">Water Villa with Private Pool & Slide</h5>
+                <p class="listing-address">1751 67TH ST APT F11 BRO...</p>
+                <div class="d-flex align-items-center mb-3">
+                    <span class="listing-rating">★★★★★ 4.95</span>
+                    <span class="superhost-text ms-2">• Superhost</span>
+                </div>
+                <button class="market-button">Market Property</button>
+            </div>
+        </div>
+        <div class="card listing-card">
+            <img src="https://via.placeholder.com/300x200" alt="Listing Image" class="listing-image">
+            <div class="card-content">
+                <h5 class="listing-title">Water Villa with Private Pool & Slide</h5>
+                <p class="listing-address">1751 67TH ST APT F11 BRO...</p>
+                <div class="d-flex align-items-center mb-3">
+                    <span class="listing-rating">★★★★★ 4.95</span>
+                    <span class="superhost-text ms-2">• Superhost</span>
+                </div>
+                <button class="market-button">Market Property</button>
+            </div>
+        </div>
+        <div class="card listing-card">
+            <img src="https://via.placeholder.com/300x200" alt="Listing Image" class="listing-image">
+            <div class="card-content">
+                <h5 class="listing-title">Water Villa with Private Pool & Slide</h5>
+                <p class="listing-address">1751 67TH ST APT F11 BRO...</p>
+                <div class="d-flex align-items-center mb-3">
+                    <span class="listing-rating">★★★★★ 4.95</span>
+                    <span class="superhost-text ms-2">• Superhost</span>
+                </div>
+                <button class="market-button">Market Property</button>
+            </div>
+        </div>
+        <div class="card listing-card">
+            <img src="https://via.placeholder.com/300x200" alt="Listing Image" class="listing-image">
+            <div class="card-content">
+                <h5 class="listing-title">Water Villa with Private Pool & Slide</h5>
+                <p class="listing-address">1751 67TH ST APT F11 BRO...</p>
+                <div class="d-flex align-items-center mb-3">
+                    <span class="listing-rating">★★★★★ 4.95</span>
+                    <span class="superhost-text ms-2">• Superhost</span>
+                </div>
+                <button class="market-button">Market Property</button>
+            </div>
+        </div>
+        <div class="card listing-card">
+            <img src="https://via.placeholder.com/300x200" alt="Listing Image" class="listing-image">
+            <div class="card-content">
+                <h5 class="listing-title">Water Villa with Private Pool & Slide</h5>
+                <p class="listing-address">1751 67TH ST APT F11 BRO...</p>
+                <div class="d-flex align-items-center mb-3">
+                    <span class="listing-rating">★★★★★ 4.95</span>
+                    <span class="superhost-text ms-2">• Superhost</span>
+                </div>
+                <button class="market-button">Market Property</button>
+            </div>
+        </div>
+        <div class="card listing-card">
+            <img src="https://via.placeholder.com/300x200" alt="Listing Image" class="listing-image">
+            <div class="card-content">
+                <h5 class="listing-title">Water Villa with Private Pool & Slide</h5>
+                <p class="listing-address">1751 67TH ST APT F11 BRO...</p>
+                <div class="d-flex align-items-center mb-3">
+                    <span class="listing-rating">★★★★★ 4.95</span>
+                    <span class="superhost-text ms-2">• Superhost</span>
+                </div>
+                <button class="market-button">Market Property</button>
+            </div>
+        </div>
+        <div class="card listing-card">
+            <img src="https://via.placeholder.com/300x200" alt="Listing Image" class="listing-image">
+            <div class="card-content">
+                <h5 class="listing-title">Water Villa with Private Pool & Slide</h5>
+                <p class="listing-address">1751 67TH ST APT F11 BRO...</p>
+                <div class="d-flex align-items-center mb-3">
+                    <span class="listing-rating">★★★★★ 4.95</span>
+                    <span class="superhost-text ms-2">• Superhost</span>
+                </div>
+                <button class="market-button">Market Property</button>
+            </div>
+        </div>
+        <!-- More cards as needed -->
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

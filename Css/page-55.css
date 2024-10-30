@@ -1,0 +1,109 @@
+.amenities-container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+/* Header section styling */
+.amenities-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.amenities-header h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.edit-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn, .add-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover, .add-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Image section styling */
+.amenities-image-section img {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Text section styling */
+.amenities-text h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.amenities-text p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 4rem;
+}
+
+/* Button section styling */
+.amenities-btn-section {
+    margin-top: 20px;
+}
+
+.add-amenities-btn {
+    padding: 12px 40px;
+    background-color: #f0f0f0;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-amenities-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .amenities-container {
+        padding: 20px;
+    }
+    
+    .amenities-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .edit-btn, .add-btn, .add-amenities-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .amenities-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .amenities-text p {
+        font-size: 0.9rem;
+    }
+
+    .amenities-image-section img {
+        max-width: auto;
+    }
+}

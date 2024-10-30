@@ -1,0 +1,299 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+* {
+    box-sizing: border-box; /* Ensure padding and margin are included in total width and height */
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font to all elements */
+    margin: 0; /* Remove default body margin */
+}
+
+/* Navbar Styles */
+.navbar-brand img {
+    height: auto;
+}
+
+/* Notification icon styling */
+.bi-bell-fill {
+    color: #007bff;
+}
+
+/* Notification dot */
+.position-absolute {
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* Profile picture and dropdown */
+.dropdown-toggle img {
+    margin-right: 8px;
+}
+
+@media (max-width: 320px) {
+    .dropdown .ms-2 {
+        font-size: 0.8rem; /* Adjust the font size as needed */
+    }
+
+    .dropdown .fa-sharp {
+        font-size: 0.8rem; /* Adjust the icon size as needed */
+    }
+}
+
+
+.text-muted {
+    color: #6c757d !important; /* Muted text color */
+}
+
+
+.message-sidebar {
+    background-color: #F5F6FA;
+}
+
+.message-list {
+    max-height: 770px; /* Set a maximum height for the message list */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Optional padding for the message list */
+    width: 100%; /* Ensure the message list takes the full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #007bff #f8f9fa; /* For Firefox */
+}
+
+/* Custom scrollbar for Webkit browsers (Chrome, Safari) */
+.message-list::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.message-list::-webkit-scrollbar-thumb {
+    background-color: #007bff; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Round edges for the thumb */
+}
+
+.message-list::-webkit-scrollbar-track {
+    background: #f8f9fa; /* Color of the scrollbar track */
+}
+
+.message-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    position: relative; /* For positioning badge */
+    border-radius: 5px; /* Rounded corners for message items */
+    transition: background-color 0.2s; /* Smooth transition for background color */
+}
+
+.message-item:hover {
+    background-color: #e9ecef; /* Highlight on hover */
+}
+
+.user-img {
+    border-radius: 50%;
+    width: 40px; /* Size for user images */
+    height: 40px;
+    margin-right: 10px;
+}
+
+.badge {
+    margin-left: 10px; /* Space between time and unread badge */
+}
+
+.message-detail {
+    overflow-y: auto; /* Enable vertical scrolling */
+    flex-grow: 1; /* Take remaining space */
+    transition: margin-right 0.5s ease; /* Smooth transition for margin */
+    padding: 20px;
+    border: 1px solid #e0e0e0; /* Light border for the chat container */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #ffffff; /* White background for the container */
+    height: 90vh; /* Set a height for the chat container */
+    display: flex;
+    flex-direction: column;
+}
+
+.message-content {
+    flex-grow: 1; /* Allow the message content to grow */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Padding for the message content */
+    width: 100%; /* Ensure the message list takes the full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #007bff #f8f9fa; /* For Firefox */
+}
+
+/* Custom scrollbar for Webkit browsers (Chrome, Safari) */
+.message-content::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.message-content::-webkit-scrollbar-thumb {
+    background-color: #007bff; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Round edges for the thumb */
+}
+
+.message-content::-webkit-scrollbar-track {
+    background: #f8f9fa; /* Color of the scrollbar track */
+}
+
+.message {
+    padding: 8px; /* Padding for messages */
+    border-radius: 10px; /* Rounded corners for messages */
+    margin-bottom: 10px; /* Space between messages */
+    position: relative; /* For positioning of the time */
+    max-width: 70%; /* Set max width for messages */
+    font-size: 0.85rem; /* Smaller text size for messages */
+    display: flex; /* Use flex to align icon and text inline */
+    align-items: flex-start; /* Align items at the top */
+}
+
+.sent {
+    background-color: #E8F5FF; /* Color for sent messages */
+    margin-left: auto; /* Align sent messages to the right */
+}
+
+.received {
+    background-color: #F5F5F5; /* Color for received messages */
+    margin-right: auto; /* Align received messages to the left */
+}
+
+.message-input {
+    padding: 10px; /* Padding for the input area */
+    border-top: 1px solid #e0e0e0; /* Top border for input area */
+    background-color: #ffffff; /* Background color for input area */
+}
+
+.input-group {
+    width: 100%; /* Full width for input group */
+}
+
+/* Styles for time display */
+.message-time {
+    font-size: 0.75rem; /* Smaller font size for time */
+    margin-top: 5px; /* Space above the time */
+    color: gray; /* Color for time text */
+}
+.chat-area {
+    height: 100vh; /* Full height */
+    overflow-y: auto; /* Scrollable if content exceeds */
+}
+.chat-header {
+    background-color: #f8f9fa; /* Light background for header */
+    border-bottom: 1px solid #e0e0e0; /* Light border */
+}
+
+.chat-header h6 {
+    font-size: 1rem; /* Adjust font size as needed */
+}
+
+.chat-header small {
+    font-size: 0.85rem; /* Smaller font for status */
+}
+
+
+
+/* Detaisl Css */
+.detail-container {
+    padding: 20px; /* Padding for the container */
+    background-color: #f8f9fa; /* Light background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for width and opacity */
+    height: 100%; /* Full height */
+    opacity: 1; /* Fully visible */
+}
+
+.profile-img {
+    width: 80px; /* Set size for profile image */
+    height: 80px;
+    border-radius: 50%; /* Circular profile image */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.detail-header {
+    display: flex; /* Flexbox for header alignment */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.icon-buttons {
+    display: flex; /* Flexbox for button alignment */
+    justify-content: center; /* Center buttons */
+    margin-bottom: 20px; /* Space below the buttons */
+}
+
+.icon-buttons button {
+    margin: 0 5px; /* Space between buttons */
+}
+
+.expandable {
+    margin-bottom: 15px; /* Space between expandable sections */
+}
+
+.files-grid {
+    display: grid; /* Grid layout for files */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 5px; /* Space between grid items */
+    display: none; /* Hide grid initially */
+}
+
+.files-grid img {
+    width: 100%; /* Full width images */
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+/* Profile icon style */
+.profile-icon {
+    transition: transform 0.5s ease; /* Smooth transition for profile icon */
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust detail section when hidden */
+.hidden {
+    display: none; /* Use display none for smoother transition */
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .message-sidebar {
+        display: none; /* Hide sidebar on mobile */
+    }
+
+    .detail-section {
+        flex-basis: 100%; /* Take full width on mobile */
+    }
+
+    .message-detail {
+        flex-grow: 1; /* Allow chat to take remaining space */
+    }
+
+    .detail-header {
+        justify-content: center; /* Center header on mobile */
+    }
+
+    .files-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    }
+
+    .privacy-card {
+        max-width: 100%; /* Full width for privacy card */
+    }
+}
+
+@media (min-width: 769px) {
+    .files-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    }
+
+    .privacy-card {
+        max-width: 250px; /* Set a max width for the privacy card */
+    }
+}

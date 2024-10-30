@@ -1,0 +1,174 @@
+/* Profile picture and dropdown */
+.dropdown-toggle img {
+    margin-right: 8px;
+}
+
+.dropdown-menu {
+    min-width: 200px;
+}
+@media (max-width: 320px) {
+    .dropdown .ms-2 {
+        font-size: 0.8rem; /* Adjust the font size as needed */
+    }
+
+    .dropdown .fa-sharp {
+        font-size: 0.8rem; /* Adjust the icon size as needed */
+    }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0; /* Padding for mobile */
+    }
+
+    .navbar-brand img {
+        width: 150px; /* Smaller logo for mobile */
+    }
+
+    .dropdown .text-end {
+        text-align: left; /* Align text to the left on mobile */
+    }
+
+    .dropdown-menu {
+        position: absolute; /* Dropdown appears above other content */
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+    /* background-color: #f7f7f7; */
+}
+
+.content {
+    text-align: left;
+    width: 70%; /* Increased width for larger screens */
+    background-color: #fff;
+    padding: 50px; /* Increased padding for better look */
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 2rem; /* Increased size of heading */
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    color: #555;
+    font-size: 1.25rem; /* Increased paragraph font size */
+    margin-bottom: 20px;
+}
+
+.note {
+    font-size: 1rem; /* Increased note font size */
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.info-box {
+    background-color: #f0f0f0;
+    padding: 20px; /* Increased padding for the box */
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.info-box p {
+    font-size: 1rem; /* Increased font size inside the box */
+    color: #666;
+}
+
+.info-box a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.info-box a:hover {
+    text-decoration: underline;
+}
+
+.next-btn {
+    display: block;
+    width: 100%;
+    padding: 20px 0; /* Increased padding */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem; /* Increased button text size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.next-btn:hover {
+    background-color: #0056b3;
+}
+
+/* For tablets and larger screens */
+@media screen and (max-width: 1024px) {
+    .content {
+        width: 80%; /* Adjusted for medium screens */
+        padding: 40px;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    p {
+        font-size: 1.125rem;
+    }
+
+    .next-btn {
+        font-size: 1.125rem;
+        padding: 18px 0;
+    }
+}
+
+/* For small screens and phones */
+@media screen and (max-width: 768px) {
+    .content {
+        width: 90%; /* Reduced width for smaller screens */
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .next-btn {
+        font-size: 1rem;
+        padding: 16px 0;
+    }
+}
+
+/* For very small screens and phones in portrait mode */
+@media screen and (max-width: 480px) {
+    .content {
+        width: 95%; /* Full width for very small screens */
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+    }
+
+    .next-btn {
+        font-size: 0.875rem;
+        padding: 14px 0;
+    }
+}

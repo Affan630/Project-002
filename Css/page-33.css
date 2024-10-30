@@ -1,0 +1,237 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font to all elements */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+
+/* Navbar Styles */
+
+.navbar-brand img {
+    height: auto;
+}
+
+/* Notification icon styling */
+.bi-bell-fill {
+    color: #007bff;
+}
+
+/* Notification dot */
+.position-absolute {
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* Profile picture and dropdown */
+.dropdown-toggle img {
+    margin-right: 8px;
+}
+
+.dropdown-menu {
+    min-width: 200px;
+}
+@media (max-width: 320px) {
+    .dropdown .ms-2 {
+        font-size: 0.8rem; /* Adjust the font size as needed */
+    }
+
+    .dropdown .fa-sharp {
+        font-size: 0.8rem; /* Adjust the icon size as needed */
+    }
+}
+
+
+/* Responsive Design */
+.container {
+    max-width: 800px; /* Max width for container */
+    margin: auto; /* Center the container */
+    padding: 30px; /* Add padding */
+}
+
+/* Card Styles */
+.card {
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition on hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+/* Form Styles */
+.form-check {
+    display: flex; /* Align items inline */
+    justify-content: space-between; /* Space between label and radio button */
+    margin-bottom: 15px; /* Space between radio buttons */
+    transition: background-color 0.2s; /* Smooth transition for hover */
+}
+
+.form-check:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Light background on hover */
+}
+
+/* Custom radio button styles */
+.form-check-input {
+    appearance: none; /* Remove default radio button style */
+    width: 40px; /* Set width */
+    height: 40px; /* Set height */
+    border: 2px solid #000; /* Black border */
+    border-radius: 50%; /* Round shape */
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+
+.form-check-input:checked {
+    background-color: #000; /* Black background when checked */
+    border-color: #000; /* Keep border color same */
+}
+
+/* Optional: Add a focus style */
+.form-check-input:focus {
+    border-color: #000000; /* Blue border on focus */
+}
+.form-check-label{
+
+    font-size: x-large;
+    font-weight: 600;
+}
+
+
+.form-select {
+    width: 100%; /* Full width for dropdown */
+    font-size: 1.4rem; /* Increase dropdown text size */
+}
+
+/* Button Styles */
+.btn {
+    min-width: 100px; /* Minimum width for buttons */
+    font-size: 1.3rem; /* Increase button text size */
+    padding: 10px; /* Increase button padding */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover */
+}
+
+.btn-primary {
+    background-color: #0091FF; /* Primary button color */
+    border: none; /* Remove border */
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Secondary button color */
+    border: none; /* Remove border */
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268; /* Darker secondary button color on hover */
+}
+
+.btn-primary:hover {
+    background-color: rgb(0, 106, 145); /* Darker primary button color on hover */
+}
+
+.before-text {
+    background-color: #F6F6F6; /* Background for text section */
+    padding: 20px; /* Padding around text */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .container {
+        padding: 15px; /* Less padding on smaller screens */
+        width: 95%; /* Ensure it takes up more width on smaller screens */
+    }
+
+    .card {
+        margin: 0; /* Remove margin for cards */
+        padding: 20px; /* Less padding on cards */
+    }
+
+    .form-check-label {
+        font-size: 1rem; /* Smaller text for labels */
+    }
+
+    .reservations-box {
+        min-height: 150px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Less padding on smaller screens */
+        width: 95%; /* Ensure it takes up more width on smaller screens */
+    }
+
+    .sidebar {
+        display: none; /* Hide sidebar on mobile */
+    }
+
+    .btn-link {
+        font-size: 0.9rem; /* Slightly smaller buttons on mobile */
+        margin: 2px; /* Less margin on mobile */
+        flex: 1 0 45%; /* Allow buttons to take 45% width for two buttons per row */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller heading on mobile */
+    }
+
+    .reservations-box {
+        min-height: 120px; /* Adjust height for smaller screens */
+        
+    }
+
+    .form-group {
+        margin: 0 15px; /* Add margin on small devices */
+    }
+
+    .form-label {
+        font-size: 0.9rem; /* Slightly smaller label size */
+    }
+
+    .form-select {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+    .form-check-input {
+        appearance: none; /* Remove default radio button style */
+        width: 20px; /* Set width */
+        height: 20px; /* Set height */
+        border: 2px solid #000; /* Black border */
+        border-radius: 50%; /* Round shape */
+        outline: none; /* Remove outline */
+        cursor: pointer; /* Change cursor to pointer */
+        transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+    }
+    .form-check-label{
+
+        font-size: small;
+        font-weight: 600;
+    }
+    
+}
+
+/* Styles for very small screens */
+@media (max-width: 320px) {
+    .container {
+        padding: 5px; /* Less padding on extra small screens */
+    }
+
+    .btn {
+        font-size: 1rem; /* Smaller button text */
+    }
+}
+
+

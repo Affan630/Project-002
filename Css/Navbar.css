@@ -1,0 +1,77 @@
+/* Navbar css start*/
+
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font to all elements */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f8f9fa; */
+    padding: 0;
+    margin: 0;
+}
+
+ /* Navbar Styles  */
+
+ nav{
+    border-bottom: 1px solid black;
+ }
+.navbar-brand img {
+    height: auto;
+}
+
+/* Notification icon styling */
+.bi-bell-fill {
+    color: #007bff;
+}
+
+/* Notification dot */
+.position-absolute {
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* Profile picture and dropdown */
+.dropdown-toggle img {
+    margin-right: 8px;
+}
+
+.dropdown-menu {
+    min-width: 200px;
+}
+@media (max-width: 320px) {
+    .dropdown .ms-2 {
+        font-size: 0.8rem; /* Adjust the font size as needed */
+    }
+
+    .dropdown .fa-sharp {
+        font-size: 0.8rem; /* Adjust the icon size as needed */
+    }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0; /* Padding for mobile */
+    }
+
+    .navbar-brand img {
+        width: 150px; /* Smaller logo for mobile */
+    }
+
+    .dropdown .text-end {
+        text-align: left; /* Align text to the left on mobile */
+    }
+
+    .dropdown-menu {
+        position: absolute; /* Dropdown appears above other content */
+    }
+}
