@@ -11,7 +11,7 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Custom CSS files for specific styles -->
-    <link rel="stylesheet" href="Css/page-54.css">
+    <link rel="stylesheet" href="Css/page-75.css">
     <link rel="stylesheet" href="Css/Navbar.css">
     <link rel="stylesheet" href="Css/sidebar.css">
     <title>Bonstay</title>
@@ -241,71 +241,93 @@
 
             <!-- Center Section -->
 
-            <div class="description-container">
-                <h2 class="description-heading">Description</h2>
-                
-                <!-- Description List Items -->
-                <div class="description-item">
-                    <div class="item-content">
-                        <h4>Listing description</h4>
-                        <p>You’ll have a great time at this comfortable place to stay.</p>
-                    </div>
-                    <i class="fas fa-chevron-right item-icon"></i>
+            <div class="amenities-container">
+                <!-- Header section -->
+                <div class="amenities-header">
+                    <div>
+                    <h2>Photo tour</h2>
                 </div>
-            
-                <div class="description-item">
-                    <div class="item-content">
-                        <h4>Your property</h4>
-                        <p>Add details</p>
-                    </div>
-                    <i class="fas fa-chevron-right item-icon"></i>
-                </div>
-            
-                <div class="description-item">
-                    <div class="item-content">
-                        <h4>Guest access</h4>
-                        <p>Add details</p>
-                    </div>
-                    <i class="fas fa-chevron-right item-icon"></i>
-                </div>
-            
-                <div class="description-item">
-                    <div class="item-content">
-                        <h4>Interaction with guests</h4>
-                        <p>Add details</p>
-                    </div>
-                    <i class="fas fa-chevron-right item-icon"></i>
-                </div>
-            
-                <div class="description-item">
-                    <div class="item-content">
-                        <h4>Other details to note</h4>
-                        <p>Add details</p>
-                    </div>
-                    <i class="fas fa-chevron-right item-icon"></i>
+                <div class="edit-buttons">
+                    <button class="btn btn-outline-secondary me-2 edit-button"><i class="fas fa-folder-open"></i> Manage Photos</button>
+                    <button class="add-btn">+</button>
                 </div>
             </div>
-                <!-- right Section -->
-                <div class="description-box">
-                    <h2>Description</h2>
-                    <textarea 
-                        class="char-count" 
-                        name="desc" 
-                        id="desc" 
-                        maxlength="441"
-                        placeholder="You'll have a great time at this comfortable place to stay."
-                        oninput="updateCharCount()">
-                    </textarea>
-                    <p id="charCounter" class="char-count">441 characters available</p>
-                    <p class="description-text">Share a general description of your property's rooms and spaces so guests know what to expect.</p>
+            <p class="text">Manage photos and add details. Guests will only see <br> your tour if every room has a photo.<p>
+            
+                <div class="row g-3">
+                    <!-- Photo Cards -->
+                    <div class="col-6 col-md-4 col-lg-3 d-flex flex-column align-items-center">
+                        <!-- Image Card -->
+                        <div class="photo-card bg-white p-3 text-center">
+                            <img src="./Assets/images/1 (1).png" alt="Half bathroom" class="img-fluid mx-auto d-block img-size">
+                        </div>
+                        <!-- Centered Text Below Image, Left Aligned Inside Text Container -->
+                        <div class="text-container mt-2">
+                            <h5 class="h6 mb-1">Half bathroom</h5>
+                            <p class="text-muted mb-0">Add photos</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 d-flex flex-column align-items-center">
+                        <!-- Image Card -->
+                        <div class="photo-card bg-white p-3 text-center position-relative">
+                            <!-- Tag for 'Interior' -->
+                            <span class="tag">Interior</span>
+                            <img src="./Assets/images/1 (1).png" alt="Half bathroom" class="img-fluid mx-auto d-block img-size">
+                        </div>
+                        <!-- Centered Text Below Image, Left Aligned Inside Text Container -->
+                        <div class="text-container mt-2">
+                            <h5 class="h6 mb-1">Half bathroom</h5>
+                            <p class="text-muted mb-0">Add photos</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 d-flex flex-column align-items-center">
+                        <!-- Image Card -->
+                        <div class="photo-card bg-white p-3 text-center position-relative">
+                            <!-- Tag for 'Interior' -->
+                            <span class="tag2">Interior</span>
+                            <img src="./Assets/images/1 (1).png" alt="Half bathroom" class="img-fluid mx-auto d-block img-size">
+                        </div>
+                        <!-- Centered Text Below Image, Left Aligned Inside Text Container -->
+                        <div class="text-container mt-2">
+                            <h5 class="h6 mb-1">Half bathroom</h5>
+                            <p class="text-muted mb-0">Add photos</p>
+                        </div>
+                    </div>
+                    
                 
-                    <!-- Button Group -->
-                    <div class="btn-container">
-                        <button class="btn btn-cancel">Cancel</button>
-                        <button class="btn btn-save">Save</button>
+                    <div class="col-6 col-md-4 col-lg-3 d-flex flex-column align-items-center">
+                        <div class="photo-card bg-white p-3 text-center ">
+                            <span class="tag2">Cover</span>
+                            <img src="./Assets/images/1 (2).png" alt="Exterior" class="img-fluid mx-auto d-block img-size">
+                        </div>
+                        <div class="text-container mt-2">
+                            <h5 class="h6 mb-1">Exterior</h5>
+                            <p class="text-muted mb-0">1 photo</p>
+                        </div>
+                    </div>
+                
+                    <div class="col-6 col-md-4 col-lg-3 d-flex flex-column align-items-center">
+                        <div class="photo-card bg-white p-3 text-center">
+                            <img src="./Assets/images/1 (3).png" alt="Bedroom area" class="img-fluid mx-auto d-block img-size">
+                        </div>
+                        <div class="text-container mt-2">
+                            <h5 class="h6 mb-1">Bedroom area</h5>
+                            <p class="text-muted mb-0">Add photos</p>
+                        </div>
+                    </div>
+                
+                    <div class="col-6 col-md-4 col-lg-3 d-flex flex-column align-items-center">
+                        <div class="photo-card bg-white p-3 text-center">
+                            <img src="./Assets/images/1 (4).png" alt="Additional photos" class="img-fluid mx-auto d-block img-size">
+                        </div>
+                        <div class="text-container mt-2">
+                            <h5 class="h6 mb-1">Additional photos</h5>
+                            <p class="text-muted mb-0">4 photos</p>
+                        </div>
                     </div>
                 </div>
-                
+            </div>
+
         </div>
     </div>
 
@@ -505,20 +527,6 @@
                 });
             });
         }
-
-
-        function updateCharCount() {
-    const maxChars = 441;
-    const textArea = document.getElementById("desc");
-    const charCounter = document.getElementById("charCounter");
-    
-    // Calculate remaining characters
-    const remainingChars = maxChars - textArea.value.length;
-    
-    // Update the counter display
-    charCounter.textContent = `${remainingChars} characters available`;
-}
-
 
 
     </script>
