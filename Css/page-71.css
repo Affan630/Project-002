@@ -1,0 +1,150 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font to all elements */
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar-brand img {
+    height: auto;
+}
+
+/* Notification icon styling */
+.bi-bell-fill {
+    color: #007bff;
+}
+
+/* Notification dot */
+.position-absolute {
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* Profile picture and dropdown */
+.dropdown-toggle img {
+    margin-right: 8px;
+}
+
+.dropdown-menu {
+    min-width: 200px;
+}
+
+@media (max-width: 320px) {
+    .dropdown .ms-2 {
+        font-size: 0.8rem; /* Adjust the font size as needed */
+    }
+
+    .dropdown .fa-sharp {
+        font-size: 0.8rem; /* Adjust the icon size as needed */
+    }
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 30px auto;
+    max-width: 1000px;
+    padding: 20px;
+    /* background: #ffffff; */
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+p {
+    font-weight: 500;
+}
+.card{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+        /* Form Check Styles */
+        .form-check {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            border-radius: 10px;
+            /* border: 1px solid #ddd; */
+            transition: background-color 0.2s;
+            /* margin-bottom: 10px; */
+        }
+
+        .form-check:hover {
+            background-color: #f1f1f1; /* Light hover effect */
+        }
+
+        .form-check-input {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid black;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .form-check-input:checked {
+            background-color: black;
+            border: 2px solid black;
+        }
+
+        /* Button Styles */
+        .btn {
+            min-width: 237px;
+            margin-top: 20px;
+        }
+
+        /* Privacy Card */
+        .privacy-card {
+            margin-top: 20px;
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .privacy-card h5 {
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .privacy-card a {
+            color: #007bff;
+        }
+
+        .privacy-card a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+                align-items: center; /* Center items on small screens */
+            }
+
+            .form-check {
+                flex-direction: column; /* Stack items vertically */
+            }
+
+            .form-check-input {
+                margin-top: 10px; /* Space above the radio button */
+            }
+        }

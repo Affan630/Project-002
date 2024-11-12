@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bonstay Reservation</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="/Css/page-88.css" />
+    <link rel="stylesheet" href="/Css/sidebar.css" />
+    <!-- Include Flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+      <div class="container-fluid">
+        <div class="row w-100 align-items-center header">
+          <!-- Logo in col-lg-4 -->
+          <div class="col-lg-3 col-6">
+            <a class="navbar-brand" href="#">
+              <img
+                src="Assets/images/logo.png"
+                alt="Bonstay"
+                width="200"
+                class="img-fluid"
+              />
+            </a>
+          </div>
+          <!-- Empty col-lg-6 for spacing -->
+          <div class="col-lg-6 d-none d-lg-block"></div>
+          <!-- Notifications and User Profile in col-lg-4 -->
+          <div
+            class="col-lg-3 col-6 d-flex justify-content-end align-items-center"
+          >
+            <!-- Notifications Icon -->
+            <a href="#" class="nav-link position-relative me-3">
+              <i
+                class="bi bi-bell-fill"
+                style="font-size: 1.5rem; color: #007bff"
+              ></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"
+              >
+                <span class="visually-hidden">New alerts</span>
+              </span>
+            </a>
+
+            <!-- User Profile -->
+            <div class="dropdown">
+              <a
+                class="d-flex align-items-center text-decoration-none"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="Assets/images/profile_pic2.png"
+                  alt="Profile Picture"
+                  class="rounded-circle"
+                  width="40"
+                  height="40"
+                />
+                <div class="ms-2">
+                  <span class="text-dark">Timo Jannis</span><br />
+                  <small class="text-dark">Employee</small>
+                  <!-- Dropdown icon -->
+                  <i class="fa-sharp fa-solid fa-caret-down text-dark ms-1"></i>
+                  <br />
+                  <!-- Small text for Employee -->
+                </div>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdown"
+              >
+                <li><a class="dropdown-item" href="#">Notifications</a></li>
+                <li><a class="dropdown-item" href="#">Messages</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Gift cards</a></li>
+                <li class="px-3 text-muted">
+                  Bonstay credits can be applied to gift card
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Switch for hosting</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+ <!-- Sidebar------------------------------------------------------- -->
+
+ <button class="offcanvas-btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+ aria-controls="offcanvasScrolling">
+ <i class="fas fa-bars"></i> Menu
+</button>
+
+<!-- Mobile Off-canvas Button (visible on mobile devices) -->
+
+
+<div class="main-layout">
+    <!-- Main Content Wrapper that holds the Sidebar, Middle, and Right Sections -->
+    <div class="content-wrapper flex-column flex-lg-row">
+        
+        <!-- Sidebar Section (Visible on large screens, off-canvas on mobile) -->
+        <div class="sidebar" id="sidebar">
+            <div class="container mt-1">
+                <!-- Heading with Settings Icon -->
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <h5><i class="fa-solid fa-chevron-left" id="closeSidebar"></i> Listing editor</h5>
+                    <span class="setting-icon fs-6" id="settingsTab" onclick="showSection('settings')">
+                        <i class="fa-solid fa-sliders fs-6"></i></span>
+                </div>
+            </div>
+
+            <!-- Tabs Section -->
+            <div class="tab d-flex gap-3 mb-4 justify-content-center p-2">
+                <button class="btn your-space active-tab" id="btnYourSpace"
+                onclick="activateTab('btnYourSpace')">Your
+                Space</button>
+            <button class="btn arrival" id="btnArrivalGuide" onclick="activateTab('btnArrivalGuide')">Arrival
+                Guide</button>
+            </div>
+
+
+            <div class="p-3">
+                <div id="yourSpaceSection" class="section-content">
+
+            <!-- Status Card -->
+            <a href="" class="text-dark text-decoration-none"><button  class="status-card mb-4 border border-dark">
+                <div class="status-info">
+                    <div class="status-header text-start">
+                        <i class="fa-solid fa-circle" style="color: red;"></i>
+                        <strong>Completed required steps</strong>
+                    </div>
+                    <p class="mb-0 text-muted text-start">Finish these final tasks to publish your listing and start getting booked.</p>
+                </div>
+                <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+            </button></a>
+
+            <!-- Custom Cards (Title, Property Type, Guests, etc.) -->
+            <a href="" class="text-dark text-decoration-none"><div class="custom-card">
+                <h6>Title</h6>
+                <p>Water Villa with Private Pool & Slide</p>
+            </div></a>
+
+            <a href="" class="text-dark text-decoration-none"> <div class="custom-card">
+                <h6>Property type</h6>
+                <p>Entire place. House</p>
+            </div></a>
+
+            <a href="" class="text-dark text-decoration-none"><div class="custom-card">
+                <h6>Number of guests</h6>
+                <p>1 Guest</p>
+            </div></a>
+
+            <a href="" class="text-dark text-decoration-none"><div class="custom-card">
+                <h6>Description</h6>
+                <p>You'll have a great time at this comfortable place to stay.</p>
+            </div></a>
+
+            <a href="" class="text-dark text-decoration-none"><div class="custom-card">
+                <h6>Amenities</h6>
+                <p>Add details</p>
+            </div></a>
+            
+            <a href="" class="text-dark text-decoration-none"><div class="custom-card">
+                <h6>Accessibility Features</h6>
+                <p>Add details</p>
+            </div></a>
+
+            <!-- Location Section (With Google Maps Embed) -->
+            <a href="" class="text-dark text-decoration-none"><div class="custom-card">
+                <h6>Location</h6>
+                <iframe class="w-100"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.2953673661264!2d-73.99735668459332!3d40.73061007932864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af18031a1b%3A0x57f5f1f461f8de!2s1751%2067th%20St%2C%20Brooklyn%2C%20NY%2011204%2C%20USA!5e0!3m2!1sen!2s!4v1630347243240!5m2!1sen!2s"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <p>1751 67th St Apt F11 Brooklyn NY<br>11204-4332 USA</p>
+            </div></a>
+
+            <!-- Host Section -->
+            <a href="" class="text-dark text-decoration-none"><div class="custom-card text-center">
+                <h6>About the Host</h6>
+                <img class="img-fluid rounded-circle" height="200px" width="200px" src="Assets/images/Group 70 (1).svg " alt="Host Image">
+                <h5>Mark William</h5>
+                <p>Started hosting in 2024</p>
+            </div></a>
+
+            <!-- Additional Cards (Co-Hosts, Instant Book, etc.) -->
+            <a href="" class="text-dark text-decoration-none"> <div class="custom-card">
+                <h6>Co-Hosts</h6>
+                <p>Add details</p>
+            </div></a>
+            <a href="" class="text-dark text-decoration-none"><div class="custom-card">
+                <h6>Instant Book</h6>
+                <p>Turned on: Guest can book automatically</p>
+            </div></a>
+            
+            <a href="" class="text-dark text-decoration-none"> <div class="custom-card">
+                <h6>House rules</h6>
+                <ul>
+                    <li>- Check-in after 3:00 PM</li>
+                    <li>- 1 Guest Maximum</li>
+                </ul>
+            </div></a>
+
+            <a href="" class="text-dark text-decoration-none"><div class="custom-card">
+                <h6>Guest safety</h6>
+                <ul>
+                    <li>- Carbon monoxide alarm not reported</li>
+                    <li>- Smoke alarm not reported</li>
+                </ul>
+            </div></a>
+
+            <a href="" class="text-dark text-decoration-none"><div class="custom-card">
+                <h6>Cancellation policy</h6>
+                <p>Flexible</p>
+            </div></a>
+            <a href="" class="text-dark text-decoration-none"><div class="custom-card">
+                <h6>Custom link</h6>
+                <p>Add details</p>
+            </div></a>
+        </div>
+        </div>
+
+         <!-- arrival------------------------>
+         <div id="arrivalGuideSection" class="section-content d-none">
+            <!-- Status Card -->
+            <a href="" class="cards text-decoration-none"><button
+                    class="status-card mb-4 border border-dark">
+                    <div class="status-info">
+                        <div class="status-header text-start">
+                            <i class="fa-solid fa-circle" style="color: red;"></i>
+                            <strong>Completed required steps</strong>
+                        </div>
+                        <p class="mb-0 text-muted text-start">Finish these final tasks to publish your
+                            listing
+                            and start getting booked.</p>
+                    </div>
+                    <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                </button>
+            </a>
+
+            <!-- Check-in -->
+            <!-- Card Structure -->
+            <div class=" custom-card check-card mb-3">
+                <div class=" check-section" id="checkInSection" onclick="showTimePicker()">
+                    <h6>Check-in</h6>
+                    <p id="checkInTime"><input type="time" id="timePicker" onchange="updateCheckInTime()" />
+                    </p>
+                    <!-- Default time -->
+                </div>
+                <div class="divider"></div>
+                <div class="check-section" id="checkOutSection">
+                    <h6>Check-Out</h6>
+                    <p id="checkOutDetails">Add Details</p>
+                </div>
+            </div>
+
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Check-in method</h6>
+                    <p>Add details</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Wifi details</h6>
+                    <p>Add details</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>House manual</h6>
+                    <p>Add details</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Amenities</h6>
+                    <p>Add details</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>House rules</h6>
+
+                    <p>- Check-in after 3:00 PM</p>
+                    <p>- 1 Guest Maximum</p>
+
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Checkout instructions</h6>
+                    <p>Add details</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Interaction preferences</h6>
+                    <p>Add details</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- -------------------------------settings------------------------------------ -->
+
+        <div id="settingsSection" class="section-content d-none">
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Listing status</h6>
+                    <p>Unlisted</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Languages</h6>
+                    <p>English</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Guest Requirements</h6>
+                    <p>Profile photo not required</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Local Laws</h6>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Taxes</h6>
+                    <p>Learn how taxes work for Hosts</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Remove listing</h6>
+                    <p>Permanently remove your listing</p>
+                </div>
+            </a>
+        </div>
+        </div>
+
+        <!-- Chevron Right Icon (5% width) to open sidebar (only for desktop) -->
+        <div class="d-none content-transition" id="openSidebarIcon">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        
+
+
+
+        <div class="container listing-container">
+            <!-- Title -->
+            <h1 class="listing-title">Listing status</h1>
+    
+            <!-- Image Section -->
+            <img src="./Assets/images/room-image.png" alt="Room image" class="listing-image my-4">
+    
+            <!-- Subtitle and Description -->
+            <h2 class="listing-title2">Finish up some final tasks</h2>
+            <p class="listing-description">
+                Before you can publish your listing, you'll need to complete a few required steps.
+            </p>
+    
+            <!-- Button -->
+            <button class="listing-button">Let's</button>
+        </div>
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Off-canvas for mobile responsive -->
+<div class="offcanvas offcanvas-start d-lg-none" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+<div class="offcanvas-body">
+    <div class="container off-canvas mt-1">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h5><i class="fa-solid fa-chevron-left" data-bs-dismiss="offcanvas" aria-label="Close"></i> Listing
+                Editor</h5>
+            <span class="setting-icon fs-6 tab-button2" id="settingsTab2"
+                onclick="showSection2('settingsSection2')">
+                <i class="fa-solid fa-sliders fs-6"></i>
+            </span>
+        </div>
+    </div>
+
+    <!-- Tab Buttons with Default Active Tab for Your Space -->
+    <div class="tab d-flex gap-3 mb-4 justify-content-center p-2">
+        <button class="btn your-space tab-button2 active-tab" id="btnYourSpace2"
+            onclick="showSection2('yourSpaceSection2')">Your Space</button>
+        <button class="btn arrival tab-button2" id="btnArrivalGuide2"
+            onclick="showSection2('arrivalGuideSection2')">Arrival Guide</button>
+    </div>
+
+    <!-- Section Content -->
+    <div class="p-3">
+        <div id="yourSpaceSection2" class="section-content2">
+            <!-- Status Card -->
+            <a href="" class="cards text-decoration-none"><button class="status-card mb-4 border border-dark">
+                    <div class="status-info">
+                        <div class="status-header text-start">
+                            <i class="fa-solid fa-circle" style="color: red;"></i>
+                            <strong>Completed required steps</strong>
+                        </div>
+                        <p class="mb-0 text-muted text-start">Finish these final tasks to publish your listing
+                            and start getting booked.</p>
+                    </div>
+                    <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                </button>
+            </a>
+
+            <!-- Custom Cards (Title, Property Type, Guests, etc.) -->
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Title</h6>
+                    <p>Water Villa with Private Pool & Slide</p>
+                </div>
+            </a>
+
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Property type</h6>
+                    <p>Entire place. House</p>
+                </div>
+            </a>
+
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Number of guests</h6>
+                    <p>1 Guest</p>
+                </div>
+            </a>
+
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Description</h6>
+                    <p>You'll have a great time at this comfortable place to stay.</p>
+                </div>
+            </a>
+
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Amenities</h6>
+                    <p>Add details</p>
+                </div>
+            </a>
+
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Accessibility Features</h6>
+                    <p>Add details</p>
+                </div>
+            </a>
+
+
+
+            <!-- Location Section (With Google Maps Embed) -->
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Location</h6>
+                    <iframe class="w-100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.2953673661264!2d-73.99735668459332!3d40.73061007932864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af18031a1b%3A0x57f5f1f461f8de!2s1751%2067th%20St%2C%20Brooklyn%2C%20NY%2011204%2C%20USA!5e0!3m2!1sen!2s!4v1630347243240!5m2!1sen!2s"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <p>1751 67th St Apt F11 Brooklyn NY<br>11204-4332 USA</p>
+                </div>
+            </a>
+
+            <!-- Host Section -->
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card text-center">
+                    <h6>About the Host</h6>
+                    <img class="img-fluid rounded-circle" height="200px" width="200px"
+                        src="Assets/images/Group 70 (1).svg " alt="Host Image">
+                    <h5>Mark William</h5>
+                    <p>Started hosting in 2024</p>
+                </div>
+            </a>
+
+            <!-- Additional Cards (Co-Hosts, Instant Book, etc.) -->
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Co-Hosts</h6>
+                    <p>Add details</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Instant Book</h6>
+                    <p>Turned on: Guest can book automatically</p>
+                </div>
+            </a>
+
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>House rules</h6>
+
+                    <p>- Check-in after 3:00 PM</p>
+                    <p>- 1 Guest Maximum</p>
+
+                </div>
+            </a>
+
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Guest safety</h6>
+
+                    <p>- Carbon monoxide alarm not reported</p>
+                    <p>- Smoke alarm not reported</p>
+
+                </div>
+            </a>
+
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Cancellation policy</h6>
+                    <p>Flexible</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Custom link</h6>
+                    <p>Add details</p>
+                </div>
+            </a>
+        </div>
+        <div id="arrivalGuideSection2" class="section-content2 d-none">
+            <!-- Status Card -->
+            <a href="" class="cards text-decoration-none"><button class="status-card mb-4 border border-dark">
+                    <div class="status-info">
+                        <div class="status-header text-start">
+                            <i class="fa-solid fa-circle" style="color: red;"></i>
+                            <strong>Completed required steps</strong>
+                        </div>
+                        <p class="mb-0 text-muted text-start">Finish these final tasks to publish your listing
+                            and start getting booked.</p>
+                    </div>
+                    <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                </button>
+            </a>
+
+            <!-- Check-in -->
+            <!-- Card Structure -->
+            <div class=" custom-card check-card mb-3">
+                <div class=" check-section" id="checkInSection" onclick="showTimePicker()">
+                    <h6>Check-in</h6>
+                    <p id="checkInTime"><input type="time" id="timePicker" onchange="updateCheckInTime()" /></p>
+                    <!-- Default time -->
+                </div>
+                <div class="divider"></div>
+                <div class="check-section" id="checkOutSection">
+                    <h6>Check-Out</h6>
+                    <p id="checkOutDetails">Add Details</p>
+                </div>
+            </div>
+
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Check-in method</h6>
+                    <p>Add details</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Wifi details</h6>
+                    <p>Add details</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>House manual</h6>
+                    <p>Add details</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Amenities</h6>
+                    <p>Add details</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>House rules</h6>
+
+                    <p>- Check-in after 3:00 PM</p>
+                    <p>- 1 Guest Maximum</p>
+
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Checkout instructions</h6>
+                    <p>Add details</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Interaction preferences</h6>
+                    <p>Add details</p>
+                </div>
+            </a>
+        </div>
+        <div id="settingsSection2" class="section-content2 d-none">
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Listing status</h6>
+                    <p>Unlisted</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Languages</h6>
+                    <p>English</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Guest Requirements</h6>
+                    <p>Profile photo not required</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Local Laws</h6>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Taxes</h6>
+                    <p>Learn how taxes work for Hosts</p>
+                </div>
+            </a>
+            <a href="" class="cards text-decoration-none">
+                <div class="custom-card">
+                    <h6>Remove listing</h6>
+                    <p>Permanently remove your listing</p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- custom script--------------------------------- -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="./JavaScript/sidebar.js"></script>
+
+    <!-- Bootstrap v5 & Bootstrap Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </body>
+</html>

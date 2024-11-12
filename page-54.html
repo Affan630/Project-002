@@ -286,17 +286,26 @@
                 </div>
             </div>
                 <!-- right Section -->
-            <div class="description-box">
-                <h2>Description</h2>
-                <p class="char-count">441 characters available</p>
-                <p class="description-text">You'll have a great time at this comfortable place to stay.</p>
-            
-                <!-- Button Group -->
-                <div class="btn-container">
-                    <button class="btn btn-cancel">Cancel</button>
-                    <button class="btn btn-save">Save</button>
+                <div class="description-box">
+                    <h2>Description</h2>
+                    <textarea 
+                        class="char-count" 
+                        name="desc" 
+                        id="desc" 
+                        maxlength="441"
+                        placeholder="You'll have a great time at this comfortable place to stay."
+                        oninput="updateCharCount()">
+                    </textarea>
+                    <p id="charCounter" class="char-count">441 characters available</p>
+                    <p class="description-text">Share a general description of your property's rooms and spaces so guests know what to expect.</p>
+                
+                    <!-- Button Group -->
+                    <div class="btn-container">
+                        <button class="btn btn-cancel">Cancel</button>
+                        <button class="btn btn-save">Save</button>
+                    </div>
                 </div>
-            </div>
+                
         </div>
     </div>
 
@@ -496,6 +505,20 @@
                 });
             });
         }
+
+
+        function updateCharCount() {
+    const maxChars = 441;
+    const textArea = document.getElementById("desc");
+    const charCounter = document.getElementById("charCounter");
+    
+    // Calculate remaining characters
+    const remainingChars = maxChars - textArea.value.length;
+    
+    // Update the counter display
+    charCounter.textContent = `${remainingChars} characters available`;
+}
+
 
 
     </script>

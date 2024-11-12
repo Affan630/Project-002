@@ -1,0 +1,44 @@
+  /* Custom styling */
+  .listing-container {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.listing-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.listing-title {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.listing-title2 {}
+
+.listing-description {
+    color: #6c757d;
+    margin-top: 10px;
+}
+
+.listing-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #00aaff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15%;
+    transition: background-color 0.3s ease;
+}
+
+.listing-button:hover {
+    background-color: #008ecc;
+}

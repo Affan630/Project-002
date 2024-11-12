@@ -3,248 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Listings</title>
+    <title>Local Laws Section</title>
     <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Page container */
-        .listings-container {
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: auto;
-            text-align: center;
-        }
+  
 
-        /* Heading and new listing link */
-        .listings-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-
-        .listings-heading {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .create-listing-link {
-            font-weight: bold;
-            color: #007bff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .create-listing-link:hover {
-            color: #0056b3;
-        }
-
-        /* Flex container for cards */
-        .cards-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px; /* Space between cards */
-        }
-
-        /* Card styling */
-        .listing-card {
-            width: 250px; /* Fixed width for inline layout */
-            border: none;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .listing-card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-        }
-
-        .listing-image {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-        }
-
-        /* Card content */
-        .card-content {
+        .container {
+            max-width: auto;
+            margin: 50px auto;
             padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
         }
 
-        .listing-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #333;
+        .section-title {
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
         }
 
-        .listing-address {
-            font-size: 0.85rem;
-            color: #666;
-            margin-bottom: 12px;
-        }
-
-        .listing-rating {
-            color: #ffc107;
+        .content-text {
             font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
 
-        .superhost-text {
-            color: #666;
-            font-size: 0.85rem;
+        .learn-more {
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-block;
+            margin-bottom: 15px;
         }
 
-        /* Button styling */
-        .market-button {
-            background-color: #007bff;
+        .save-button {
+            background-color: #00aaff;
             color: #fff;
             font-weight: bold;
-            padding: 10px;
+            font-size: 1rem;
             border: none;
-            border-radius: 8px;
+            padding: 12px 24px;
             width: 100%;
+            max-width: 80%;
+            border-radius: 8px;
+            margin-top: 30px;
             transition: background-color 0.3s;
         }
 
-        .market-button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .listings-heading {
-                font-size: 1.5rem;
-            }
-            .listing-card {
-                width: 200px;
-            }
-            .listing-image {
-                height: 130px;
-            }
+        .save-button:hover {
+            background-color: #008ecc;
         }
     </style>
 </head>
 <body>
 
-<div class="container listings-container">
-    <!-- Heading and Create New Listing Link -->
-    <div class="listings-header">
-        <h2 class="listings-heading">Your listings</h2>
-        <a href="#" class="create-listing-link">Create New Listing</a>
-    </div>
+<div class="container">
+    <!-- Section Title -->
+    <h2 class="section-title">Local laws</h2>
 
-    <!-- Listings Flexbox Wrapper -->
-    <div class="cards-wrapper">
-        <!-- Card Item -->
-        <div class="card listing-card">
-            <img src="https://via.placeholder.com/300x200" alt="Listing Image" class="listing-image">
-            <div class="card-content">
-                <h5 class="listing-title">Water Villa with Private Pool & Slide</h5>
-                <p class="listing-address">1751 67TH ST APT F11 BRO...</p>
-                <div class="d-flex align-items-center mb-3">
-                    <span class="listing-rating">★★★★★ 4.95</span>
-                    <span class="superhost-text ms-2">• Superhost</span>
-                </div>
-                <button class="market-button">Market Property</button>
-            </div>
-        </div>
-        <!-- Repeat Card Item as Needed -->
-        <div class="card listing-card">
-            <img src="https://via.placeholder.com/300x200" alt="Listing Image" class="listing-image">
-            <div class="card-content">
-                <h5 class="listing-title">Water Villa with Private Pool & Slide</h5>
-                <p class="listing-address">1751 67TH ST APT F11 BRO...</p>
-                <div class="d-flex align-items-center mb-3">
-                    <span class="listing-rating">★★★★★ 4.95</span>
-                    <span class="superhost-text ms-2">• Superhost</span>
-                </div>
-                <button class="market-button">Market Property</button>
-            </div>
-        </div>
-        <div class="card listing-card">
-            <img src="https://via.placeholder.com/300x200" alt="Listing Image" class="listing-image">
-            <div class="card-content">
-                <h5 class="listing-title">Water Villa with Private Pool & Slide</h5>
-                <p class="listing-address">1751 67TH ST APT F11 BRO...</p>
-                <div class="d-flex align-items-center mb-3">
-                    <span class="listing-rating">★★★★★ 4.95</span>
-                    <span class="superhost-text ms-2">• Superhost</span>
-                </div>
-                <button class="market-button">Market Property</button>
-            </div>
-        </div>
-        <div class="card listing-card">
-            <img src="https://via.placeholder.com/300x200" alt="Listing Image" class="listing-image">
-            <div class="card-content">
-                <h5 class="listing-title">Water Villa with Private Pool & Slide</h5>
-                <p class="listing-address">1751 67TH ST APT F11 BRO...</p>
-                <div class="d-flex align-items-center mb-3">
-                    <span class="listing-rating">★★★★★ 4.95</span>
-                    <span class="superhost-text ms-2">• Superhost</span>
-                </div>
-                <button class="market-button">Market Property</button>
-            </div>
-        </div>
-        <div class="card listing-card">
-            <img src="https://via.placeholder.com/300x200" alt="Listing Image" class="listing-image">
-            <div class="card-content">
-                <h5 class="listing-title">Water Villa with Private Pool & Slide</h5>
-                <p class="listing-address">1751 67TH ST APT F11 BRO...</p>
-                <div class="d-flex align-items-center mb-3">
-                    <span class="listing-rating">★★★★★ 4.95</span>
-                    <span class="superhost-text ms-2">• Superhost</span>
-                </div>
-                <button class="market-button">Market Property</button>
-            </div>
-        </div>
-        <div class="card listing-card">
-            <img src="https://via.placeholder.com/300x200" alt="Listing Image" class="listing-image">
-            <div class="card-content">
-                <h5 class="listing-title">Water Villa with Private Pool & Slide</h5>
-                <p class="listing-address">1751 67TH ST APT F11 BRO...</p>
-                <div class="d-flex align-items-center mb-3">
-                    <span class="listing-rating">★★★★★ 4.95</span>
-                    <span class="superhost-text ms-2">• Superhost</span>
-                </div>
-                <button class="market-button">Market Property</button>
-            </div>
-        </div>
-        <div class="card listing-card">
-            <img src="https://via.placeholder.com/300x200" alt="Listing Image" class="listing-image">
-            <div class="card-content">
-                <h5 class="listing-title">Water Villa with Private Pool & Slide</h5>
-                <p class="listing-address">1751 67TH ST APT F11 BRO...</p>
-                <div class="d-flex align-items-center mb-3">
-                    <span class="listing-rating">★★★★★ 4.95</span>
-                    <span class="superhost-text ms-2">• Superhost</span>
-                </div>
-                <button class="market-button">Market Property</button>
-            </div>
-        </div>
-        <div class="card listing-card">
-            <img src="https://via.placeholder.com/300x200" alt="Listing Image" class="listing-image">
-            <div class="card-content">
-                <h5 class="listing-title">Water Villa with Private Pool & Slide</h5>
-                <p class="listing-address">1751 67TH ST APT F11 BRO...</p>
-                <div class="d-flex align-items-center mb-3">
-                    <span class="listing-rating">★★★★★ 4.95</span>
-                    <span class="superhost-text ms-2">• Superhost</span>
-                </div>
-                <button class="market-button">Market Property</button>
-            </div>
-        </div>
-        <!-- More cards as needed -->
-    </div>
+    <!-- Section Content -->
+    <p class="content-text">Take a moment to review the local laws that apply to your listing. We want to make sure you have everything you need to get off to a great start.</p>
+
+    <p class="content-text">Most cities have rules covering homesharing, and the specific codes and ordinances can appear in many places (such as zoning, building, licensing or tax codes). In most places, you must register, get a permit, or obtain a license before you list your property or accept guests. You may also be responsible for collecting and remitting certain taxes. In some places, short-term rentals could be prohibited altogether.</p>
+
+    <p class="content-text">Since you are responsible for your own decision to list or book, you should get comfortable with the applicable rules before listing on Bonstay. To get you started, we offer some helpful resources under "Your City Laws."</p>
+
+    <!-- Learn More Section -->
+    <a href="#" class="learn-more">Learn more about responsible hosting</a>
+    <p class="content-text">By accepting our Terms of Service and listing your space, you certify that you will follow applicable laws and regulations.</p>
+
+    <!-- Save Button -->
+    <button class="save-button">Save</button>
 </div>
 
-<!-- Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap JS (Optional for interactive components) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>

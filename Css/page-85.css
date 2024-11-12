@@ -1,0 +1,46 @@
+        /* Container Styling */
+        .time-container {
+            max-width: auto;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        /* Dropdown button styling */
+        .dropdown-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .dropdown-btn:hover {
+            border-color: black;
+        }
+
+        /* Title styling */
+        .section-title {
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        /* Main title styling */
+        .main-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .time-container {
+                padding: 15px;
+            }
+        }

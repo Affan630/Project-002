@@ -8,11 +8,13 @@
     display: flex;
     flex-grow: 1;
     height: calc(100vh - 60px); /* Account for navbar height */
+    background: white;/* Prevent overflow issues */
 }
 
 /* Sidebar Styles */
 .sidebar {
     height: 100vh;
+    width: 100%;
     padding: 20px;
     position: relative;
     transition: width 0.4s ease;
@@ -175,20 +177,103 @@
 }
 
 /* Other Elements */
-.setting-icon {
+ /* Other Elements */
+ .setting-icon {
     background-color: #EEEEEE;
     padding: 10px;
     border-radius: 20%;
 }
 
-.your-space {
-    background-color: #00AAE5;
-    color: #EEEEEE;
+.your-space,
+.arrival {
+    background-color: #f1eded;
     padding: 10px;
+    border: none;
+    /* Optional: remove borders */
+}
+
+.your-space {
+    /* background-color: #00AAE5; */
+    margin-right: 10px;
+    color: black;
 }
 
 .arrival {
-    background-color: white;
-    color: #EEEEEE;
-    padding: 10px;
+    background-color:#f1eded ;
+    color: #333333;
+    /* Adjust text color for visibility */
+}
+
+/* Active tab styling */
+.active-tab {
+    background-color: #00AAE5 !important;
+    color: #EEEEEE !important;
+}
+
+.cards {
+    color: black;
+}
+
+.cards:hover {
+    color: black;
+}
+
+/* Styling for the card container */
+.check-card {
+    margin-bottom: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: auto;
+    margin: auto;
+}
+
+/* Styling for each check-in/check-out section */
+.check-section {
+    text-align: center;
+    flex: 1;
+}
+
+/* Styling for the labels (Check-in / Check-Out) */
+.check-section h6 {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Styling for details text */
+.check-section p {
+    margin: 0;
+    color: #555;
+    font-size: 0.85rem;
+}
+
+/* Divider line */
+.divider {
+    height: 40px;
+    width: 1px;
+    background-color: #ddd;
+    margin: 0 15px;
+}
+
+.content {
+    margin-left: auto;
+    transition: margin-left 0.3s ease;
+}
+
+.content.expanded {
+    margin-left: 0;
+}
+
+.content2 {
+    margin-left: auto;
+    transition: margin-left 0.3s ease;
+}
+
+.content2.expanded {
+    margin-left: 0;
 }

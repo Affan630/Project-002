@@ -1,0 +1,313 @@
+
+
+        /* Custom Styles */
+
+        .content-wrapper {
+            display: flex;
+            flex-grow: 1;
+            height: calc(100vh - 60px); /* Account for navbar height */
+            background: white;/* Prevent overflow issues */
+        }
+        
+        .sidebar {
+            height: 100vh;
+            width: 100%;
+            padding: 20px;
+            position: relative;
+            transition: width 0.4s ease;
+            width: 30%;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            border-right: 1px solid black;
+            scrollbar-width: none;
+            /* Hide scrollbar for Firefox */
+            -ms-overflow-style: none;
+            /* Hide scrollbar for IE and Edge */
+        }
+
+        .sidebar::-webkit-scrollbar {
+            display: none;
+            /* Hide scrollbar for Webkit browsers */
+        }
+
+        .sidebar.collapsed {
+            transform: translateX(-100%);
+        }
+
+        /* Other Elements */
+        .setting-icon {
+            background-color: #EEEEEE;
+            padding: 10px;
+            border-radius: 20%;
+        }
+
+        .your-space,
+        .arrival {
+            background-color: #f1eded;
+            padding: 10px;
+            border: none;
+            /* Optional: remove borders */
+        }
+
+        .your-space {
+            /* background-color: #00AAE5; */
+            margin-right: 10px;
+            color: black;
+        }
+
+        .arrival {
+            background-color:#f1eded ;
+            color: #333333;
+            /* Adjust text color for visibility */
+        }
+
+        /* Active tab styling */
+        .active-tab {
+            background-color: #00AAE5 !important;
+            color: #EEEEEE !important;
+        }
+
+
+
+
+        .tab-button {
+            width: 50%;
+        }
+
+        .chevron-icon {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .settings-icon {
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin-left: auto;
+        }
+
+        /* Collapsed Button */
+        #collapsedButton {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 55px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        /* Show collapsed button when sidebar is collapsed */
+        .sidebar.collapsed+#collapsedButton {
+            display: flex;
+        }
+
+        .sidebar ul {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            transition: background-color 0.4s ease;
+        }
+
+        .sidebar ul li:hover {
+            background-color: #EEEEEE;
+        }
+
+        @media (max-width: 992px) {
+            .sidebar {
+                width: 250px;
+                position: absolute;
+                transform: translateX(-100%);
+                transition: transform 0.4s ease;
+            }
+
+            .sidebar.show {
+                transform: translateX(0);
+            }
+
+            .offcanvas-btn {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .middle-section,
+            .right-section {
+                width: 100%;
+                border-left: none;
+                padding: 10px;
+            }
+
+            .right-section {
+                margin-top: 10px;
+                border-bottom: 1px solid black;
+            }
+
+            #openSidebarIcon {
+                display: none !important;
+            }
+        }
+
+        /* Status Card */
+        .status-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .status-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            background-color: red;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        /* Custom Cards */
+        .custom-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .custom-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .cards {
+            color: black;
+        }
+
+        .cards:hover {
+            color: black;
+        }
+
+        /* Styling for the card container */
+        .check-card {
+            margin-bottom: 47px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: auto;
+            margin: auto;
+        }
+
+        /* Styling for each check-in/check-out section */
+        .check-section {
+            text-align: center;
+            flex: 1;
+        }
+
+        /* Styling for the labels (Check-in / Check-Out) */
+        .check-section h6 {
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Styling for details text */
+        .check-section p {
+            margin: 0;
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        /* Divider line */
+        .divider {
+            height: 40px;
+            width: 1px;
+            background-color: #ddd;
+            margin: 0 15px;
+        }
+
+        .content {
+            margin-left: auto;
+            transition: margin-left 0.3s ease;
+        }
+
+        .content.expanded {
+            margin-left: 0;
+        }
+
+        .content2 {
+            margin-left: auto;
+            transition: margin-left 0.3s ease;
+        }
+
+        .content2.expanded {
+            margin-left: 0;
+        }
+
+        .offcanvas-btn {
+            display: none;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 992px) {
+            .sidebar {
+                width: 250px;
+                position: absolute;
+                transform: translateX(-100%);
+                transition: transform 0.4s ease;
+            }
+
+            .sidebar.show {
+                transform: translateX(0);
+            }
+
+            .offcanvas-btn {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .middle-section,
+            .right-section {
+                width: 100%;
+                border-left: none;
+                padding: 10px;
+            }
+
+            .right-section {
+                margin-top: 10px;
+                border-bottom: 1px solid black;
+            }
+
+            #openSidebarIcon {
+                display: none !important;
+            }
+        }

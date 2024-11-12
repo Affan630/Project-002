@@ -1,0 +1,243 @@
+/* Navbar css start*/
+
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font to all elements */
+}
+
+
+
+/* Navbar Styles */
+.navbar-brand img {
+    height: auto;
+}
+
+/* Notification icon styling */
+.bi-bell-fill {
+    color: #007bff;
+}
+
+/* Notification dot */
+.position-absolute {
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* Profile picture and dropdown */
+.dropdown-toggle img {
+    margin-right: 8px;
+}
+
+.dropdown-menu {
+    min-width: 200px;
+}
+@media (max-width: 320px) {
+    .dropdown .ms-2 {
+        font-size: 0.8rem; /* Adjust the font size as needed */
+    }
+
+    .dropdown .fa-sharp {
+        font-size: 0.8rem; /* Adjust the icon size as needed */
+    }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0; /* Padding for mobile */
+    }
+
+    .navbar-brand img {
+        width: 150px; /* Smaller logo for mobile */
+    }
+
+    .dropdown .text-end {
+        text-align: left; /* Align text to the left on mobile */
+    }
+
+    .dropdown-menu {
+        position: absolute; /* Dropdown appears above other content */
+    }
+}
+
+/* Main Section css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    /* background-color: #f7f7f7; */
+}
+
+.content {
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    color: #555;
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+}
+
+.note {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.form-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+    width: 100%;
+}
+
+.stacked-inputs {
+    display: flex;
+    flex-direction: column; /* Stack inputs beneath each other */
+    border-radius: 8px;
+}
+
+.dropdown select {
+    padding: 10px;
+    font-size: 1.125rem;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    outline: none;
+    margin-bottom: 10px; /* Add some space below the dropdown */
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1.125rem;
+    border: none;
+    outline: none;
+}
+.countryCode{
+}
+
+.save-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Error styling for input field */
+.input-error {
+    border: 1px solid #d9534f !important; /* Red border for error */
+    box-shadow: 10px 10px 10px rgba(217, 83, 79, 0.5); /* Subtle shadow effect */
+}
+
+/* Error message styling */
+.error-message {
+    display: none; /* Hidden by default */
+    font-size: 0.875rem;
+    color: #d9534f;
+    margin-top: 5px;
+}
+
+.error-message .error-icon {
+    margin-right: 5px;
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+
+/* For medium screens like tablets */
+@media screen and (max-width: 1024px) {
+    .content {
+        width: 80%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .save-btn {
+        font-size: 1.125rem;
+    }
+}
+
+/* For small screens like phones */
+@media screen and (max-width: 768px) {
+    .content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .save-btn {
+        font-size: 1rem;
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+    .content {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.125rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+    }
+
+    .save-btn {
+        font-size: 0.875rem;
+    }
+}
