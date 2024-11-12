@@ -1,0 +1,50 @@
+        /* Container Styling */
+        .directions-container {
+            max-width: auto;
+            margin: 0 auto;
+            padding: 20px;
+            
+        }
+
+        /* Styling for textarea */
+        .large-textarea {
+            width: 100%;
+            height: 250px;
+            resize: vertical; /* Allow vertical resizing */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            font-size: 16px;
+        }
+
+        /* Save button styling */
+        .btn-save {
+            width: 100%;
+            font-weight: bold;
+            padding: 12px;
+            background-color: #00AAE5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .btn-save:hover {
+            background-color: #008bbd;
+        }
+
+        /* Footer Text Styling */
+        .footer-text {
+            font-size: 14px;
+            color: #666;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .directions-container {
+                padding: 15px;
+            }
+        }

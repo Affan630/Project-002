@@ -15,7 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <!-- Custom Css -->
-    <link rel="stylesheet" href="/Css/page-78.css" />
+    <link rel="stylesheet" href="/Css/page-89.css" />
     <link rel="stylesheet" href="/Css/sidebar.css" />
     <!-- Include Flatpickr CSS -->
     <link
@@ -374,55 +374,134 @@
 
 
 
-        <div class="container my-5">
-            <!-- Title and Description -->
-            <h1 class="h4 fw-bold">Interaction with guests</h1>
-            <p class="text-muted mb-4">Let guests know if you enjoy spending time with them or prefer a hands-off approach.</p>
+        <div class="container language-container">
+            <!-- Title -->
+            <h1 class="title">Languages</h1>
         
-            <!-- Radio Button Group -->
-            <div class="radio-group">
-                <div class="radio-card mb-3 d-flex align-items-center">
-                    <input type="radio" id="option1" name="interaction" />
-                    <label for="option1" class="mb-0">I won’t be available in person, and prefer communicating through the app.</label>
-                    <div class="custom-radio"></div>
-                </div>
+            <!-- Description -->
+            <p class="description">
+                For some settings, you can add details in any language you add to your listing.
+                Guests will be shown automatic translations for everything else.
+            </p>
         
-                <div class="radio-card mb-3 d-flex align-items-center">
-                    <input type="radio" id="option2" name="interaction" />
-                    <label for="option2" class="mb-0">I like to say hello in person, but keep to myself otherwise.</label>
-                    <div class="custom-radio"></div>
-                </div>
-        
-                <div class="radio-card mb-3 d-flex align-items-center">
-                    <input type="radio" id="option3" name="interaction" />
-                    <label for="option3" class="mb-0">I like socializing and spending time with guests.</label>
-                    <div class="custom-radio"></div>
-                </div>
-        
-                <div class="radio-card mb-3 d-flex align-items-center">
-                    <input type="radio" id="option4" name="interaction" />
-                    <label for="option4" class="mb-0">No preference — I follow my guests’ lead.</label>
-                    <div class="custom-radio"></div>
+            <!-- Default Language Display Section -->
+            <div id="selectedLanguages">
+                <div class="language-option">
+                    <span>English (Default)</span>
                 </div>
             </div>
+            <div class="separator"></div>
         
-            <!-- Shared Information and Buttons -->
-            <div class="d-flex flex-column  mt-5 w-100">
-                <p class="text-muted mb-3">Shared 48 hours before check-in</p>
-                <div class="row w-100">
-                    <div class="col-6">
-                        <button class="btn btn-primary w-100">Back</button>
-                    </div>
-                    <div class="col-6">
-                        <button class="btn btn-primary w-100">Next</button>
-                    </div>
-                </div>
-            </div>
-            
+            <!-- Add Language Button -->
+            <button class="add-language-btn" onclick="toggleAddLanguageSection()">Add Language</button>
         </div>
+
+
+        <!-- Add Language Section -->
+<div class="container language-container2" id="addLanguageSection">
+    <!-- Title -->
+    <h1 class="title">Add a language</h1>
+
+    <!-- Language List with Checkboxes -->
+    <div class="language-list">
+        <div class="language-item">
+            <span>Azerbaycan dili</span>
+            <input type="checkbox" class="language-checkbox" value="Azerbaycan dili">
+        </div>
+        <div class="language-item">
+            <span>Bahasa Indonesia</span>
+            <input type="checkbox" class="language-checkbox" value="Bahasa Indonesia">
+        </div>
+        <div class="language-item">
+            <span>Bahasa Melayu</span>
+            <input type="checkbox" class="language-checkbox" value="Bahasa Melayu">
+        </div>
+        <div class="language-item">
+            <span>Bosanski</span>
+            <input type="checkbox" class="language-checkbox" value="Bosanski">
+        </div>
+        <div class="language-item">
+            <span>Català</span>
+            <input type="checkbox" class="language-checkbox" value="Català">
+        </div>
+        <div class="language-item">
+            <span>Crnogorski</span>
+            <input type="checkbox" class="language-checkbox" value="Crnogorski">
+        </div>
+        <div class="language-item">
+            <span>Dansk</span>
+            <input type="checkbox" class="language-checkbox" value="Dansk">
+        </div>
+        <div class="language-item">
+            <span>Deutsch</span>
+            <input type="checkbox" class="language-checkbox" value="Deutsch">
+        </div>
+        <div class="language-item">
+            <span>Eesti</span>
+            <input type="checkbox" class="language-checkbox" value="Eesti">
+        </div>
+        <div class="language-item">
+            <span>English (Australia)</span>
+            <input type="checkbox" class="language-checkbox" value="English (Australia)">
+        </div>
+        <div class="language-item">
+            <span>English (Canada)</span>
+            <input type="checkbox" class="language-checkbox" value="English (Canada)">
+        </div>
+        <div class="language-item">
+            <span>English (UK)</span>
+            <input type="checkbox" class="language-checkbox" value="English (UK)">
+        </div>
+        <div class="language-item">
+            <span>Español</span>
+            <input type="checkbox" class="language-checkbox" value="Español">
+        </div>
+        <div class="language-item">
+            <span>Español (Argentina)</span>
+            <input type="checkbox" class="language-checkbox" value="Español (Argentina)">
+        </div>
+        <div class="language-item">
+            <span>Español (Latinoamérica)</span>
+            <input type="checkbox" class="language-checkbox" value="Español (Latinoamérica)">
+        </div>
+    </div>
+
+    <!-- Save Button -->
+    <button class="save-btn" onclick="saveSelectedLanguages()">Save</button>
+</div>
+<!-- Confetti Container -->
+<div id="confetti-container" class="position-absolute w-100 h-100 d-none"></div>
+
+<!-- Congratulations Modal -->
+<div class="modal fade" id="congratsModal" tabindex="-1" aria-labelledby="congratsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+            <div class="modal-header">
+                <h5 class="modal-title" id="congratsModalLabel">🎉 Congratulations! 🎉</h5>
+            </div>
+            <div class="modal-body">
+                <p>You have chosen these languages:</p>
+                <ul id="selectedLanguagesList" class="list-unstyled"></ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="clearConfetti()">Continue</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     </div>
 </div>
+
+
+
+
+
+
+
+
+
 
 
 <!-- Off-canvas for mobile responsive -->
@@ -701,8 +780,93 @@ id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
 
 <!-- custom script--------------------------------- -->
 
+<script>
+      function toggleAddLanguageSection() {
+        // Toggle visibility of the Add Language section
+        const addLanguageSection = document.getElementById('addLanguageSection');
+        addLanguageSection.style.display = addLanguageSection.style.display === 'none' ? 'block' : 'none';
+    }
 
+    function saveSelectedLanguages() {
+        const selectedLanguagesContainer = document.getElementById('selectedLanguages');
+        selectedLanguagesContainer.innerHTML = ''; // Clear current languages
 
+        // Add default language
+        selectedLanguagesContainer.innerHTML += `<div class="language-option">
+            <span>English (Default)</span>
+        </div>`;
+
+        // Get selected languages
+        const checkboxes = document.querySelectorAll('.language-checkbox:checked');
+        const selectedLanguagesList = document.getElementById('selectedLanguagesList');
+        selectedLanguagesList.innerHTML = ''; // Clear modal list
+
+        if (checkboxes.length === 0) {
+            // If no language is selected, show alert
+            alert("Please choose at least one language");
+            return;
+        }
+
+        checkboxes.forEach(checkbox => {
+            const languageName = checkbox.value;
+
+            // Add language to main display with a remove button
+            const languageDiv = document.createElement('div');
+            languageDiv.className = 'language-option';
+            languageDiv.innerHTML = `
+                <span>${languageName}</span>
+                <button class="remove-btn" onclick="deleteLanguage(this)">Remove</button>
+            `;
+            selectedLanguagesContainer.appendChild(languageDiv);
+
+            // Add language to modal list
+            const languageListItem = document.createElement('li');
+            languageListItem.textContent = languageName;
+            selectedLanguagesList.appendChild(languageListItem);
+        });
+
+        // Clear checkboxes after saving
+        checkboxes.forEach(checkbox => checkbox.checked = false);
+
+        // Show the congratulations modal with confetti effect
+        showCongratsModal();
+
+        // Hide the Add Language section again
+        toggleAddLanguageSection();
+    }
+
+    function deleteLanguage(button) {
+        // Delete the selected language from the display list
+        const languageDiv = button.parentElement;
+        languageDiv.remove();
+    }
+
+    function showCongratsModal() {
+        // Generate confetti elements
+        const confettiContainer = document.getElementById('confetti-container');
+        confettiContainer.classList.remove('d-none');
+        confettiContainer.innerHTML = '';
+
+        // Generate 50 confetti pieces with random colors and positions
+        for (let i = 0; i < 50; i++) {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.animationDuration = (Math.random() * 1 + 1) + 's';
+            confettiContainer.appendChild(confetti);
+        }
+
+        // Show modal
+        const modal = new bootstrap.Modal(document.getElementById('congratsModal'));
+        modal.show();
+    }
+
+    function clearConfetti() {
+        // Clear the confetti effect when the modal is dismissed
+        document.getElementById('confetti-container').classList.add('d-none');
+        document.getElementById('confetti-container').innerHTML = '';
+    }
+</script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- jquery CDN -->

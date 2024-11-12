@@ -15,7 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <!-- Custom Css -->
-    <link rel="stylesheet" href="/Css/page-78.css" />
+    <link rel="stylesheet" href="/Css/page-83.css" />
     <link rel="stylesheet" href="/Css/sidebar.css" />
     <!-- Include Flatpickr CSS -->
     <link
@@ -371,58 +371,90 @@
             <i class="fas fa-chevron-right"></i>
         </div>
         
-
-
-
-        <div class="container my-5">
-            <!-- Title and Description -->
-            <h1 class="h4 fw-bold">Interaction with guests</h1>
-            <p class="text-muted mb-4">Let guests know if you enjoy spending time with them or prefer a hands-off approach.</p>
+        <div class="container checkin-container">
+            <!-- Title -->
+            <h1 class="h5 fw-bold mb-4">Select a check-in method</h1>
         
-            <!-- Radio Button Group -->
-            <div class="radio-group">
-                <div class="radio-card mb-3 d-flex align-items-center">
-                    <input type="radio" id="option1" name="interaction" />
-                    <label for="option1" class="mb-0">I won’t be available in person, and prefer communicating through the app.</label>
-                    <div class="custom-radio"></div>
-                </div>
-        
-                <div class="radio-card mb-3 d-flex align-items-center">
-                    <input type="radio" id="option2" name="interaction" />
-                    <label for="option2" class="mb-0">I like to say hello in person, but keep to myself otherwise.</label>
-                    <div class="custom-radio"></div>
-                </div>
-        
-                <div class="radio-card mb-3 d-flex align-items-center">
-                    <input type="radio" id="option3" name="interaction" />
-                    <label for="option3" class="mb-0">I like socializing and spending time with guests.</label>
-                    <div class="custom-radio"></div>
-                </div>
-        
-                <div class="radio-card mb-3 d-flex align-items-center">
-                    <input type="radio" id="option4" name="interaction" />
-                    <label for="option4" class="mb-0">No preference — I follow my guests’ lead.</label>
-                    <div class="custom-radio"></div>
-                </div>
+            <!-- Check-in Method Options -->
+            <div class="option-card" onclick="selectOption(this, 'Smart lock', 'Add any important details for getting inside your place with a smart lock. This info will be shared with guests 24 - 48 hours before check-in.')">
+                <div class="option-title">Smart lock</div>
+                <p class="mb-0">Guests will use a code or app to open a wifi-connected lock.</p>
             </div>
         
-            <!-- Shared Information and Buttons -->
-            <div class="d-flex flex-column  mt-5 w-100">
-                <p class="text-muted mb-3">Shared 48 hours before check-in</p>
-                <div class="row w-100">
-                    <div class="col-6">
-                        <button class="btn btn-primary w-100">Back</button>
-                    </div>
-                    <div class="col-6">
-                        <button class="btn btn-primary w-100">Next</button>
-                    </div>
-                </div>
+            <div class="option-card" onclick="selectOption(this, 'Keypad', 'Add any important details for getting inside your place with a keypad. This info will be shared with guests 24 - 48 hours before check-in.')">
+                <div class="option-title">Keypad</div>
+                <p class="mb-0">Guests will use the code you provide to open an electronic lock.</p>
             </div>
-            
+        
+            <div class="option-card" onclick="selectOption(this, 'Lockbox', 'Add any important details for accessing the lockbox. This info will be shared with guests 24 - 48 hours before check-in.')">
+                <div class="option-title">Lockbox</div>
+                <p class="mb-0">Guests will use a code you provide to open a small safe that has a key inside.</p>
+            </div>
+        
+            <div class="option-card" onclick="selectOption(this, 'Building staff', 'Add any important details for guests interacting with building staff. This info will be shared with guests 24 - 48 hours before check-in.')">
+                <div class="option-title">Building staff</div>
+                <p class="mb-0">Someone will be available 24 hours a day to let guests in.</p>
+            </div>
+        
+            <div class="option-card" onclick="selectOption(this, 'In-person greeting', 'Add any important details for guests who will meet you or your Co-Host. This info will be shared with guests 24 - 48 hours before check-in.')">
+                <div class="option-title">In-person greeting</div>
+                <p class="mb-0">Guests will meet you or your Co-Host to pick up keys.</p>
+            </div>
+        
+            <div class="option-card" onclick="selectOption(this, 'Other', 'Add any important details for guests using an alternate check-in method. This info will be shared with guests 24 - 48 hours before check-in.')">
+                <div class="option-title">Other</div>
+                <p class="mb-0">Guests will use a different method not listed here.</p>
+            </div>
+        </div>
+
+        <div class="container details-container">
+             <!-- Title and Description -->
+    <h1 class="h5 fw-bold mb-3" id="detailsTitle">Add details</h1>
+    <p class="text-muted mb-4" id="detailsDescription">Add any important details for getting inside your place.</p>
+
+    <!-- Textarea for entering details -->
+    <textarea class="form-control large-textarea" placeholder="Add optional details..."></textarea>
+
+    <!-- Footer Text -->
+    <p class="footer-text">Shared 48 hours before check-in</p>
+
+    <!-- Footer Buttons -->
+    <div class="d-flex justify-content-between">
+        <button class="btn btn-light btn-custom" onclick="goBack()">Back</button>
+        <button class="btn btn-primary btn-custom">Save</button>
+    </div>  
         </div>
 
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- Off-canvas for mobile responsive -->
@@ -700,7 +732,31 @@ id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
 
 
 <!-- custom script--------------------------------- -->
+<script>
+     function selectOption(element, title, description) {
+            // Remove 'active' class from all option cards
+            document.querySelectorAll('.option-card').forEach(card => card.classList.remove('active'));
 
+            // Add 'active' class to the clicked card
+            element.classList.add('active');
+
+            // Update the details container with the selected option's title and description
+            document.getElementById('detailsTitle').innerText = `Add ${title} details`;
+            document.getElementById('detailsDescription').innerText = description;
+
+            // Show the details container
+            document.getElementById('detailsContainer').style.display = 'block';
+
+            // Scroll down to the details container for better UX
+            document.getElementById('detailsContainer').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function goBack() {
+            // Hide the details container and remove active state from all cards
+            document.getElementById('detailsContainer').style.display = 'none';
+            document.querySelectorAll('.option-card').forEach(card => card.classList.remove('active'));
+        }
+</script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
