@@ -1,28 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bonstay Reservation</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="/Css/page-89.css" />
+    <link rel="stylesheet" href="/Css/sidebar.css" />
+    <!-- Include Flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Custom CSS files for specific styles -->
-    <link rel="stylesheet" href="Css/sidebar.css">
-    <link rel="stylesheet" href="Css/Navbar.css">
-    <title>Bonstay</title>
-</head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+      <div class="container-fluid">
+        <div class="row w-100 align-items-center header">
+          <!-- Logo in col-lg-4 -->
+          <div class="col-lg-3 col-6">
+            <a class="navbar-brand" href="#">
+              <img
+                src="Assets/images/logo.png"
+                alt="Bonstay"
+                width="200"
+                class="img-fluid"
+              />
+            </a>
+          </div>
+          <!-- Empty col-lg-6 for spacing -->
+          <div class="col-lg-6 d-none d-lg-block"></div>
+          <!-- Notifications and User Profile in col-lg-4 -->
+          <div
+            class="col-lg-3 col-6 d-flex justify-content-end align-items-center"
+          >
+            <!-- Notifications Icon -->
+            <a href="#" class="nav-link position-relative me-3">
+              <i
+                class="bi bi-bell-fill"
+                style="font-size: 1.5rem; color: #007bff"
+              ></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"
+              >
+                <span class="visually-hidden">New alerts</span>
+              </span>
+            </a>
 
-<body>
+            <!-- User Profile -->
+            <div class="dropdown">
+              <a
+                class="d-flex align-items-center text-decoration-none"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="Assets/images/profile_pic2.png"
+                  alt="Profile Picture"
+                  class="rounded-circle"
+                  width="40"
+                  height="40"
+                />
+                <div class="ms-2">
+                  <span class="text-dark">Timo Jannis</span><br />
+                  <small class="text-dark">Employee</small>
+                  <!-- Dropdown icon -->
+                  <i class="fa-sharp fa-solid fa-caret-down text-dark ms-1"></i>
+                  <br />
+                  <!-- Small text for Employee -->
+                </div>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdown"
+              >
+                <li><a class="dropdown-item" href="#">Notifications</a></li>
+                <li><a class="dropdown-item" href="#">Messages</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Gift cards</a></li>
+                <li class="px-3 text-muted">
+                  Bonstay credits can be applied to gift card
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Switch for hosting</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+ <!-- Sidebar------------------------------------------------------- -->
+
+ <button class="offcanvas-btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+ aria-controls="offcanvasScrolling">
+ <i class="fas fa-bars"></i> Menu
+</button>
 
 <!-- Mobile Off-canvas Button (visible on mobile devices) -->
-<!-- This button is hidden on large screens (d-lg-none) and triggers the off-canvas sidebar for mobile users -->
-<button class="offcanvas-btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-    <i class="fas fa-bars"></i> Menu
-</button>
+
 
 <div class="main-layout">
     <!-- Main Content Wrapper that holds the Sidebar, Middle, and Right Sections -->
@@ -276,9 +370,138 @@
         <div class="d-none content-transition" id="openSidebarIcon">
             <i class="fas fa-chevron-right"></i>
         </div>
+        
+
+
+
+        <div class="container language-container">
+            <!-- Title -->
+            <h1 class="title">Languages</h1>
+        
+            <!-- Description -->
+            <p class="description">
+                For some settings, you can add details in any language you add to your listing.
+                Guests will be shown automatic translations for everything else.
+            </p>
+        
+            <!-- Default Language Display Section -->
+            <div id="selectedLanguages">
+                <div class="language-option">
+                    <span>English (Default)</span>
+                </div>
+            </div>
+            <div class="separator"></div>
+        
+            <!-- Add Language Button -->
+            <button class="add-language-btn" onclick="toggleAddLanguageSection()">Add Language</button>
+        </div>
+
+
+        <!-- Add Language Section -->
+<div class="container language-container2" id="addLanguageSection">
+    <!-- Title -->
+    <h1 class="title">Add a language</h1>
+
+    <!-- Language List with Checkboxes -->
+    <div class="language-list">
+        <div class="language-item">
+            <span>Azerbaycan dili</span>
+            <input type="checkbox" class="language-checkbox" value="Azerbaycan dili">
+        </div>
+        <div class="language-item">
+            <span>Bahasa Indonesia</span>
+            <input type="checkbox" class="language-checkbox" value="Bahasa Indonesia">
+        </div>
+        <div class="language-item">
+            <span>Bahasa Melayu</span>
+            <input type="checkbox" class="language-checkbox" value="Bahasa Melayu">
+        </div>
+        <div class="language-item">
+            <span>Bosanski</span>
+            <input type="checkbox" class="language-checkbox" value="Bosanski">
+        </div>
+        <div class="language-item">
+            <span>Català</span>
+            <input type="checkbox" class="language-checkbox" value="Català">
+        </div>
+        <div class="language-item">
+            <span>Crnogorski</span>
+            <input type="checkbox" class="language-checkbox" value="Crnogorski">
+        </div>
+        <div class="language-item">
+            <span>Dansk</span>
+            <input type="checkbox" class="language-checkbox" value="Dansk">
+        </div>
+        <div class="language-item">
+            <span>Deutsch</span>
+            <input type="checkbox" class="language-checkbox" value="Deutsch">
+        </div>
+        <div class="language-item">
+            <span>Eesti</span>
+            <input type="checkbox" class="language-checkbox" value="Eesti">
+        </div>
+        <div class="language-item">
+            <span>English (Australia)</span>
+            <input type="checkbox" class="language-checkbox" value="English (Australia)">
+        </div>
+        <div class="language-item">
+            <span>English (Canada)</span>
+            <input type="checkbox" class="language-checkbox" value="English (Canada)">
+        </div>
+        <div class="language-item">
+            <span>English (UK)</span>
+            <input type="checkbox" class="language-checkbox" value="English (UK)">
+        </div>
+        <div class="language-item">
+            <span>Español</span>
+            <input type="checkbox" class="language-checkbox" value="Español">
+        </div>
+        <div class="language-item">
+            <span>Español (Argentina)</span>
+            <input type="checkbox" class="language-checkbox" value="Español (Argentina)">
+        </div>
+        <div class="language-item">
+            <span>Español (Latinoamérica)</span>
+            <input type="checkbox" class="language-checkbox" value="Español (Latinoamérica)">
+        </div>
+    </div>
+
+    <!-- Save Button -->
+    <button class="save-btn" onclick="saveSelectedLanguages()">Save</button>
+</div>
+<!-- Confetti Container -->
+<div id="confetti-container" class="position-absolute w-100 h-100 d-none"></div>
+
+<!-- Congratulations Modal -->
+<div class="modal fade" id="congratsModal" tabindex="-1" aria-labelledby="congratsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+            <div class="modal-header">
+                <h5 class="modal-title" id="congratsModalLabel">🎉 Congratulations! 🎉</h5>
+            </div>
+            <div class="modal-body">
+                <p>You have chosen these languages:</p>
+                <ul id="selectedLanguagesList" class="list-unstyled"></ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="clearConfetti()">Continue</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     </div>
 </div>
+
+
+
+
+
+
+
+
+
 
 
 <!-- Off-canvas for mobile responsive -->
@@ -555,12 +778,108 @@ id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
 </div>
 
 
+<!-- custom script--------------------------------- -->
 
+<script>
+      function toggleAddLanguageSection() {
+        // Toggle visibility of the Add Language section
+        const addLanguageSection = document.getElementById('addLanguageSection');
+        addLanguageSection.style.display = addLanguageSection.style.display === 'none' ? 'block' : 'none';
+    }
 
-<!-- Bootstrap JS and dependencies -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="JavaScript/sidebar.js"></script>
+    function saveSelectedLanguages() {
+        const selectedLanguagesContainer = document.getElementById('selectedLanguages');
+        selectedLanguagesContainer.innerHTML = ''; // Clear current languages
 
-</body>
+        // Add default language
+        selectedLanguagesContainer.innerHTML += `<div class="language-option">
+            <span>English (Default)</span>
+        </div>`;
 
+        // Get selected languages
+        const checkboxes = document.querySelectorAll('.language-checkbox:checked');
+        const selectedLanguagesList = document.getElementById('selectedLanguagesList');
+        selectedLanguagesList.innerHTML = ''; // Clear modal list
+
+        if (checkboxes.length === 0) {
+            // If no language is selected, show alert
+            alert("Please choose at least one language");
+            return;
+        }
+
+        checkboxes.forEach(checkbox => {
+            const languageName = checkbox.value;
+
+            // Add language to main display with a remove button
+            const languageDiv = document.createElement('div');
+            languageDiv.className = 'language-option';
+            languageDiv.innerHTML = `
+                <span>${languageName}</span>
+                <button class="remove-btn" onclick="deleteLanguage(this)">Remove</button>
+            `;
+            selectedLanguagesContainer.appendChild(languageDiv);
+
+            // Add language to modal list
+            const languageListItem = document.createElement('li');
+            languageListItem.textContent = languageName;
+            selectedLanguagesList.appendChild(languageListItem);
+        });
+
+        // Clear checkboxes after saving
+        checkboxes.forEach(checkbox => checkbox.checked = false);
+
+        // Show the congratulations modal with confetti effect
+        showCongratsModal();
+
+        // Hide the Add Language section again
+        toggleAddLanguageSection();
+    }
+
+    function deleteLanguage(button) {
+        // Delete the selected language from the display list
+        const languageDiv = button.parentElement;
+        languageDiv.remove();
+    }
+
+    function showCongratsModal() {
+        // Generate confetti elements
+        const confettiContainer = document.getElementById('confetti-container');
+        confettiContainer.classList.remove('d-none');
+        confettiContainer.innerHTML = '';
+
+        // Generate 50 confetti pieces with random colors and positions
+        for (let i = 0; i < 50; i++) {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.animationDuration = (Math.random() * 1 + 1) + 's';
+            confettiContainer.appendChild(confetti);
+        }
+
+        // Show modal
+        const modal = new bootstrap.Modal(document.getElementById('congratsModal'));
+        modal.show();
+    }
+
+    function clearConfetti() {
+        // Clear the confetti effect when the modal is dismissed
+        document.getElementById('confetti-container').classList.add('d-none');
+        document.getElementById('confetti-container').innerHTML = '';
+    }
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="./JavaScript/sidebar.js"></script>
+
+    <!-- Bootstrap v5 & Bootstrap Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </body>
 </html>

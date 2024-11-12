@@ -1,0 +1,159 @@
+        /* Page container */
+        .listings-container {
+            padding: 50px 20px;
+            max-width: 70%;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* Heading and new listing link */
+        .listings-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .listings-heading {
+            font-size: 2.5rem;
+            /* Larger heading for big screens */
+            font-weight: bold;
+            color: #333;
+        }
+
+        .create-listing-link {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: black;
+            transition: color 0.3s;
+        }
+
+        .create-listing-link:hover {
+            color: #0056b3;
+        }
+
+        /* Flex container for cards */
+        .cards-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            /* Space between cards */
+        }
+
+        /* Card styling */
+        .listing-card {
+            width: 430px;
+            /* Slightly wider */
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .listing-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .listing-image {
+            width: 430px;
+            /* Adjust width as needed */
+            height: auto;
+            /* Make height equal to width to create a square */
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+
+        /* Card content */
+        .card-content {
+            padding: 10px;
+        }
+
+        .listing-title {
+            font-size: 1.25rem;
+            /* Bigger font for titles */
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .listing-address {
+    font-size: 0.95rem;
+    color: black;
+    margin-bottom: 12px;
+}
+
+        .listing-rating {
+            color: #ffc107;
+            font-size: 1.2rem;
+            /* Bigger rating icon */
+        }
+
+        .superhost-text {
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+        /* Button styling */
+        .market-button {
+            background-color: #00AAE5;
+            color: #fff;
+            font-weight: bold;
+            padding: 22px;
+            border: none;
+            border-radius: 8px;
+            width: 70%;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+            margin-top: 13px;
+            cursor: pointer;
+        }
+
+        .market-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .listings-heading {
+                font-size: 1.5rem;
+            }
+
+            .listing-card {
+                width: 200px;
+            }
+
+            .listing-image {
+                height: 200px;
+                width: 200px;
+                /* Square on smaller screens as well */
+            }
+
+            .listing-title {
+                font-size: 1rem;
+            }
+
+            .listing-address {
+                font-size: 0.8rem;
+            }
+
+            .listing-rating {
+                font-size: 1rem;
+            }
+
+            .superhost-text {
+                font-size: 0.75rem;
+            }
+
+            .market-button {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+            .create-listing-link {
+                font-size: 0.8rem;}
+                
+            }

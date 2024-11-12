@@ -9,8 +9,7 @@
 
 
 
-* Navbar Styles */
-
+/* Navbar Styles */
 .navbar-brand img {
     height: auto;
 }
@@ -162,6 +161,27 @@ input[type="text"] {
 .save-btn:hover {
     background-color: #0056b3;
 }
+
+/* Error styling for input field */
+.input-error {
+    border: 1px solid #d9534f !important; /* Red border for error */
+    box-shadow: 10px 10px 10px rgba(217, 83, 79, 0.5); /* Subtle shadow effect */
+}
+
+/* Error message styling */
+.error-message {
+    display: none; /* Hidden by default */
+    font-size: 0.875rem;
+    color: #d9534f;
+    margin-top: 5px;
+}
+
+.error-message .error-icon {
+    margin-right: 5px;
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
 
 /* For medium screens like tablets */
 @media screen and (max-width: 1024px) {

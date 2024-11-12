@@ -1,0 +1,245 @@
+body{
+    background:#FCFCFC;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 40px;
+    align-items: center;
+    gap: 20px; /* Space between main content and privacy box */
+}
+
+.main-content {
+    flex: 1;
+    max-width: 700px;
+}
+
+h2 {
+    font-size: 2.75rem;
+    margin-bottom: 25px;
+    color: #333;
+    text-align: left;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.id-card-image {
+    width: 100%;
+    max-width: 610px;
+    height: auto;
+}
+
+.privacy-box {
+    height: 400px;
+    max-width: 283px;
+    padding: 31px;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: left;
+    background-color: white;
+}
+
+.privacy-box h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.privacy-box p {
+    font-size: 1.50rem;
+    color: black;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.privacy-box a {
+    font-size: 1.25rem;
+    color: black;
+}
+
+
+.privacy-box a:hover {
+    text-decoration: underline;
+}
+
+.button-group {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    justify-content: center;
+}
+
+button {
+    margin-top: 141px;
+    padding: 16px 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 542px;
+    transition: background-color 0.3s;
+}
+
+.back-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.retake-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.back-btn:hover,
+.retake-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Medium screen adjustments (tablets and smaller laptops) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    .id-card-image {
+        max-width: 400px;
+    }
+
+    .privacy-box {
+        max-width: 300px;
+        padding: 20px;
+        height: auto;
+    }
+
+    .privacy-box h3 {
+        font-size: 1.5rem;
+    }
+
+    .privacy-box p,
+    .privacy-box a {
+        font-size: 1.125rem;
+    }
+
+    button {
+        padding: 18px 36px;
+        font-size: 1.25rem;
+        width: 50%;
+}
+}
+/* Small screen adjustments (mobile phones) */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .content {
+        flex-direction: column; /* Stack main content and privacy box */
+        align-items: center;
+        gap: 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .id-card-image {
+        max-width: 300px;
+    }
+
+    .privacy-box {
+        max-width: 100%;
+        padding: 15px;
+        height: auto;
+    }
+
+    .privacy-box h3 {
+        font-size: 1.25rem;
+    }
+
+    .privacy-box p,
+    .privacy-box a {
+        font-size: 1rem;
+    }
+
+    .button-group {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 15px;
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 1.125rem;
+        width: 100%; /* Full width for mobile */
+        margin-top: 0;
+    }
+}
+
+/* Extra small screens (very small mobile devices) */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+    }
+
+    .id-card-image {
+        max-width: 250px;
+    }
+
+    @media (max-width: 480px) {
+    .privacy-box {
+        padding: 10px;
+        height: auto;
+    }
+
+    .privacy-box h3 {
+        font-size: 1.125rem;
+    }
+
+    .privacy-box p,
+    .privacy-box a {
+        font-size: 0.875rem;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+}

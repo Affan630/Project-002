@@ -1,0 +1,115 @@
+.center-container{
+    border-right: 1px solid black;
+    height: 100vh;
+}
+
+
+/* Minimal custom styling */
+       .card-custom {
+        max-width: 400px;
+        border: none;
+        padding: 46px;
+       
+    }
+    
+    .card-title {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .card-text {
+        color: #555;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .learn-more {
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
+    }
+
+    .learn-more:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .center-container{
+            border-right: none;
+        }
+        
+    }
+
+
+    /* right Section=---------------------- */
+            .container{
+                margin-left: 20px;
+                max-width: 500px;
+            }
+            /* Custom styling for card-like buttons */
+            .instruction-card {
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 15px;
+                cursor: pointer;
+                transition: border-color 0.3s;
+                text-align: left;
+                background-color: white;
+                font-weight: 700;
+            }
+            .container .btn {
+                margin-top: 30%;
+                background-color: #0091FF;
+            }
+            .instruction-card:hover {
+                
+                border: 3px solid black;
+            }
+            .form-control{
+                border: 1px solid black;
+            }
+            
+            .instruction-card.active {
+                /* border-color: #007bff; */
+                border: 4px solid black;
+                font-weight: bold;
+            }
+    
+             
+                .textarea-container {
+                    border: 1px solid black;
+                    border-radius: 8px;
+                    padding: 15px;
+                    margin-bottom: 20px;
+                }
+    
+            .character-count {
+                font-size: 12px;
+                color: #666;
+                text-align: right;
+            }
+    
+            /* Button styling */
+            .btn-custom {
+                width: 100%;
+                max-width: 150px;
+                font-weight: bold;
+            }
+    
+            @media (max-width: 768px) {
+                .card-custom {
+                    max-width: 100%;
+                    border: none;
+                    padding: 20px;
+
+                   
+                }
+
+                .container{
+                    margin-left: 0;
+                    max-width: 100%;
+                }
+                .instruction-card, .textarea-container {
+                    padding: 10px;
+                }
+            }

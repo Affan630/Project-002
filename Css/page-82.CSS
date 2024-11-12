@@ -1,0 +1,56 @@
+ /* Styling for container */
+ .wifi-container {
+    max-width: auto;
+    margin: 0 auto;
+}
+
+/* Dropdown button styling */
+.dropdown-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.dropdown-btn:hover {
+    border-color: #007bff;
+}
+
+/* Button styling */
+.btn-custom {
+    width: 100%;
+    max-width: 49%;
+    font-weight: bold;
+    padding: 12px;
+    background-color: #00AAE5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-custom:hover {
+    background-color: #008bbd;
+}
+
+/* Footer text styling */
+.footer-text {
+    font-size: 14px;
+    color: #666;
+    text-align: left;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .wifi-container {
+        padding: 0 15px;
+    }
+}

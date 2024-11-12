@@ -1,0 +1,137 @@
+        /* Container Styling */
+        .language-container {
+            max-width: 500px;
+            padding: 40px 40px;
+            height: 100vh;
+            margin: 0;
+            border-right: 1px solid black;
+        }
+    
+        /* Title Styling */
+        .title {
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+        }
+    
+        /* Description Styling */
+        .description {
+            color: #6c757d;
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+    
+        /* Language Option Styling */
+        .language-option {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+    
+        /* Horizontal Line Styling */
+        .separator {
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+    
+        /* Button Styling */
+        .add-language-btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #00aaff;
+            border: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+    
+        .add-language-btn:hover {
+            background-color: #008ecc;
+        }
+    
+    
+    
+    
+          /* Center the container and apply padding */
+          .language-container2 {
+            max-width: auto;
+            margin: 0 20px;
+            padding: 40px 20px;
+            margin-right: 100px;
+        }
+    
+        /* Title Styling */
+        .title {
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+        }
+    
+        /* Styling for each language item */
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+    
+        /* Button Styling */
+        .save-btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #00aaff;
+            border: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            margin-top: 30px;
+        }
+     /* Remove Button Styling */
+     .remove-btn {
+        background: none;
+        border: none;
+        color: #dc3545;
+        font-size: 0.9rem;
+        cursor: pointer;
+    }
+        .save-btn:hover {
+            background-color: #008ecc;
+        }
+         /* Delete Button Styling */
+         .delete-btn {
+            background: none;
+            border: none;
+            color: #dc3545;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+         /* Hide Add Language Section by Default */
+         #addLanguageSection {
+            display: none;
+        }
+
+        /* Confetti Styling */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #FFC107;
+            animation: confetti-fall 1s linear infinite;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+
+        @keyframes confetti-fall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(300px) rotate(360deg); opacity: 0; }
+        }
+
+        .confetti:nth-child(2n) { background-color: #FF5722; }
+        .confetti:nth-child(3n) { background-color: #4CAF50; }
+        .confetti:nth-child(4n) { background-color: #3F51B5; }
