@@ -1,0 +1,130 @@
+.data-container {
+    max-width: 900px;
+    height: 100vh;
+    padding: 20px;
+  }
+  .breadcrumb {
+    font-size: 14px;
+    color: #555;
+  }
+  .header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .nav-tabs .nav-link {
+    color: #666;
+  }
+  .nav-tabs .nav-link.active {
+    color: #00AAE5;
+    font-weight: bold;
+    border-bottom: 2px solid#00AAE5;
+  }
+  .section-title {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .request-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    color: #333;
+  }
+  .request-item .description {
+    font-size: 14px;
+    color: #666;
+  }
+  .info-box {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 14px;
+    color: #333;
+    margin-top: 40px;
+  }
+  .info-box-title {
+    font-weight: bold;
+  }
+  .info-box a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .info-box a:hover {
+    text-decoration: underline;
+  }
+  .divider {
+    border-bottom: 1px solid #e0e0e0;
+    margin: 15px 0;
+  }
+
+
+  /* sharing------------------------- */
+
+  .activity-container {
+    max-width: 600px;
+    
+  }
+  .section-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  .description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  .toggle-container {
+    margin-top: 20px;
+  }
+  .toggle-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .option-title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+  }
+  .option-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+  }
+  .divider {
+    border-bottom: 1px solid #e0e0e0;
+    margin: 20px 0;
+  }
+
+  /* Services--------------------------- */
+
+  .services-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+  .section-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  .section-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  .no-services {
+    font-size: 16px;
+    color: #333;
+    font-weight: normal;
+  }

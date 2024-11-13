@@ -1,0 +1,112 @@
+/* Base Styles */
+.pro-container {
+  max-width: 900px;
+  padding: 20px;
+  height: auto;
+}
+.breadcrumb {
+  font-size: 14px;
+  color: #555;
+}
+.header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-title {
+  font-weight: bold;
+  color: #333;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.section-description {
+  color: #666;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.manage-link {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+}
+.manage-link:hover {
+  text-decoration: underline;
+}
+.form-inline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.form-control {
+  width: auto;
+  flex-grow: 1;
+}
+.btn-save {
+  background-color: #0091FF;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+}
+.btn-copy {
+  background-color: #fff;
+  color: #007bff;
+  font-weight: bold;
+  border: 1px solid #0091FF;
+  padding: 10px 20px;
+}
+.btn-save:hover {
+  background-color: #0056b3;
+}
+.btn-copy:hover {
+  background-color: #e6f0ff;
+}
+.tip-text {
+  font-size: 12px;
+  color: #666;
+  margin-top: 20px;
+}
+.tip-text a {
+  color: black;
+  font-weight: 600;
+}
+.tip-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header h1 {
+      font-size: 20px;
+  }
+  .section-title {
+      font-size: 15px;
+  }
+  .section-description,
+  .tip-text {
+      font-size: 13px;
+  }
+  .form-inline {
+      flex-direction: column;
+      align-items: stretch;
+  }
+  .form-control,
+  .btn-save,
+  .btn-copy {
+      width: 100%;
+      margin-top: 5px;
+  }
+  /* Align manage link to the right */
+  .d-flex.justify-content-between.align-items-center {
+      flex-direction: row;
+      align-items: center;
+  }
+  .manage-link {
+      margin-left: auto;
+  }
+}
