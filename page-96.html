@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bonstay Reservation</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="/Css/page-96.css" />
+    <link rel="stylesheet" href="/Css/Navbar.css" />
+    <link rel="stylesheet" href="/Css/footer.css" />
+    <!-- Include Flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+  </head>
+
+  <body>
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container-fluid">
+      <div class="row w-100 align-items-center header">
+        <!-- Logo in col-lg-4 -->
+        <div class="col-lg-3 col-6">
+          <a class="navbar-brand" href="#">
+            <img
+              src="Assets/images/logo.png"
+              alt="Bonstay"
+              width="200"
+              class="img-fluid"
+            />
+          </a>
+        </div>
+        <!-- Empty col-lg-6 for spacing -->
+        <div class="col-lg-6 d-none d-lg-block"></div>
+        <!-- Notifications and User Profile in col-lg-4 -->
+        <div
+          class="col-lg-3 col-6 d-flex justify-content-end align-items-center"
+        >
+          <!-- Notifications Icon -->
+          <a href="#" class="nav-link position-relative me-3">
+            <i
+              class="bi bi-bell-fill"
+              style="font-size: 1.5rem; color: #007bff"
+            ></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"
+            >
+              <span class="visually-hidden">New alerts</span>
+            </span>
+          </a>
+
+          <!-- User Profile -->
+          <div class="dropdown">
+            <a
+              class="d-flex align-items-center text-decoration-none"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="Assets/images/profile_pic2.png"
+                alt="Profile Picture"
+                class="rounded-circle"
+                width="40"
+                height="40"
+              />
+              <div class="ms-2">
+                <span class="text-dark">Timo Jannis</span><br />
+                <small class="text-dark">Employee</small>
+                <!-- Dropdown icon -->
+                <i class="fa-sharp fa-solid fa-caret-down text-dark ms-1"></i>
+                <br />
+                <!-- Small text for Employee -->
+              </div>
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdown"
+            >
+              <li><a class="dropdown-item" href="#">Notifications</a></li>
+              <li><a class="dropdown-item" href="#">Messages</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Gift cards</a></li>
+              <li class="px-3 text-muted">
+                Bonstay credits can be applied to gift card
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Switch for hosting</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main-container">
+    <div class="row">
+        <!-- Left Form Section -->
+        <div class="col-md-8 form-section">
+            <a href="" class="text-dark text-decoration-none"><div class="d-flex align-items-center mb-3">
+                <span><i class="fas fa-chevron-left"></i></span>
+                <h2 class="form-header ms-2">Request your personal data</h2>
+            </div></a>
+            <p class="form-description">Before we get you a copy of your data, we’ll just need you to answer a few questions.</p>
+
+            <!-- Form Fields -->
+            <form>
+                <h5>Where do you reside?</h5>
+                <div class="custom-select-wrapper">
+                    <select class="custom-select" required>
+                        <option value="">Country/Region</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="AU">Australia</option>
+                    </select>
+                    <i class="fas fa-chevron-down custom-select-icon"></i>
+                </div>
+
+                <h5>In what format do you want your data?</h5>
+                <div class="custom-select-wrapper">
+                    <select class="custom-select" required>
+                        <option value="">Select Format</option>
+                        <option value="pdf">PDF</option>
+                        <option value="csv">CSV</option>
+                        <option value="json">JSON</option>
+                    </select>
+                    <i class="fas fa-chevron-down custom-select-icon"></i>
+                </div>
+
+                <h5>Why are you requesting a copy of your data?</h5>
+                <div class="custom-select-wrapper">
+                    <select class="custom-select">
+                        <option value="">Select Reason (optional)</option>
+                        <option value="privacy">Privacy Concerns</option>
+                        <option value="compliance">Compliance</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <i class="fas fa-chevron-down custom-select-icon"></i>
+                </div>
+
+                <button type="submit" class="btn btn-request mt-3">Request Data</button>
+            </form>
+        </div>
+
+        <!-- Right Help Section -->
+        <div class="col-md-4">
+            <div class="help-section">
+                <h6>Need help?</h6>
+                <a href="#" class="help-link">How do payment plans work? <i class="fas fa-chevron-right"></i></a>
+                <a href="#" class="help-link">How do I pay for my long-term reservation? <i class="fas fa-chevron-right"></i></a>
+                <a href="#" class="help-link">Where can I find my payment? <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- footer -->
+    <div class="footer container-fluid">
+      <div class="container py-4">
+          <!-- Top Footer Section with Links -->
+          <div class="row text-center text-md-start">
+              <!-- Support Column -->
+              <div class="col-12 col-md-4 mb-4">
+                  <h5 class="footer-heading">Support</h5>
+                  <ul class="footer-list">
+                      <li><a href="#">Help Center</a></li>
+                      <li><a href="#">BonstayCover</a></li>
+                      <li><a href="#">Anti-discrimination</a></li>
+                      <li><a href="#">Disability support</a></li>
+                      <li><a href="#">Cancellation options</a></li>
+                      <li><a href="#">Report neighborhood concern</a></li>
+                  </ul>
+              </div>
+              <!-- Hosting Column -->
+              <div class="col-12 col-md-4 mb-4">
+                  <h5 class="footer-heading">Hosting</h5>
+                  <ul class="footer-list">
+                      <li><a href="#">Bonstay your home</a></li>
+                      <li><a href="#">BonCover for Hosts</a></li>
+                      <li><a href="#">Hosting resources</a></li>
+                      <li><a href="#">Community forum</a></li>
+                      <li><a href="#">Hosting responsibly</a></li>
+                      <li><a href="#">Bonstay-friendly apartments</a></li>
+                      <li><a href="#">Join a free Hosting class</a></li>
+                  </ul>
+              </div>
+              <!-- Bonstay Column -->
+              <div class="col-12 col-md-4 mb-4">
+                  <h5 class="footer-heading">Bonstay</h5>
+                  <ul class="footer-list">
+                      <li><a href="#">Newsroom</a></li>
+                      <li><a href="#">New features</a></li>
+                      <li><a href="#">Careers</a></li>
+                      <li><a href="#">Investors</a></li>
+                      <li><a href="#">Gift cards</a></li>
+                      <li><a href="#">Bonstay.org emergency stays</a></li>
+                  </ul>
+              </div>
+          </div>
+  
+          <hr class="footer-divider">
+  
+          <!-- Bottom Footer Section with Legal Links, Language/Currency, and Social Icons -->
+          <div class="footer-bottom text-center text-md-start">
+              <p class="mb-2">&copy; 2024 Bonstay</p>
+              <div class="footer-links">
+                  <a href="#">Terms</a>
+                  <span>|</span>
+                  <a href="#">Sitemap</a>
+                  <span>|</span>
+                  <a href="#">Privacy</a>
+                  <span>|</span>
+                  <a href="#">Your Privacy Choices</a>
+              </div>
+  
+              <!-- Language and Currency Section -->
+              <div class="language-currency mt-3">
+                  <a href="#" class="footer-icon"><i class="fas fa-globe"></i> English (US)</a>
+                  <a href="#" class="footer-icon ms-3"><i class="fas fa-dollar-sign"></i> USD</a>
+              </div>
+  
+              <!-- Social Icons Section -->
+              <div class="social-icons mt-3">
+                  <a href="#" class="footer-icon"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="footer-icon"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="./JavaScript/page-31.js"></script>
+
+    <!-- Bootstrap v5 & Bootstrap Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </body>
+</html>
