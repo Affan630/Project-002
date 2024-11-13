@@ -15,7 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <!-- Custom Css -->
-    <link rel="stylesheet" href="/Css/page-89.css" />
+    <link rel="stylesheet" href="/Css/page-92.css" />
     <link rel="stylesheet" href="/Css/sidebar.css" />
     <!-- Include Flatpickr CSS -->
     <link
@@ -374,122 +374,68 @@
 
 
 
-        <div class="container language-container">
+        <div class="container taxes-container">
             <!-- Title -->
-            <h1 class="title">Languages</h1>
+            <h1 class="title">Taxes</h1>
         
             <!-- Description -->
             <p class="description">
-                For some settings, you can add details in any language you add to your listing.
-                Guests will be shown automatic translations for everything else.
+                Your listing is in NewYork where Bonstay may collect and remit occupancy taxes on your behalf.
             </p>
         
             <!-- Default Language Display Section -->
-            <div id="selectedLanguages">
-                <div class="language-option">
-                    <span>English (Default)</span>
-                </div>
-            </div>
-            <div class="separator"></div>
+
         
             <!-- Add Language Button -->
-            <button class="add-language-btn" onclick="toggleAddLanguageSection()">Add Language</button>
+            <button class="tax-btn">Learn how Taxes work for hosts</button>
         </div>
 
 
-        <!-- Add Language Section -->
-<div class="container language-container2" id="addLanguageSection">
-    <!-- Title -->
-    <h1 class="title">Add a language</h1>
-
-    <!-- Language List with Checkboxes -->
-    <div class="language-list">
-        <div class="language-item">
-            <span>Azerbaycan dili</span>
-            <input type="checkbox" class="language-checkbox" value="Azerbaycan dili">
-        </div>
-        <div class="language-item">
-            <span>Bahasa Indonesia</span>
-            <input type="checkbox" class="language-checkbox" value="Bahasa Indonesia">
-        </div>
-        <div class="language-item">
-            <span>Bahasa Melayu</span>
-            <input type="checkbox" class="language-checkbox" value="Bahasa Melayu">
-        </div>
-        <div class="language-item">
-            <span>Bosanski</span>
-            <input type="checkbox" class="language-checkbox" value="Bosanski">
-        </div>
-        <div class="language-item">
-            <span>Català</span>
-            <input type="checkbox" class="language-checkbox" value="Català">
-        </div>
-        <div class="language-item">
-            <span>Crnogorski</span>
-            <input type="checkbox" class="language-checkbox" value="Crnogorski">
-        </div>
-        <div class="language-item">
-            <span>Dansk</span>
-            <input type="checkbox" class="language-checkbox" value="Dansk">
-        </div>
-        <div class="language-item">
-            <span>Deutsch</span>
-            <input type="checkbox" class="language-checkbox" value="Deutsch">
-        </div>
-        <div class="language-item">
-            <span>Eesti</span>
-            <input type="checkbox" class="language-checkbox" value="Eesti">
-        </div>
-        <div class="language-item">
-            <span>English (Australia)</span>
-            <input type="checkbox" class="language-checkbox" value="English (Australia)">
-        </div>
-        <div class="language-item">
-            <span>English (Canada)</span>
-            <input type="checkbox" class="language-checkbox" value="English (Canada)">
-        </div>
-        <div class="language-item">
-            <span>English (UK)</span>
-            <input type="checkbox" class="language-checkbox" value="English (UK)">
-        </div>
-        <div class="language-item">
-            <span>Español</span>
-            <input type="checkbox" class="language-checkbox" value="Español">
-        </div>
-        <div class="language-item">
-            <span>Español (Argentina)</span>
-            <input type="checkbox" class="language-checkbox" value="Español (Argentina)">
-        </div>
-        <div class="language-item">
-            <span>Español (Latinoamérica)</span>
-            <input type="checkbox" class="language-checkbox" value="Español (Latinoamérica)">
-        </div>
-    </div>
-
-    <!-- Save Button -->
-    <button class="save-btn" onclick="saveSelectedLanguages()">Save</button>
-</div>
-<!-- Confetti Container -->
-<div id="confetti-container" class="position-absolute w-100 h-100 d-none"></div>
-
-<!-- Congratulations Modal -->
-<div class="modal fade" id="congratsModal" tabindex="-1" aria-labelledby="congratsModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content text-center">
-            <div class="modal-header">
-                <h5 class="modal-title" id="congratsModalLabel">🎉 Congratulations! 🎉</h5>
+        <div class="right-container container">
+            <!-- Fixed Header -->
+            <div class="tax-header">Help Center</div>
+        
+            <!-- Scrollable Content -->
+            <div class="scrollable-content">
+                <h2 class="subheading"><span class="link">How do taxes work for hosts?</span></h2>
+                <p class="content-text">As a host, depending on your location, you may be required to collect local tax or Value Added Tax (VAT) from your guests.</p>
+        
+                <p class="content-text" style="color: gray;">In this article</p>
+                <ul class="content-text">
+                    <li>Local tax</li>
+                    <li>VAT</li>
+                </ul>
+        
+                <h3 class="subheading">Local tax</h3>
+                <p class="content-text">If you determine that you need to collect tax, it's important that guests are informed of the exact tax amount prior to booking.</p>
+        
+                <p class="content-text">In some locations, Bonstay hosts may have a <span class="link">collect and remit feature</span> available to handle occupancy tax. Hosts should not collect occupancy taxes separately for those jurisdictions.</p>
+        
+                <p class="content-text">If you’re a host who has provided your business tax ID and relevant tourist tax registration info, you may be eligible to collect taxes directly from guests by using our <span class="link">professional hosting tools.</span></p>
+        
+                <p class="content-text">If automatic occupancy tax collection and payment isn't available for your listing, you can collect occupancy taxes manually with a special offer or the Resolution Center.</p>
+        
+                <span class="note">Note:</span>
+                <p class="content-text">Transient occupancy tax payouts won’t go through specific routing rules, and will only be sent to your default payout method.</p>
+        
+                <h3 class="subheading">VAT</h3>
+                <p class="content-text">If your country of residence is part of the European Union, Latin America, China, or South Korea, you may need to assess VAT on the services you provide. We encourage you to consult a tax advisor in your jurisdiction for more insight or if you need assistance assessing VAT on the services you provide.</p>
+        
+                <p class="content-text">Additionally, Bonstay is required to collect VAT on its service fees in countries that tax electronically supplied services. Currently, that includes all countries in the EU, Albania, Chile, Colombia, Iceland, Mexico, Norway, Saudi Arabia, South Africa, Switzerland, and Uruguay.</p>
+        
+                <p class="content-text">Bonstay is also required to collect VAT on its service fees from all users who contract with Bonstay China.</p>
+        
+                <p class="content-text">For info on Japanese consumption taxes (JCT), refer to What is VAT and how does it apply to me?</p>
             </div>
-            <div class="modal-body">
-                <p>You have chosen these languages:</p>
-                <ul id="selectedLanguagesList" class="list-unstyled"></ul>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="clearConfetti()">Continue</button>
+        
+            <!-- Fixed Footer with Save Button -->
+            <div class="tax-footer">
+                <button class="save-button">Save</button>
             </div>
         </div>
-    </div>
-</div>
 
+
+        
 
     </div>
 </div>
@@ -781,91 +727,7 @@ id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
 <!-- custom script--------------------------------- -->
 
 <script>
-      function toggleAddLanguageSection() {
-        // Toggle visibility of the Add Language section
-        const addLanguageSection = document.getElementById('addLanguageSection');
-        addLanguageSection.style.display = addLanguageSection.style.display === 'none' ? 'block' : 'none';
-    }
-
-    function saveSelectedLanguages() {
-        const selectedLanguagesContainer = document.getElementById('selectedLanguages');
-        selectedLanguagesContainer.innerHTML = ''; // Clear current languages
-
-        // Add default language
-        selectedLanguagesContainer.innerHTML += `<div class="language-option">
-            <span>English (Default)</span>
-        </div>`;
-
-        // Get selected languages
-        const checkboxes = document.querySelectorAll('.language-checkbox:checked');
-        const selectedLanguagesList = document.getElementById('selectedLanguagesList');
-        selectedLanguagesList.innerHTML = ''; // Clear modal list
-
-        if (checkboxes.length === 0) {
-            // If no language is selected, show alert
-            alert("Please choose at least one language");
-            return;
-        }
-
-        checkboxes.forEach(checkbox => {
-            const languageName = checkbox.value;
-
-            // Add language to main display with a remove button
-            const languageDiv = document.createElement('div');
-            languageDiv.className = 'language-option';
-            languageDiv.innerHTML = `
-                <span>${languageName}</span>
-                <button class="remove-btn" onclick="deleteLanguage(this)">Remove</button>
-            `;
-            selectedLanguagesContainer.appendChild(languageDiv);
-
-            // Add language to modal list
-            const languageListItem = document.createElement('li');
-            languageListItem.textContent = languageName;
-            selectedLanguagesList.appendChild(languageListItem);
-        });
-
-        // Clear checkboxes after saving
-        checkboxes.forEach(checkbox => checkbox.checked = false);
-
-        // Show the congratulations modal with confetti effect
-        showCongratsModal();
-
-        // Hide the Add Language section again
-        toggleAddLanguageSection();
-    }
-
-    function deleteLanguage(button) {
-        // Delete the selected language from the display list
-        const languageDiv = button.parentElement;
-        languageDiv.remove();
-    }
-
-    function showCongratsModal() {
-        // Generate confetti elements
-        const confettiContainer = document.getElementById('confetti-container');
-        confettiContainer.classList.remove('d-none');
-        confettiContainer.innerHTML = '';
-
-        // Generate 50 confetti pieces with random colors and positions
-        for (let i = 0; i < 50; i++) {
-            const confetti = document.createElement('div');
-            confetti.className = 'confetti';
-            confetti.style.left = Math.random() * 100 + 'vw';
-            confetti.style.animationDuration = (Math.random() * 1 + 1) + 's';
-            confettiContainer.appendChild(confetti);
-        }
-
-        // Show modal
-        const modal = new bootstrap.Modal(document.getElementById('congratsModal'));
-        modal.show();
-    }
-
-    function clearConfetti() {
-        // Clear the confetti effect when the modal is dismissed
-        document.getElementById('confetti-container').classList.add('d-none');
-        document.getElementById('confetti-container').innerHTML = '';
-    }
+   
 </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 

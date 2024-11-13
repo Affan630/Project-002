@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bonstay Reservation</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="/Css/page-99.css" />
+    <link rel="stylesheet" href="/Css/Navbar.css" />
+    <link rel="stylesheet" href="/Css/footer.css" />
+    <!-- Include Flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+  </head>
+
+  <body>
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container-fluid">
+      <div class="row w-100 align-items-center header">
+        <!-- Logo in col-lg-4 -->
+        <div class="col-lg-3 col-6">
+          <a class="navbar-brand" href="#">
+            <img
+              src="Assets/images/logo.png"
+              alt="Bonstay"
+              width="200"
+              class="img-fluid"
+            />
+          </a>
+        </div>
+        <!-- Empty col-lg-6 for spacing -->
+        <div class="col-lg-6 d-none d-lg-block"></div>
+        <!-- Notifications and User Profile in col-lg-4 -->
+        <div
+          class="col-lg-3 col-6 d-flex justify-content-end align-items-center"
+        >
+          <!-- Notifications Icon -->
+          <a href="#" class="nav-link position-relative me-3">
+            <i
+              class="bi bi-bell-fill"
+              style="font-size: 1.5rem; color: #007bff"
+            ></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"
+            >
+              <span class="visually-hidden">New alerts</span>
+            </span>
+          </a>
+
+          <!-- User Profile -->
+          <div class="dropdown">
+            <a
+              class="d-flex align-items-center text-decoration-none"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="Assets/images/profile_pic2.png"
+                alt="Profile Picture"
+                class="rounded-circle"
+                width="40"
+                height="40"
+              />
+              <div class="ms-2">
+                <span class="text-dark">Timo Jannis</span><br />
+                <small class="text-dark">Employee</small>
+                <!-- Dropdown icon -->
+                <i class="fa-sharp fa-solid fa-caret-down text-dark ms-1"></i>
+                <br />
+                <!-- Small text for Employee -->
+              </div>
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdown"
+            >
+              <li><a class="dropdown-item" href="#">Notifications</a></li>
+              <li><a class="dropdown-item" href="#">Messages</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Gift cards</a></li>
+              <li class="px-3 text-muted">
+                Bonstay credits can be applied to gift card
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Switch for hosting</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5 mb-5">
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb mb-3">
+        <a href="#">Account</a> &gt; <span>Personal info</span>
+    </div>
+
+    <!-- Main Content -->
+    <div class="row">
+        <!-- Left Section with Personal Information -->
+        <div class="col-md-8">
+            <h2 class="section-heading mb-3">
+                <i class="fas fa-chevron-left me-2"></i>Personal info
+            </h2>
+
+            <p><strong>Mark William</strong>, MarkWilliam@gmail.com &middot; <a href="#" class="edit-link">Go to profile</a></p>
+
+            <!-- Information Items -->
+            <div class="info-item" data-field="Legal name" data-value="Mark William">
+                <span>Legal name</span>
+                <span class="info-value">Mark William</span>
+                <a href="#" class="edit-link" data-bs-toggle="modal" data-bs-target="#editModal">Edit</a>
+            </div>
+
+            <div class="info-item" data-field="Preferred name" data-value="Not provided">
+                <span>Preferred name</span>
+                <span class="info-value">Not provided</span>
+                <a href="#" class="edit-link" data-bs-toggle="modal" data-bs-target="#editModal">Add</a>
+            </div>
+
+            <div class="info-item" data-field="Email address" data-value="m***m@gmail.com">
+                <span>Email address</span>
+                <span class="info-value">m***m@gmail.com</span>
+                <a href="#" class="edit-link" data-bs-toggle="modal" data-bs-target="#editModal">Edit</a>
+            </div>
+
+            <div class="info-item" data-field="Phone numbers" data-value="+1 *** 000 ***">
+                <span>Phone numbers</span>
+                <span class="info-value">+1 *** 000 ***</span>
+                <a href="#" class="edit-link" data-bs-toggle="modal" data-bs-target="#editModal">Edit</a>
+            </div>
+
+            <div class="info-item" data-field="Government ID" data-value="Not provided">
+                <span>Government ID</span>
+                <span class="info-value">Not provided</span>
+                <a href="#" class="edit-link" data-bs-toggle="modal" data-bs-target="#editModal">Add</a>
+            </div>
+
+            <div class="info-item" data-field="Address" data-value="Not provided">
+                <span>Address</span>
+                <span class="info-value">Not provided</span>
+                <a href="#" class="edit-link" data-bs-toggle="modal" data-bs-target="#editModal">Edit</a>
+            </div>
+
+            <div class="info-item" data-field="Emergency contact" data-value="Not provided">
+                <span>Emergency contact</span>
+                <span class="info-value">Not provided</span>
+                <a href="#" class="edit-link" data-bs-toggle="modal" data-bs-target="#editModal">Add</a>
+            </div>
+        </div>
+
+        <!-- Right Section with Help Information -->
+        <div class="col-md-4">
+            <div class="help-box p-3">
+                <div class="help-item mb-3">
+                    <i class="fas fa-lock icon"></i>
+                    <h5>Why isn’t my info shown here?</h5>
+                    <p>We’re hiding some account details to protect your identity.</p>
+                </div>
+
+                <div class="help-item mb-3">
+                    <i class="fas fa-lock-open icon"></i>
+                    <h5>Which details can be edited?</h5>
+                    <p>Contact info and personal details can be edited. If this info was used to verify your identity, you’ll need to get verified again the next time you book—or to continue hosting.</p>
+                </div>
+
+                <div class="help-item">
+                    <i class="fas fa-eye icon"></i>
+                    <h5>What info is shared with others?</h5>
+                    <p>Bonstay only releases contact information for Hosts and guests after a reservation is confirmed.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Editing Information -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Edit Information</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editForm">
+                    <div class="mb-3">
+                        <label for="editInput" class="form-label" id="modalFieldLabel"></label>
+                        <input type="text" class="form-control" id="editInput" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- footer -->
+    <div class="footer container-fluid">
+        <div class="container py-4">
+            <!-- Top Footer Section with Links -->
+            <div class="row text-center text-md-start">
+                <!-- Support Column -->
+                <div class="col-12 col-md-4 mb-4">
+                    <h5 class="footer-heading">Support</h5>
+                    <ul class="footer-list">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">BonstayCover</a></li>
+                        <li><a href="#">Anti-discrimination</a></li>
+                        <li><a href="#">Disability support</a></li>
+                        <li><a href="#">Cancellation options</a></li>
+                        <li><a href="#">Report neighborhood concern</a></li>
+                    </ul>
+                </div>
+                <!-- Hosting Column -->
+                <div class="col-12 col-md-4 mb-4">
+                    <h5 class="footer-heading">Hosting</h5>
+                    <ul class="footer-list">
+                        <li><a href="#">Bonstay your home</a></li>
+                        <li><a href="#">BonCover for Hosts</a></li>
+                        <li><a href="#">Hosting resources</a></li>
+                        <li><a href="#">Community forum</a></li>
+                        <li><a href="#">Hosting responsibly</a></li>
+                        <li><a href="#">Bonstay-friendly apartments</a></li>
+                        <li><a href="#">Join a free Hosting class</a></li>
+                    </ul>
+                </div>
+                <!-- Bonstay Column -->
+                <div class="col-12 col-md-4 mb-4">
+                    <h5 class="footer-heading">Bonstay</h5>
+                    <ul class="footer-list">
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">New features</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Gift cards</a></li>
+                        <li><a href="#">Bonstay.org emergency stays</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <hr class="footer-divider">
+    
+            <!-- Bottom Footer Section with Legal Links, Language/Currency, and Social Icons -->
+            <div class="footer-bottom text-center text-md-start">
+                <p class="mb-2">&copy; 2024 Bonstay</p>
+                <div class="footer-links">
+                    <a href="#">Terms</a>
+                    <span>|</span>
+                    <a href="#">Sitemap</a>
+                    <span>|</span>
+                    <a href="#">Privacy</a>
+                    <span>|</span>
+                    <a href="#">Your Privacy Choices</a>
+                </div>
+    
+                <!-- Language and Currency Section -->
+                <div class="language-currency mt-3">
+                    <a href="#" class="footer-icon"><i class="fas fa-globe"></i> English (US)</a>
+                    <a href="#" class="footer-icon ms-3"><i class="fas fa-dollar-sign"></i> USD</a>
+                </div>
+    
+                <!-- Social Icons Section -->
+                <div class="social-icons mt-3">
+                    <a href="#" class="footer-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="footer-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script>
+      // Store the modal instance globally
+      const editModal = new bootstrap.Modal(document.getElementById('editModal'));
+      
+      // Open modal and populate fields based on the clicked item
+      document.querySelectorAll('.edit-link').forEach(link => {
+          link.addEventListener('click', (event) => {
+              const infoItem = event.target.closest('.info-item');
+              const field = infoItem.getAttribute('data-field');
+              const currentValue = infoItem.getAttribute('data-value');
+      
+              // Set modal title and input value
+              document.getElementById('modalFieldLabel').innerText = `Edit ${field}`;
+              document.getElementById('editInput').value = currentValue;
+      
+              // Show the modal
+              editModal.show();
+      
+              // Update form submission to handle saving the changes
+              const editForm = document.getElementById('editForm');
+              editForm.onsubmit = (e) => {
+                  e.preventDefault(); // Prevent form submission
+      
+                  const newValue = document.getElementById('editInput').value;
+      
+                  // Update displayed value
+                  infoItem.querySelector('.info-value').innerText = newValue;
+                  infoItem.setAttribute('data-value', newValue);
+      
+                  // Hide the modal after saving changes
+                  editModal.hide();
+              };
+          });
+      });
+      
+      </script>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="./JavaScript/page-31.js"></script>
+
+    <!-- Bootstrap v5 & Bootstrap Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </body>
+</html>
