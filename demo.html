@@ -3,87 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Payments</title>
+<title>Activity Sharing</title>
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- Font Awesome CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
-  body {
-    background-color: #f9f9f9;
-  }
-  .payment-container {
-    max-width: 900px;
+  /* Custom styles for the Activity Sharing section */
+  .activity-container {
+    max-width: 600px;
+    margin: 40px auto;
     padding: 20px;
   }
-  .header h1 {
-    font-size: 24px;
+  .section-title {
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
   }
   .description {
+    font-size: 14px;
     color: #666;
-    font-size: 14px;
-    margin-top: 10px;
+    margin-bottom: 20px;
   }
-  .info-box {
-    border: 1px solid #e0e0e0;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: white;
-    font-size: 14px;
-    color: #333;
+  .toggle-container {
+    margin-top: 20px;
   }
-  .info-box-title {
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  .info-link {
+  .toggle-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-decoration: none;
-    color: #333;
+  }
+  .option-title {
     font-weight: bold;
-    margin-top: 8px;
+    font-size: 16px;
+    color: #333;
   }
-  .info-link i {
-    color: #888;
+  .option-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
   }
-  .info-link:hover {
-    text-decoration: underline;
+  .divider {
+    border-bottom: 1px solid #e0e0e0;
+    margin: 20px 0;
   }
 </style>
 </head>
 <body>
 
-<div class="payment-container container">
-  <!-- Main Content and Info Box Side-by-Side -->
-  <div class="row">
-    <!-- Main Content Area -->
-    <div class="col-md-8">
-      <!-- Header -->
-      <div class="header">
-        <h1><i class="fas fa-chevron-left"></i> Your payments</h1>
-      </div>
+<div class="activity-container">
+  <!-- Activity Sharing Section -->
+  <div class="section-title">Activity sharing</div>
+  <div class="description">Decide how your profile and activity are shown to others.</div>
 
-      <!-- Description -->
-      <div class="description">
-        Once you have a reservation, this is where you can come to track your payments and refunds.
+  <!-- Include My Listings in Search Engines -->
+  <div class="toggle-container">
+    <div class="toggle-header">
+      <div class="option-title">Include my listing(s) in search engines</div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="searchEngineToggle">
       </div>
     </div>
+    <div class="option-description">Turning this on means search engines, like Google, will display your listing page(s) in search results.</div>
+  </div>
+  <div class="divider"></div>
 
-    <!-- Info Box on the Right Side -->
-    <div class="col-md-4">
-      <div class="info-box">
-        <div class="info-box-title">Need help?</div>
-        <a href="#" class="info-link">How do payment plans work? <i class="fas fa-chevron-right"></i></a>
-        <a href="#" class="info-link">How do I pay for my long-term reservation? <i class="fas fa-chevron-right"></i></a>
-        <a href="#" class="info-link">Where can I find my payment? <i class="fas fa-chevron-right"></i></a>
+  <!-- Read Receipts -->
+  <div class="toggle-container">
+    <div class="toggle-header">
+      <div class="option-title">Read Receipts</div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="readReceiptsToggle">
       </div>
     </div>
+    <div class="option-description">When this is on, we’ll show people that you’ve read their messages. <a href="#" class="text-dark fw-bold">Learn more</a></div>
   </div>
 </div>
 

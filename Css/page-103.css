@@ -1,0 +1,125 @@
+
+.tax-container {
+    /* margin-top: 20px; */
+    max-width: 900px;
+    padding: 20px;
+    height: 80vh;
+  }
+  .header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .breadcrumb {
+    font-size: 14px;
+    color: #555;
+  }
+  .nav-tabs .nav-link {
+    color: #666;
+  }
+  .nav-tabs .nav-link.active {
+    color: #00AAE5;
+    font-weight: bold;
+    border-bottom: 2px solid #00AAE5;
+  }
+  .section-title {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .section-content {
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 15px; /* added bottom margin to create space below */
+  }
+  .btn-custom {
+    background-color: #00AAE5;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px; /* added top margin to ensure spacing from text */
+    display: inline-block;
+  }
+  .btn-custom:hover {
+    background-color: #0056b3;
+  }
+  .info-box {
+    margin-top: 20px;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 14px;
+    color: #333;
+    margin-top: 20px;
+  }
+  .info-box-title {
+    font-weight: bold;
+  }
+  .divider {
+    border-bottom: 1px solid #e0e0e0;
+    margin: 15px 0;
+  }
+
+  /* tax document------------------------------ */
+
+    /* Custom styling for tax documents */
+    .tax-documents-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+     
+    }
+    .section-title {
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .section-content {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .year-section {
+      font-weight: bold;
+      font-size: 16px;
+      color: #333;
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+    .year-content {
+      font-size: 14px;
+      color: #666;
+    }
+    .divider {
+      border-bottom: 1px solid #e0e0e0;
+      margin: 15px 0;
+    }
+    .help-section {
+      font-size: 14px;
+      color: #666;
+      margin-top: 30px;
+    }
+    .help-section a {
+      color: #000;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .help-section a:hover {
+      text-decoration: underline;
+    }
+
+  @media (max-width: 768px) {
+    .tax-container {
+        height: 115vh;
+    }
+  }

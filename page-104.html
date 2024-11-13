@@ -15,7 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <!-- Custom Css -->
-    <link rel="stylesheet" href="/Css/page-100.css" />
+    <link rel="stylesheet" href="/Css/page-104.css" />
     <link rel="stylesheet" href="/Css/Navbar.css" />
     <link rel="stylesheet" href="/Css/footer.css" />
     <!-- Include Flatpickr CSS -->
@@ -109,140 +109,194 @@
     </div>
   </nav>
 
-
-  <div class="login-container container">
+  <div class="notification-container container">
     <!-- Breadcrumb and Header -->
     <nav aria-label="breadcrumb" class="breadcrumb mb-2">
-      Account &gt; Login & security
+      Account &gt; Notifications
     </nav>
-    
+  
     <div class="header">
-      <h1><i class="fas fa-chevron-left"></i> Login & security</h1>
+      <h1><i class="fas fa-chevron-left"></i> Notifications</h1>
     </div>
   
-    <!-- Main Content and Info Box Side-by-Side -->
-    <div class="row">
-      <!-- Main Content Area -->
-      <div class="col-md-8">
-        <!-- Tabs -->
-        <ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="login-tab" data-bs-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">LOGIN</a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a class="nav-link" id="login-requests-tab" data-bs-toggle="tab" href="#login-requests" role="tab" aria-controls="login-requests" aria-selected="false">LOGIN REQUESTS</a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a class="nav-link" id="shared-access-tab" data-bs-toggle="tab" href="#shared-access" role="tab" aria-controls="shared-access" aria-selected="false">SHARED ACCESS</a>
-          </li>
-        </ul>
-  
-        <!-- Tab Content -->
-        <div class="tab-content mt-3" id="myTabContent">
-          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-            
-            <!-- Login Section -->
-            <div class="section-title">Login</div>
-            <div class="section-content">
-              <span>Password</span> <span class="text-muted">Last updated a month ago</span>
-              <a href="#" class="action-link float-end">Update</a>
-            </div>
-            <div class="divider"></div>
-  
-            <!-- Social Accounts Section -->
-            <div class="section-title">Social accounts</div>
-            <div class="section-content">
-              <span>Facebook</span> <span class="text-muted">Not connected</span>
-              <a href="#" class="action-link float-end">Connect</a>
-            </div>
-            <div class="divider"></div>
-  
-            <!-- Google Section -->
-            <div class="section-title">Google</div>
-            <div class="section-content">
-              <span>Not connected</span>
-              <a href="#" class="action-link float-end">Disconnect</a>
-            </div>
-            <div class="divider"></div>
-  
-            <!-- Device History Section -->
-            <div class="section-title">Device history</div>
-            <div class="section-content">
-              <i class="fas fa-desktop device-icon"></i>
-              <span>Windows 10.0 - Chrome</span> <span class="device-details d-block">CURRENT SESSION</span>
-              <span class="device-details">Karachi, Sindh · April 29, 2024 at 23:12</span>
-              <a href="#" class="action-link float-end">Log out device</a>
-            </div>
-            <div class="divider"></div>
-  
-            <!-- Account Section -->
-            <div class="section-title">Account</div>
-            <div class="section-content">
-              <span>Deactivate your account</span>
-              <a href="#" class="action-link float-end">Deactivate</a>
-            </div>
-            <div class="divider"></div>
-          </div>
-  
-          <!-- Placeholder for other tabs -->
-          <div class="tab-pane fade" id="login-requests" role="tabpanel" aria-labelledby="login-requests-tab">
-            
-            <div class="container login-container">
-              <!-- Main Title -->
-              <div class="login-title">Login requests</div>
-            
-              <!-- Description -->
-              <div class="login-description">
-                Team members may have to enter a verification code when they log in to this account for the first time. Approve or decline their login requests on this page.
-              </div>
-            
-              <!-- Request Sections -->
-              <div>
-                <!-- Pending Requests -->
-                <div class="request-section">Pending requests</div>
-                <div class="divider"></div>
-            
-                <!-- Approved Requests -->
-                <div class="request-section">Approved requests</div>
-                <div class="divider"></div>
-            
-                <!-- Satisfied Requests -->
-                <div class="request-section">Satisfied requests</div>
-                <div class="divider"></div>
-            
-                <!-- Declined Requests -->
-                <div class="request-section">Declined requests</div>
-                <div class="divider"></div>
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="shared-access" role="tabpanel" aria-labelledby="shared-access-tab">
-            <div class="container shared-access-container">
-              <!-- Title -->
-              <div class="shared-access-title">Shared access</div>
-            
-              <!-- Description -->
-              <div class="shared-access-description">
-                Review each request carefully before approving access.
-                We’ll email your employee or co-worker a 4-digit code
-                that lets them log into your account with their trusted device.
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- Notification Alert Box -->
+    <div class="alert-box">
+      <i class="fas fa-exclamation-circle alert-icon"></i>
+      <div>
+        <strong>Web push notifications are off.</strong><br>
+        Turn on notifications to get notified of new responses on your device.
       </div>
+      <a href="#" class="alert-action">Turn on notifications</a>
+    </div>
   
-      <!-- Info Box on the Right Side -->
-      <div class="col-md-4">
-        <div class="info-box">
-          <div class="info-box-title">Keeping your account secure</div>
-          <p>We regularly review accounts to make sure they’re secure as possible. We’ll also let you know if there’s more we can do to increase the security of your account.</p>
-          <p>Learn about safety tips for guests and hosts.</p>
+    <!-- Tabs -->
+    <ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="offers-updates-tab" data-bs-toggle="tab" href="#offers-updates" role="tab" aria-controls="offers-updates" aria-selected="true">Offers and updates</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="account-tab" data-bs-toggle="tab" href="#account" role="tab" aria-controls="account" aria-selected="false">Account</a>
+      </li>
+    </ul>
+  
+    <!-- Tab Content -->
+    <div class="tab-content mt-3" id="myTabContent">
+      <!-- Offers and Updates Tab -->
+      <div class="tab-pane fade show active" id="offers-updates" role="tabpanel" aria-labelledby="offers-updates-tab">
+        <!-- Hosting Insights and Rewards Section -->
+        <div class="section-title">Hosting insights and rewards</div>
+        <div class="section-description">
+          Learn about best hosting practices, and get access to exclusive hosting perks.
         </div>
-      </div>
+  
+        <div class="option-title">Recognition and achievements</div>
+        <div class="option-description">On: Email</div>
+        <a href="#" class="edit-link">Edit</a>
+       
+  
+        <div class="option-title">Insights and tips</div>
+        <div class="option-description">On: Email</div>
+        <a href="#" class="edit-link">Edit</a>
+       
+  
+        <div class="option-title">Pricing trends and suggestions</div>
+        <div class="option-description">On: Email</div>
+        <a href="#" class="edit-link">Edit</a>
+       
+  
+        <div class="option-title">Hosting perks</div>
+        <div class="option-description">On: Email</div>
+        <a href="#" class="edit-link">Edit</a>
+        <div class="divider"></div>
+  
+        <!-- Hosting Updates Section -->
+        <div class="section-title">Hosting updates</div>
+        <div class="section-description">
+          Get updates about programs, features, and regulations.
+        </div>
+  
+        <div class="option-title">News and updates</div>
+        <div class="option-description">On: Email</div>
+        <a href="#" class="edit-link">Edit</a>
+        
+  
+        <div class="option-title">Local laws and regulations</div>
+        <div class="option-description">On: Email</div>
+        <a href="#" class="edit-link">Edit</a>
+        <div class="divider"></div>
+  
+        <!-- Travel Tips and Offers Section -->
+        <div class="section-title">Travel tips and offers</div>
+        <div class="section-description">
+          Inspire your next trip with personalized recommendations and special offers.
+        </div>
+  
+        <div class="option-title">Inspiration and offers</div>
+        <div class="option-description">On: Email</div>
+        <a href="#" class="edit-link">Edit</a>
+        
+  
+        <div class="option-title">Trip planning</div>
+        <div class="option-description">On: Email</div>
+        <a href="#" class="edit-link">Edit</a>
+        <div class="divider"></div>
+  
+          <!-- Bonstay Updates Section -->
+    <div class="section-title">Bonstay updates</div>
+    <div class="section-description">Stay up to date on the latest news from Bonstay, and let us know how we can improve.</div>
+  
+    <div class="option-title">News and programs</div>
+    <div class="option-description">On: Email</div>
+    <a href="#" class="edit-link">Edit</a>
+   
+  
+    <div class="option-title">Feedback</div>
+    <div class="option-description">On: Email</div>
+    <a href="#" class="edit-link">Edit</a>
+   
+  
+    <div class="option-title">Travel regulations</div>
+    <div class="option-description">On: Email</div>
+    <a href="#" class="edit-link">Edit</a>
+    <div class="divider"></div>
+  
+    <!-- Unsubscribe Checkbox -->
+    <div class="unsubscribe-checkbox">
+      <input type="checkbox" id="unsubscribe" style="margin-right: 10px;">
+      <label for="unsubscribe">Unsubscribe from all marketing emails</label>
+    </div>
+  
+    <!-- Additional Information Section -->
+    <div class="additional-info">
+      By opting in to text messages, you agree to receive automated marketing messages from Bonstay at +1 000 0000.
+    </div>
+  <br>
+    <div class="additional-info">
+      If you’d prefer to use a different number on your account, <a class="text-dark fw-bold" href="#">select where you’ll get text messages</a>. To change to a new phone number, <a class="text-dark fw-bold" href="#">update your phone number settings</a> on your personal info page.
     </div>
   </div>
 
+        <!-- Account Tab -->
+        <div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account-tab">
+          <!-- Account Activity and Policies Section -->
+          <div class="section-title">Account activity and policies</div>
+          <div class="section-description">
+            Confirm your booking and account activity, and learn about important Bonstay policies.
+          </div>
+    
+          <div class="option-title">Account activity</div>
+          <div class="option-description">On: Email</div>
+          <a href="#" class="edit-link">Edit</a>
+    
+          <div class="option-title">Listing activity</div>
+          <div class="option-description">On: Email and SMS</div>
+          <a href="#" class="edit-link">Edit</a>
+    
+          <div class="option-title">Guest policies</div>
+          <div class="option-description">On: Email</div>
+          <a href="#" class="edit-link">Edit</a>
+    
+          <div class="option-title">Host policies</div>
+          <div class="option-description">On: Email</div>
+          <a href="#" class="edit-link">Edit</a>
+          <div class="divider"></div>
+    
+          <!-- Reminders Section -->
+          <div class="section-title">Reminders</div>
+          <div class="section-description">
+            Get important reminders about your reservations, listings, and account activity.
+          </div>
+    
+          <div class="option-title">Reminders</div>
+          <div class="option-description">On: Email</div>
+          <a href="#" class="edit-link">Edit</a>
+          <div class="divider"></div>
+    
+          <!-- Guest and Host Messages Section -->
+          <div class="section-title">Guest and Host messages</div>
+          <div class="section-description">
+            Keep in touch with your Host or guests before and during your trip.
+          </div>
+    
+          <div class="option-title">Messages</div>
+          <div class="option-description">On: Email</div>
+          <a href="#" class="edit-link">Edit</a>
+          <div class="divider"></div>
+    
+          <!-- Additional Information Section -->
+          <div class="additional-info">
+            By opting in to text messages, you agree to receive automated marketing messages from Bonstay at +1 000 0000.
+          </div>
+          <div class="additional-info">
+            If you’d prefer to use a different number on your account, <a class="text-dark fw-bold" href="#">select where you’ll get text messages</a>. To change to a new phone number, <a class="text-dark fw-bold" href="#">update your phone number settings</a> on your personal info page.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
     <!-- footer -->
     <div class="footer container-fluid">
         <div class="container py-4">
@@ -319,42 +373,6 @@
     </div>
     
     
-    <script>
-      // Store the modal instance globally
-      const editModal = new bootstrap.Modal(document.getElementById('editModal'));
-      
-      // Open modal and populate fields based on the clicked item
-      document.querySelectorAll('.edit-link').forEach(link => {
-          link.addEventListener('click', (event) => {
-              const infoItem = event.target.closest('.info-item');
-              const field = infoItem.getAttribute('data-field');
-              const currentValue = infoItem.getAttribute('data-value');
-      
-              // Set modal title and input value
-              document.getElementById('modalFieldLabel').innerText = `Edit ${field}`;
-              document.getElementById('editInput').value = currentValue;
-      
-              // Show the modal
-              editModal.show();
-      
-              // Update form submission to handle saving the changes
-              const editForm = document.getElementById('editForm');
-              editForm.onsubmit = (e) => {
-                  e.preventDefault(); // Prevent form submission
-      
-                  const newValue = document.getElementById('editInput').value;
-      
-                  // Update displayed value
-                  infoItem.querySelector('.info-value').innerText = newValue;
-                  infoItem.setAttribute('data-value', newValue);
-      
-                  // Hide the modal after saving changes
-                  editModal.hide();
-              };
-          });
-      });
-      
-      </script>
     
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -362,7 +380,6 @@
     <!-- jquery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Custom JavaScript -->
-    <script src="./JavaScript/page-31.js"></script>
 
     <!-- Bootstrap v5 & Bootstrap Icons -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
