@@ -1,0 +1,61 @@
+.gift-container {
+    max-width: 900px;
+    padding: 20px;
+    height: 70vh;
+  }
+  .header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .form-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  .form-control {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .btn-primary {
+    background-color: #00a9e0;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  .terms-text {
+    font-size: 12px;
+    color: #666;
+    margin-top: 10px;
+  }
+  .terms-text a {
+    color: black;
+    font-weight: 600;
+  }
+  .terms-text a:hover {
+    text-decoration: underline;
+  }
+  .gift-card-image {
+    background-color: #00a9e0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 202px;
+    width: 300px;
+    color: white;
+}
+  .gift-card-image img {
+    max-width: 100%;
+    height: auto;
+  }
