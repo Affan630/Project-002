@@ -1,0 +1,155 @@
+/* Main Container */
+.account-delete-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    height: 70%;
+}
+
+/* Header with Chevron Icon and Title */
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-icon {
+    font-size: 1.2rem;
+    color: #333;
+    margin-right: 10px;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Main Content Section */
+.content p {
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Subheader */
+.subheader {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* Information List */
+.info-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.info-list li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Blue bullet styling */
+.info-list li::before {
+    content: "•";
+    color: #00aaff;
+    font-size: 4.2rem;
+    position: absolute;
+    left: -10px;
+    top: -40px;
+}
+
+/* Link Styling */
+.info-list a {
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Form Section */
+.form-section {
+    margin-top: 30px;
+}
+
+.form-section h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.form-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-text {
+    color: gray;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.btn-back, .btn-next {
+    width: 48%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #00aaff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-back {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.btn-next {
+    background-color: #00aaff;
+}
+
+.btn-next:hover, .btn-back:hover {
+    background-color: #008ecc;
+    color: #fff;
+}
+
+/* Responsive Styling */
+@media (max-width: 576px) {
+    .title {
+        font-size: 1.25rem;
+    }
+
+    .subheader {
+        font-size: 1.1rem;
+    }
+
+    .info-list li, .form-section h3 {
+        font-size: 0.95rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-back, .btn-next {
+        width: 100%;
+    }
+}

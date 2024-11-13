@@ -1,0 +1,51 @@
+.payment-container {
+  margin-top: 02%;
+  max-width: 900px;
+  height: 70vh;
+  padding: 20px;
+}
+.header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.description {
+  color: #666;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.info-box {
+  border: 1px solid black;
+  padding: 25px;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 14px;
+  color: #333;
+}
+.info-box-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.info-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  margin-top: 8px;
+}
+.info-link i {
+  color: #888;
+}
+.info-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .info-box{
+    margin-top: 20px;
+  }
+}

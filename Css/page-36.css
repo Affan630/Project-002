@@ -57,7 +57,7 @@ body{
 /* side bar css */
 
 .sidebar {
-    height: 93vh;
+    height: 100vh;
     background-color:#F5F6FA; /* White background */
     border-right: 1px solid #e0e0e0; /* Right border */
    

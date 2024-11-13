@@ -1,6 +1,7 @@
         /* Container Styling */
         .language-container {
-            max-width: 500px;
+            max-width: auto;
+            width: 600px;
             padding: 40px 40px;
             height: 100vh;
             margin: 0;
@@ -56,7 +57,7 @@
     
           /* Center the container and apply padding */
           .language-container2 {
-            max-width: auto;
+            max-width: 800px;
             margin: 0 20px;
             padding: 40px 20px;
             margin-right: 100px;
@@ -135,3 +136,30 @@
         .confetti:nth-child(2n) { background-color: #FF5722; }
         .confetti:nth-child(3n) { background-color: #4CAF50; }
         .confetti:nth-child(4n) { background-color: #3F51B5; }
+
+
+        @media only screen and  (max-width: 1024px) and (min-width: 769px) {
+            .language-container {
+                width: 300px;
+            }
+            
+            .language-container2 {
+                width: 300px;
+                
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .language-container {
+                border-right:none;
+                border-bottom: 1px solid black;
+                width: 100%;
+                margin: auto;
+            }
+            .language-container2 {
+
+                width: 100%;
+                margin: auto;
+            }
+
+        }

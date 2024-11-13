@@ -18,7 +18,7 @@
     padding: 20px;
     position: relative;
     transition: width 0.4s ease;
-    width: 30%;
+    width: 40%;
     overflow-x: hidden;
     overflow-y: scroll;
     border-right: 1px solid black;
@@ -146,6 +146,7 @@
     align-items: center;
     justify-content: space-between;
     transition: all 0.3s ease;
+    width: 100%;
 }
 
 .status-card:hover {
