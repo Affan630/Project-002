@@ -17,3 +17,5 @@ Changes in pages----->
 side bar avatar pic-> Starting From page 46
 
 -------------------------------------------------------------------------------------------------
+page 77 contains perfectly working Sidebar.
+ last working status ------> workin on sidebar on page 77 setting linking left . 
