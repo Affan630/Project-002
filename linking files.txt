@@ -19,3 +19,16 @@ side bar avatar pic-> Starting From page 46
 -------------------------------------------------------------------------------------------------
 page 77 contains perfectly working Sidebar.
  last working status ------> workin on sidebar on page 77 setting linking left . 
+
+-------------------------------------------------------------------------------------------------
+PAGES THAT ARE NOT LINK YET AND SKIPPED-->
+page-06 is breaking flow not coming from any link. opning after login
+page-08 breaking flow after feedback submmit.
+page-12 has not any idea form where it is comimg.
+page-30 has two button no idea what have comimg on that buttons no action matching. SOL : HOME PAGE
+page-31 have no idea coming from.
+PAGE-35 INCOMPELATE LISTING 
+PAGE-36 CONNECTED AFTER 31
+page-46 listing-Editor is coming from ??.
+
+
