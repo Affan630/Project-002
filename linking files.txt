@@ -1,21 +1,22 @@
-Sidebar------------> Starting From page 31--------->
-Today -> page-35
-calender ->
-Listing ->
-Massages ->
-
-2024 Summer Release Features ->
-Reservation -> page-32
-Earnings -> page-31
-Create a new listing ->
-Market Me ->
+-------------------------------------------------------------------------------------------------
+Sidebar------------>Listing Editor<-----------><Changes that have been done>
+->title Page no 58.
+->title Page no 57.
+->title Page no 56.
+->title Page no 54<See missing section>.
+Sidebar------------>Listing Editor<-----------><Changes that have been Not done / missing>
+1.<-description page 68 which is getting by page 54->
+Guest Access Missing page.
+2.<-Aminities Page 55->
+iska add page bana hai.
+3.<-cutom link->
+custom trade not linked.
 -------------------------------------------------------------------------------------------------
 Page that are missing 
 page 55 with funtionality.
 -------------------------------------------------------------------------------------------------
 Changes in pages----->
 side bar avatar pic-> Starting From page 46
-
 -------------------------------------------------------------------------------------------------
 page 77 contains perfectly working Sidebar.
  last working status ------> workin on sidebar on page 77 setting linking left . 
@@ -30,5 +31,9 @@ page-31 have no idea coming from.
 PAGE-35 INCOMPELATE LISTING 
 PAGE-36 CONNECTED AFTER 31
 page-46 listing-Editor is coming from ??.
+-------------------------------------------------------------------------------------------------
+work reaming 
+1.navbar 
+2.readme file
 
 

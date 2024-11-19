@@ -72,6 +72,25 @@
     color: #333;
     margin-top: 20px;
 }
+/* Buttons */
+.save-btn {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    background-color: #00aaff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #008ecc;
+    transform: translateY(-3px);
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {

@@ -240,19 +240,21 @@
                     <div id="guestIcons" class="guest-icons">
                         <img src="./Assets/images/person.png" alt=""> <!-- Initial Guest Icon -->
                     </div>
-            
+
                     <!-- Guest Counter -->
                     <div class="counter-controls">
                         <button id="minusBtn" class="counter-btn">−</button>
                         <span id="guestCount" class="count-display">1</span>
                         <button id="plusBtn" class="counter-btn">+</button>
                     </div>
-            
+
                     <!-- Label -->
                     <p class="label">How many guests can fit comfortably in your space?</p>
+                    <a href="page-54.html" class="text-decoration-none"><button class="save-btn">Save</button></a>
+
                 </div>
             </div>
-            
+
 
         </div>
     </div>
@@ -413,46 +415,46 @@
     <!-- Custom JavaScript for Sidebar Toggle -->
     <script>
 
-    // Initialize guest count
-// Initialize guest count
-let guestCount = 1;
+        // Initialize guest count
+        // Initialize guest count
+        let guestCount = 1;
 
-// Select elements
-const guestIconsContainer = document.getElementById("guestIcons");
-const guestCountDisplay = document.getElementById("guestCount");
-const minusBtn = document.getElementById("minusBtn");
-const plusBtn = document.getElementById("plusBtn");
+        // Select elements
+        const guestIconsContainer = document.getElementById("guestIcons");
+        const guestCountDisplay = document.getElementById("guestCount");
+        const minusBtn = document.getElementById("minusBtn");
+        const plusBtn = document.getElementById("plusBtn");
 
-// Update the guest count display and guest icons
-function updateGuestCount(count) {
-    guestCountDisplay.textContent = count;
+        // Update the guest count display and guest icons
+        function updateGuestCount(count) {
+            guestCountDisplay.textContent = count;
 
-    // Clear current icons
-    guestIconsContainer.innerHTML = "";
+            // Clear current icons
+            guestIconsContainer.innerHTML = "";
 
-    // Add the correct number of guest images
-    for (let i = 0; i < count; i++) {
-        const img = document.createElement("img");
-        img.src = "./Assets/images/person.png"; // Replace with your image path
-        img.alt = "Guest Icon";
-        img.classList.add("guest-image");
-        guestIconsContainer.appendChild(img);
-    }
-}
+            // Add the correct number of guest images
+            for (let i = 0; i < count; i++) {
+                const img = document.createElement("img");
+                img.src = "./Assets/images/person.png"; // Replace with your image path
+                img.alt = "Guest Icon";
+                img.classList.add("guest-image");
+                guestIconsContainer.appendChild(img);
+            }
+        }
 
-// Handle minus button click
-minusBtn.addEventListener("click", () => {
-    if (guestCount > 1) {
-        guestCount--;
-        updateGuestCount(guestCount);
-    }
-});
+        // Handle minus button click
+        minusBtn.addEventListener("click", () => {
+            if (guestCount > 1) {
+                guestCount--;
+                updateGuestCount(guestCount);
+            }
+        });
 
-// Handle plus button click
-plusBtn.addEventListener("click", () => {
-    guestCount++;
-    updateGuestCount(guestCount);
-});
+        // Handle plus button click
+        plusBtn.addEventListener("click", () => {
+            guestCount++;
+            updateGuestCount(guestCount);
+        });
 
     </script>
 
