@@ -29,7 +29,8 @@
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     max-width: 900px;
-    overflow: hidden; /* Ensures images do not overflow */
+    overflow: hidden;
+    /* Ensures images do not overflow */
 }
 
 /* Subheading inside the container */
@@ -43,7 +44,8 @@
 /* Photo Gallery */
 .custom-photo-gallery {
     position: relative;
-    height: 320px; /* Fixed height for the images */
+    height: 320px;
+    /* Fixed height for the images */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,8 +55,10 @@
 /* Photo Card Styling */
 /* Photo Card Styling */
 .custom-photo-card {
-    width: 200px; /* Reduced width */
-    height: 300px; /* Reduced height */
+    width: 200px;
+    /* Reduced width */
+    height: 300px;
+    /* Reduced height */
     border-radius: 15px;
     overflow: hidden;
     position: absolute;
@@ -112,8 +116,11 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+
     .custom-photo-gallery-container {
         width: 95%;
+        height: 100vh;
+
     }
 
     .custom-photo-card {

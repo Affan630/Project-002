@@ -291,10 +291,13 @@
             <h2>Pre-booking message</h2>
         
             <!-- Example text message -->
-            <p>Ex: Hello! Please let me know more details about your trip and when you expect to arrive.</p>
+            <p></p>
+        
+            <!-- Textarea with character counter functionality -->
+            <textarea class="message-input" id="messageInput" rows="5" maxlength="400" placeholder="Ex: Hello! Please let me know more details about your trip and when you expect to arrive."></textarea>
         
             <!-- Character counter -->
-            <div class="char-counter">400 characters available</div>
+            <div class="char-counter" id="charCounter">400 characters available</div>
         
             <!-- Buttons -->
             <div class="btn-group">
@@ -453,6 +456,15 @@ if (radios.length) {
     });
 }
 
+// word count--------------------------
+const messageInput = document.getElementById('messageInput');
+    const charCounter = document.getElementById('charCounter');
+    const maxChars = 400;
+
+    messageInput.addEventListener('input', () => {
+        const remainingChars = maxChars - messageInput.value.length;
+        charCounter.textContent = `${remainingChars} characters available`;
+    });
 
 </script>
 

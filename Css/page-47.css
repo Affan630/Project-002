@@ -406,5 +406,12 @@ border-radius: 50%;
     padding-right: 20px;
 }
 
+@media (max-width: 768px) {
+    .container-right {
+        border-left:none;
+        border-top: 1px solid black;
+    }
+}
+
 
 
