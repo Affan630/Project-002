@@ -11,9 +11,8 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Custom CSS files for specific styles -->
-    <link rel="stylesheet" href="Css/page-52.css">
+    <link rel="stylesheet" href="Css/page-47.css">
     <link rel="stylesheet" href="Css/Navbar.css">
-    <link rel="stylesheet" href="Css/sidebar.css">
     <title>Bonstay</title>
 </head>
 
@@ -235,83 +234,98 @@
                 <i class="fas fa-chevron-right"></i>
             </div>
 
-            <!-- Center Section -->
+            <!-- Middle Section (Contains Policy Information) -->
+            <div class="middle-section content-transition" id="middleSection">
+                <div class="container mt-1">
+                    <!-- Cancellation Policy Section -->
+                    <h5 class="fw-bold mb-4">Cancellation policy</h5>
 
-            <!-- Main Container -->
-            <div class="container location-container mt-5">
-                <!-- Location Header -->
-                <h2>Location</h2>
+                    <!-- Standard Policy Section -->
+                    <h6 class="fw-bold">Standard policy</h6>
+                    <p>Applies to any stays under 28 nights.</p>
 
-                <!-- Content that will scroll -->
-                <div class="location-content">
-                    <!-- Map Section -->
-                    <div class="location-map mb-5">
-                        <iframe src="https://www.google.com/maps/embed?pb=..." loading="lazy"></iframe>
-                    </div>
-
-                    <!-- Address Section -->
-                    <div class="location-list-item">
+                    <!-- Flexible Policy Card -->
+                    <div class="card-policy">
                         <div>
-                            <h3>Address</h3>
-                            <p>1751 67TH St apt F11 Brooklyn NY 11204-4332 USA</p>
+                            <h6>Flexible</h6>
+                            <p>Guests get a full refund if they cancel up to a day before check-in.</p>
                         </div>
-                        <i class="fas fa-chevron-right"></i>
+                        <a href="page-47.html" class="text-black">
+                            <div class="edit-icon">
+                                <i class="fas fa-pencil-alt"></i>
+                            </div>
+                        </a>
                     </div>
 
-                    <!-- Location Sharing Section -->
-                    <div class="location-list-item">
+                    <!-- Non-refundable Policy Card -->
+                    <div class="card-policy">
                         <div>
-                            <h3>Location sharing</h3>
-                            <p>Show listing’s specific location</p>
+                            <h6>Non-refundable</h6>
+                            <p>In addition to Flexible, offer a non-refundable option—guests pay 10% less, but you keep
+                                your payout no matter when they cancel.</p>
+                            <span class="learn-more text-dark">Learn more</span>
                         </div>
-                        <i class="fas fa-chevron-right"></i>
+                        <div class="switch">
+                            <input type="checkbox" id="nonrefundableSwitch">
+                            <label class="slider" for="nonrefundableSwitch"></label>
+                        </div>
                     </div>
 
-                    <!-- Location Features Section -->
-                    <div class="location-list-item">
+                    <!-- Divider Line -->
+                    <div class="divider"></div>
+
+                    <!-- Long-term Stay Policy Section -->
+                    <h6>Long-term stay policy</h6>
+                    <p>Applies to stays 28 nights or longer.</p>
+
+                    <!-- Firm Policy Card -->
+                    <div class="card-policy">
                         <div>
-                            <h3>Location features</h3>
-                            <p>Add details</p>
+                            <h6>Firm</h6>
+                            <p>Full refund up to 30 days before check-in. After that, the first 30 days of the stay are
+                                non-refundable.</p>
                         </div>
-                        <i class="fas fa-chevron-right"></i>
-                    </div>
-
-                    <!-- Neighborhood Description Section -->
-                    <div class="location-list-item">
-                        <div>
-                            <h3>Neighborhood description</h3>
-                            <p>Add details</p>
+                        <div class="edit-icon">
+                            <i class="fas fa-pencil-alt"></i>
                         </div>
-                        <i class="fas fa-chevron-right"></i>
                     </div>
-
-                    <!-- Getting Around Section -->
-                    <div class="location-list-item">
-                        <div>
-                            <h3>Getting around</h3>
-                            <p>Add details</p>
-                        </div>
-                        <i class="fas fa-chevron-right"></i>
-                    </div>
-
-                    <!-- Scenic Views Section -->
-                    <div class="location-list-item">
-                        <div>
-                            <h3>Scenic views</h3>
-                            <p>Add details</p>
-                        </div>
-                        <i class="fas fa-chevron-right"></i>
-                    </div>
-                    <!-- Custom Button Group at the Bottom -->
-                    <div class="custom-button-group mt-5">
-                        <button class="custom-btn custom-btn-primary"><a href="page-53.html" class="text-light text-decoration-none">Back</a></button>
-                        <button class="custom-btn custom-btn-primary"><a href="page-51.html" class="text-light text-decoration-none">Next</a></button>
-                    </div>
-
                 </div>
-
             </div>
 
+            <!-- Right Section (Radio Button Options for Policies) -->
+            <div class="container-right mt-1">
+                <h4 class="mb-4 fw-bold">Choose your long-term stay policy</h4>
+                <p>To understand the full policies, go to the <a href="" class="text-black">Help Center.</a></p>
+
+                <!-- Policy Option 1 -->
+                <div class="policy-option">
+                    <div class="policy-text">
+                        <h6>Firm</h6>
+                        <p>Full refund up to 30 days before check-in. After that, the first 30 days of the stay are
+                            non-refundable.</p>
+                    </div>
+                    <div class="custom-radio selected" data-value="flexible"></div>
+                </div>
+
+                <!-- Policy Option 2 -->
+                <div class="policy-option">
+                    <div class="policy-text">
+                        <h6>Strict</h6>
+                        <p>
+                            Full refund if cancelled within 48 hours of booking and at least 28 days before check-in.
+                            After that, the first 30 days of the stay are non-refundable.
+                        </p>
+                    </div>
+                    <div class="custom-radio" data-value="moderate"></div>
+                </div>
+                <!-- Action Buttons (Back and Next) -->
+                <div class="btn-group mt-4">
+                    <button class="btn btn-secondary"><a href="page-47.html"
+                            class="text-decoration-none text-light">Back</a></button>
+                    <button class="btn btn-primary"><a href="page-46.html"
+                            class="text-decoration-none text-light">Next</a></button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -338,130 +352,86 @@
             </div>
 
             <!-- Status Card -->
-            <a href="" class="text-dark text-decoration-none"><button class="status-card mb-4 border border-dark">
-                    <div class="status-info">
-                        <div class="status-header text-start">
-                            <i class="fa-solid fa-circle" style="color: red;"></i>
-                            <strong>Completed required steps</strong>
-                        </div>
-                        <p class="mb-0 text-muted text-start">Finish these final tasks to publish your listing and start
-                            getting booked.</p>
+            <button class="status-card mb-4 border border-dark">
+                <div class="status-info">
+                    <div class="status-header">
+                        <span class="status-dot"></span>
+                        <strong>Completed required steps</strong>
                     </div>
-                    <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
-                </button></a>
+                    <p class="mb-0 text-muted text-start">Finish these final tasks to publish your listing and start
+                        getting booked.</p>
+                </div>
+                <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+            </button>
 
-            <!-- Custom Cards (Title, Property Type, Guests, etc.) -->
-            <a href="" class="text-dark text-decoration-none">
-                <div class="custom-card">
-                    <h6>Title</h6>
-                    <p>Water Villa with Private Pool & Slide</p>
-                </div>
-            </a>
-
-            <a href="" class="text-dark text-decoration-none">
-                <div class="custom-card">
-                    <h6>Property type</h6>
-                    <p>Entire place. House</p>
-                </div>
-            </a>
-
-            <a href="" class="text-dark text-decoration-none">
-                <div class="custom-card">
-                    <h6>Number of guests</h6>
-                    <p>1 Guest</p>
-                </div>
-            </a>
-
-            <a href="" class="text-dark text-decoration-none">
-                <div class="custom-card">
-                    <h6>Description</h6>
-                    <p>You'll have a great time at this comfortable place to stay.</p>
-                </div>
-            </a>
-
-            <a href="" class="text-dark text-decoration-none">
-                <div class="custom-card">
-                    <h6>Amenities</h6>
-                    <p>Add details</p>
-                </div>
-            </a>
-
-            <a href="" class="text-dark text-decoration-none">
-                <div class="custom-card">
-                    <h6>Accessibility Features</h6>
-                    <p>Add details</p>
-                </div>
-            </a>
-
-            <!-- Location Section (With Google Maps Embed) -->
-            <a href="" class="text-dark text-decoration-none">
-                <div class="custom-card">
-                    <h6>Location</h6>
-                    <iframe class="w-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.2953673661264!2d-73.99735668459332!3d40.73061007932864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af18031a1b%3A0x57f5f1f461f8de!2s1751%2067th%20St%2C%20Brooklyn%2C%20NY%2011204%2C%20USA!5e0!3m2!1sen!2s!4v1630347243240!5m2!1sen!2s"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                    <p>1751 67th St Apt F11 Brooklyn NY<br>11204-4332 USA</p>
-                </div>
-            </a>
-
-            <!-- Host Section -->
-            <a href="" class="text-dark text-decoration-none">
-                <div class="custom-card text-center">
-                    <h6>About the Host</h6>
-                    <img class="img-fluid rounded-circle" height="200px" width="200px"
-                        src="Assets/images/Group 70 (1).svg " alt="Host Image">
-                    <h5>Mark William</h5>
-                    <p>Started hosting in 2024</p>
-                </div>
-            </a>
-
-            <!-- Additional Cards (Co-Hosts, Instant Book, etc.) -->
-            <a href="" class="text-dark text-decoration-none">
-                <div class="custom-card">
-                    <h6>Co-Hosts</h6>
-                    <p>Add details</p>
-                </div>
-            </a>
-            <a href="" class="text-dark text-decoration-none">
-                <div class="custom-card">
-                    <h6>Instant Book</h6>
-                    <p>Turned on: Guest can book automatically</p>
-                </div>
-            </a>
-
-            <a href="" class="text-dark text-decoration-none">
-                <div class="custom-card">
-                    <h6>House rules</h6>
-                    <ul>
-                        <li>- Check-in after 3:00 PM</li>
-                        <li>- 1 Guest Maximum</li>
-                    </ul>
-                </div>
-            </a>
-
-            <a href="" class="text-dark text-decoration-none">
-                <div class="custom-card">
-                    <h6>Guest safety</h6>
-                    <ul>
-                        <li>- Carbon monoxide alarm not reported</li>
-                        <li>- Smoke alarm not reported</li>
-                    </ul>
-                </div>
-            </a>
-
-            <a href="" class="text-dark text-decoration-none">
-                <div class="custom-card">
-                    <h6>Cancellation policy</h6>
-                    <p>Flexible</p>
-                </div>
-            </a>
-            <a href="" class="text-dark text-decoration-none">
-                <div class="custom-card">
-                    <h6>Custom link</h6>
-                    <p>Add details</p>
-                </div>
-            </a>
+            <!-- Custom Cards -->
+            <div class="custom-card">
+                <h6>Title</h6>
+                <p>Water Villa with Private Pool & Slide</p>
+            </div>
+            <div class="custom-card">
+                <h6>Property type</h6>
+                <p>Entire place. House</p>
+            </div>
+            <div class="custom-card">
+                <h6>Number of guests</h6>
+                <p>1 Guest</p>
+            </div>
+            <div class="custom-card">
+                <h6>Description</h6>
+                <p>You'll have a great time at this comfortable place to stay.</p>
+            </div>
+            <div class="custom-card">
+                <h6>Amenities</h6>
+                <p>Add details</p>
+            </div>
+            <div class="custom-card">
+                <h6>Accessibility Features</h6>
+                <p>Add details</p>
+            </div>
+            <div class="custom-card">
+                <h6>Location</h6>
+                <iframe class="w-100" src="https://www.google.com/maps/embed?..." allowfullscreen=""
+                    loading="lazy"></iframe>
+                <p>1751 67th St Apt F11 Brooklyn NY<br>11204-4332 USA</p>
+            </div>
+            <div class="custom-card text-center">
+                <h6>About the Host</h6>
+                <img class="img-fluid rounded-circle" height="200px" width="200px" src="Assets/images/Group 70 (1).svg "
+                    alt="Host Image">
+                <h5>Mark William</h5>
+                <p>Started hosting in 2024</p>
+            </div>
+            <div class="custom-card">
+                <h6>Co-Hosts</h6>
+                <p>Add details</p>
+            </div>
+            <div class="custom-card">
+                <h6>Instant Book</h6>
+                <p>Turned on: Guest can book automatically</p>
+            </div>
+            <div class="custom-card">
+                <h6>House rules</h6>
+                <ul>
+                    <li>- Check-in after 3:00 PM</li>
+                    <li>- 1 Guest Maximum</li>
+                </ul>
+            </div>
+            <div class="custom-card">
+                <h6>Guest safety</h6>
+                <ul>
+                    <li>- Carbon monoxide alarm not reported</li>
+                    <li>- Smoke alarm not reported</li>
+                </ul>
+            </div>
+            <div class="custom-card">
+                <h6>Cancellation policy</h6>
+                <p>Flexible</p>
+            </div>
+            <div class="custom-card">
+                <h6>Custom link</h6>
+                <p>Add details</p>
+            </div>
         </div>
     </div>
     <!-- Bootstrap JS and dependencies -->

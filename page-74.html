@@ -11,7 +11,7 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Custom CSS files for specific styles -->
-    <link rel="stylesheet" href="Css/page-52.css">
+    <link rel="stylesheet" href="Css/page-54.css">
     <link rel="stylesheet" href="Css/Navbar.css">
     <link rel="stylesheet" href="Css/sidebar.css">
     <title>Bonstay</title>
@@ -237,81 +237,62 @@
 
             <!-- Center Section -->
 
-            <!-- Main Container -->
-            <div class="container location-container mt-5">
-                <!-- Location Header -->
-                <h2>Location</h2>
-
-                <!-- Content that will scroll -->
-                <div class="location-content">
-                    <!-- Map Section -->
-                    <div class="location-map mb-5">
-                        <iframe src="https://www.google.com/maps/embed?pb=..." loading="lazy"></iframe>
+            <div class="description-container">
+                <h2 class="description-heading">Description</h2>
+                
+                <!-- Description List Items -->
+                <div class="description-item">
+                    <div class="item-content">
+                        <h4>Listing description</h4>
+                        <p>You’ll have a great time at this comfortable place to stay.</p>
                     </div>
-
-                    <!-- Address Section -->
-                    <div class="location-list-item">
-                        <div>
-                            <h3>Address</h3>
-                            <p>1751 67TH St apt F11 Brooklyn NY 11204-4332 USA</p>
-                        </div>
-                        <i class="fas fa-chevron-right"></i>
-                    </div>
-
-                    <!-- Location Sharing Section -->
-                    <div class="location-list-item">
-                        <div>
-                            <h3>Location sharing</h3>
-                            <p>Show listing’s specific location</p>
-                        </div>
-                        <i class="fas fa-chevron-right"></i>
-                    </div>
-
-                    <!-- Location Features Section -->
-                    <div class="location-list-item">
-                        <div>
-                            <h3>Location features</h3>
-                            <p>Add details</p>
-                        </div>
-                        <i class="fas fa-chevron-right"></i>
-                    </div>
-
-                    <!-- Neighborhood Description Section -->
-                    <div class="location-list-item">
-                        <div>
-                            <h3>Neighborhood description</h3>
-                            <p>Add details</p>
-                        </div>
-                        <i class="fas fa-chevron-right"></i>
-                    </div>
-
-                    <!-- Getting Around Section -->
-                    <div class="location-list-item">
-                        <div>
-                            <h3>Getting around</h3>
-                            <p>Add details</p>
-                        </div>
-                        <i class="fas fa-chevron-right"></i>
-                    </div>
-
-                    <!-- Scenic Views Section -->
-                    <div class="location-list-item">
-                        <div>
-                            <h3>Scenic views</h3>
-                            <p>Add details</p>
-                        </div>
-                        <i class="fas fa-chevron-right"></i>
-                    </div>
-                    <!-- Custom Button Group at the Bottom -->
-                    <div class="custom-button-group mt-5">
-                        <button class="custom-btn custom-btn-primary"><a href="page-53.html" class="text-light text-decoration-none">Back</a></button>
-                        <button class="custom-btn custom-btn-primary"><a href="page-51.html" class="text-light text-decoration-none">Next</a></button>
-                    </div>
-
+                    <a href="page-54.html"><i class="fas fa-chevron-right item-icon"></i></a>
                 </div>
-
+            
+                <div class="description-item">
+                    <div class="item-content">
+                        <h4>Your property</h4>
+                        <p>Add details</p>
+                    </div>
+                    <a href="page-68.html"><i class="fas fa-chevron-right item-icon"></i></a>
+                </div>
+            
+                <div class="description-item">
+                    <div class="item-content">
+                        <h4>Guest access</h4>
+                        <p>Add details</p>
+                    </div>
+                    <a href="#"><i class="fas fa-chevron-right item-icon"></i></a>
+                </div>
+            
+                <div class="description-item">
+                    <div class="item-content">
+                        <h4>Interaction with guests</h4>
+                        <p>Add details</p>
+                    </div>
+                    <a href="page-74.html"><i class="fas fa-chevron-right item-icon"></i></a>
+                </div>
+            
+                <div class="description-item">
+                    <div class="item-content">
+                        <h4>Other details to note</h4>
+                        <p>Add details</p>
+                    </div>
+                    <a href="page-77.html"><i class="fas fa-chevron-right item-icon"></i></a>
+                </div>
             </div>
-
+                <!-- right Section -->
+                <div class="description-box">
+                    <h2>Interaction with guests</h2>
+                    <p class="description-text">Let guests know how to get in touch if they need help during their stay.</p>
+                
+                    <!-- Button Group -->
+                    <div class="btn-container">
+                        <button class="btn btn-cancel">Cancel</button>
+                        <a href="page-78.html"><button class="btn btn-save">Save</button></a>
+                    </div>
+                </div>
+                
         </div>
     </div>
 
@@ -511,6 +492,20 @@
                 });
             });
         }
+
+
+        function updateCharCount() {
+    const maxChars = 441;
+    const textArea = document.getElementById("desc");
+    const charCounter = document.getElementById("charCounter");
+    
+    // Calculate remaining characters
+    const remainingChars = maxChars - textArea.value.length;
+    
+    // Update the counter display
+    charCounter.textContent = `${remainingChars} characters available`;
+}
+
 
 
     </script>
