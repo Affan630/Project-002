@@ -60,7 +60,6 @@
             display: flex;
             align-items: center;
             padding: 10px;
-            
         }
 
         .notification-item:last-child {
@@ -94,81 +93,93 @@
             font-size: 0.8em;
             color: #6c757d;
         }
+
+        /* Sticky Footer */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .container-fluid {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer {
+            margin-top: auto;
+        }
     </style>
 </head>
 
 <body>
     <div class="container-fluid">
         <!-- Navbar -->
-            <!-- Navbar -->
-
-            <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
-                <div class="container-fluid">
-                    <div class="row w-100 align-items-center header">
-                        <!-- Logo in col-lg-4 -->
-                        <div class="col-lg-3 col-6">
-                            <a class="navbar-brand" href="page-06.html">
-                                <img src="Assets/images/logo.png" alt="Bonstay" width="200" class="img-fluid" />
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+            <div class="container-fluid">
+                <div class="row w-100 align-items-center header">
+                    <!-- Logo in col-lg-4 -->
+                    <div class="col-lg-3 col-6">
+                        <a class="navbar-brand" href="page-06.html">
+                            <img src="Assets/images/logo.png" alt="Bonstay" width="200" class="img-fluid" />
+                        </a>
+                    </div>
+                    <!-- Empty col-lg-6 for spacing -->
+                    <div class="col-lg-6 d-none d-lg-block"></div>
+                    <!-- Notifications and User Profile in col-lg-4 -->
+                    <div class="col-lg-3 col-6 d-flex justify-content-end align-items-center">
+                        <a href="page-35.html" class="text-black position-relative me-3">
+                            Switch To Hosting
+                        </a>
+                        <!-- Notifications Icon -->
+                        <a href="page-10.html" class="nav-link position-relative me-3">
+                            <i class="bi bi-bell-fill" style="font-size: 1.5rem; color: #007bff"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </a>
+                        <!-- User Profile -->
+                        <div class="dropdown">
+                            <a class="d-flex align-items-center text-decoration-none" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="Assets/images/profile_pic2.png" alt="Profile Picture" class="rounded-circle"
+                                    width="40" height="40" />
+                                <div class="ms-2 d-flex align-items-center">
+                                    <span class="text-dark me-2">Timo Jannis</span>
+                                    <!-- Dropdown icon -->
+                                    <i class="fa-sharp fa-solid fa-caret-down text-dark"></i>
+                                </div>
                             </a>
-                        </div>
-                        <!-- Empty col-lg-6 for spacing -->
-                        <div class="col-lg-6 d-none d-lg-block"></div>
-                        <!-- Notifications and User Profile in col-lg-4 -->
-                        <div class="col-lg-3 col-6 d-flex justify-content-end align-items-center">
-                            <a href="page-35.html" class="text-black position-relative me-3 ">
-                                Switch To Hosting
-                            </a>
-                            <!-- Notifications Icon -->
-                            <a href="page-10.html" class="nav-link position-relative me-3">
-                                <i class="bi bi-bell-fill" style="font-size: 1.5rem; color: #007bff"></i>
-                                <span
-                                    class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
-                                    <span class="visually-hidden">New alerts</span>
-                                </span>
-                            </a>
-                            <!-- User Profile -->
-                            <div class="dropdown">
-                                <a class="d-flex align-items-center text-decoration-none" href="#" id="navbarDropdown"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="Assets/images/profile_pic2.png" alt="Profile Picture" class="rounded-circle"
-                                        width="40" height="40" />
-                                    <div class="ms-2 d-flex align-items-center">
-                                        <span class="text-dark me-2">Timo Jannis</span>
-                                        <!-- Dropdown icon -->
-                                        <i class="fa-sharp fa-solid fa-caret-down text-dark"></i>
-                                    </div>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="page-05.html">Profile</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider" />
-                                    </li>
-                                    <li><a class="dropdown-item" href="page-32.html">Reservations</a></li>
-                                    <li><a class="dropdown-item" href="page-10.html">Notifications</a></li>
-                                    <li><a class="dropdown-item" href="page-11.html">Messages</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider" />
-                                    </li>
-                                    <li><a class="dropdown-item" href="page-114.html">Gift cards</a></li>
-                                    <li class="px-3 text-muted">
-                                        Bonstay credits can be applied to gift card
-                                    </li>
-                                    <li><a class="dropdown-item disabled text-black" href="#">Bonstay Credits</a></li>
-                                    <li class="px-3 text-muted">
-                                        Apply credits when making a reservation
-                                    </li>
-                                    <li>
-                                        <hr class="dropdown-divider" />
-                                    </li>
-                                    <li><a class="dropdown-item" href="page-35.html">Switch for hosting</a></li>
-                                </ul>
-                            </div>
-    
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="page-05.html">Profile</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li><a class="dropdown-item" href="page-32.html">Reservations</a></li>
+                                <li><a class="dropdown-item" href="page-10.html">Notifications</a></li>
+                                <li><a class="dropdown-item" href="page-11.html">Messages</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li><a class="dropdown-item" href="page-114.html">Gift cards</a></li>
+                                <li class="px-3 text-muted">
+                                    Bonstay credits can be applied to gift card
+                                </li>
+                                <li><a class="dropdown-item disabled text-black" href="#">Bonstay Credits</a></li>
+                                <li class="px-3 text-muted">
+                                    Apply credits when making a reservation
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li><a class="dropdown-item" href="page-35.html">Switch for hosting</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </nav>
-        <!-- Main Content section  -->
+            </div>
+        </nav>
+        <!-- Main Content Section -->
         <div class="container mt-4">
             <h4 class="mb-3">Notifications</h4>
             <div class="notification-item">
@@ -182,7 +193,7 @@
                     <div>10:30 PM</div>
                 </div>
             </div>
-
+            <!-- Repeat Notification Items as needed -->
             <div class="notification-item">
                 <img src="Assets/images/profile_pic2.png" alt="Profile" class="profile-img">
                 <div class="notification-content">
@@ -271,14 +282,12 @@
                 <a href="#">Privacy</a>
                 <a href="#">Your Privacy Choices</a>
             </div>
-
             <!-- Center (Language and Currency) -->
             <div class="d-flex align-items-center">
                 <i class="bi bi-globe"></i>
                 <span class="mx-1">English (US)</span>
                 <span>$USD</span>
             </div>
-
             <!-- Right Side (Social Icons) -->
             <div class="social-icons">
                 <a href="#" class="bi bi-facebook"></a>
@@ -288,8 +297,7 @@
         </footer>
     </div>
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
