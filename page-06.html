@@ -20,7 +20,7 @@
             width: 25%;
             height: 100vh;
             position: absolute;
-            top: 0;
+            top: 61px;
             left: 0;
             background-color: #f8f9fa;
             border-right: 1px solid #e3e3e3;
@@ -276,8 +276,38 @@
             text-decoration: underline;
         }
 
+        .offcanvas-btn {
+            display: none;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        @media (max-width: 1024px) {
+            .sidebar {
+                top: 89px;
+            }
+
+        }
+        @media (max-width: 992px) {
+            .offcanvas-btn {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+
         /* Responsive Adjustments */
-        @media (min-width: 768px) {
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                top: 10;
+            }
+
+
             .footer-bottom {
                 flex-direction: row;
                 align-items: center;
@@ -309,12 +339,102 @@
 
 <body>
     <div class="container-fluid">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <!-- Logo at the top of the sidebar -->
-            <div class="logo">
-                <img src="Assets/images/logo.png" alt="Bonstay Logo">
+
+
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="page-06.html">
+                    <img src="Assets/images/logo.png" alt="Bonstay" width="120" />
+                </a>
+
+                <!-- Toggle button for mobile view -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Search bar -->
+                <form class="d-flex align-items-center search-bar mx-3 flex-grow-1">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search Destination" aria-label="Where" />
+                        <input type="text" class="form-control" placeholder="Add Dates" aria-label="Check In" />
+                        <input type="text" class="form-control" placeholder="Add Dates" aria-label="Check Out" />
+                        <input type="text" class="form-control" placeholder="Add Guests" aria-label="Who" />
+                        <button class="btn btn-primary" type="submit" style="border-radius: 0;">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Right side - Hosting, Notifications, User Profile -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="d-flex align-items-center ms-auto">
+                        <!-- Switch to hosting -->
+                        <a class="nav-link me-3 text-decoration-underline" href="page-35.html">Switch to hosting</a>
+
+                        <!-- Notifications Icon -->
+                        <a href="page-10.html" class="nav-link position-relative me-3">
+                            <i class="bi bi-bell-fill" style="font-size: 1.5rem; color: #007bff;"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </a>
+
+                        <!-- User Profile -->
+                        <div class="dropdown">
+                            <a class="d-flex align-items-center text-decoration-none" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="Assets/images/profile_pic2.png" alt="Profile Picture" class="rounded-circle"
+                                    width="40" height="40" />
+                                <div class="ms-2 d-flex align-items-center">
+                                    <span class="text-dark me-2">Timo Jannis</span>
+                                    <!-- Dropdown icon -->
+                                    <i class="fa-sharp fa-solid fa-caret-down text-dark"></i>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="page-05.html">Profile</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li><a class="dropdown-item" href="page-32.html">Reservations</a></li>
+                                <li><a class="dropdown-item" href="page-10.html">Notifications</a></li>
+                                <li><a class="dropdown-item" href="page-11.html">Messages</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li><a class="dropdown-item" href="page-114.html">Gift cards</a></li>
+                                <li class="px-3 text-muted">
+                                    Bonstay credits can be applied to gift card
+                                </li>
+                                <li><a class="dropdown-item disabled text-black" href="#">Bonstay Credits</a></li>
+                                <li class="px-3 text-muted">
+                                    Apply credits when making a reservation
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li><a class="dropdown-item" href="page-35.html">Switch for hosting</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </nav>
+
+        <!-- Mobile Off-canvas Button (visible on mobile devices) -->
+        <!-- This button is hidden on large screens (d-lg-none) and triggers the off-canvas sidebar for mobile users -->
+        <button class="offcanvas-btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+            aria-controls="offcanvasScrolling">
+            <i class="fas fa-bars"></i> Menu
+        </button>
+        <!-- Sidebar -->
+        <div class="sidebar d-none d-lg-block">
+
             <!-- Navigation Links -->
             <a href="#" class="active"><i class="fas fa-home"></i> Cabins</a>
             <a href="#"><i class="fas fa-water"></i> Beach Front</a>
@@ -326,91 +446,6 @@
             <a href="#"><i class="fas fa-umbrella-beach"></i> Tropical</a>
             <a href="#"><i class="fas fa-calendar"></i> Events</a>
         </div>
-        
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
-            <div class="container-fluid">
-              <!-- Logo -->
-              <a class="navbar-brand" href="page-06.html">
-                <img src="Assets/images/logo.png" alt="Bonstay" width="120" />
-              </a>
-      
-              <!-- Toggle button for mobile view -->
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-      
-              <!-- Search bar -->
-              <form class="d-flex align-items-center search-bar mx-3 flex-grow-1">
-                <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search Destination" aria-label="Where" />
-                  <input type="text" class="form-control" placeholder="Add Dates" aria-label="Check In" />
-                  <input type="text" class="form-control" placeholder="Add Dates" aria-label="Check Out" />
-                  <input type="text" class="form-control" placeholder="Add Guests" aria-label="Who" />
-                  <button class="btn btn-primary" type="submit" style="border-radius: 0;">
-                    <i class="bi bi-search"></i>
-                  </button>
-                </div>
-              </form>
-      
-              <!-- Right side - Hosting, Notifications, User Profile -->
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="d-flex align-items-center ms-auto">
-                  <!-- Switch to hosting -->
-                  <a class="nav-link me-3 text-decoration-underline" href="page-35.html">Switch to hosting</a>
-      
-                  <!-- Notifications Icon -->
-                  <a href="page-10.html" class="nav-link position-relative me-3">
-                    <i class="bi bi-bell-fill" style="font-size: 1.5rem; color: #007bff;"></i>
-                    <span
-                      class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
-                      <span class="visually-hidden">New alerts</span>
-                    </span>
-                  </a>
-      
-                  <!-- User Profile -->
-                  <div class="dropdown">
-                    <a class="d-flex align-items-center text-decoration-none" href="#" id="navbarDropdown"
-                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="Assets/images/profile_pic2.png" alt="Profile Picture" class="rounded-circle"
-                            width="40" height="40" />
-                        <div class="ms-2 d-flex align-items-center">
-                            <span class="text-dark me-2">Timo Jannis</span>
-                            <!-- Dropdown icon -->
-                            <i class="fa-sharp fa-solid fa-caret-down text-dark"></i>
-                        </div>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="page-05.html">Profile</a></li>
-                        <li>
-                            <hr class="dropdown-divider" />
-                        </li>
-                        <li><a class="dropdown-item" href="page-32.html">Reservations</a></li>
-                        <li><a class="dropdown-item" href="page-10.html">Notifications</a></li>
-                        <li><a class="dropdown-item" href="page-11.html">Messages</a></li>
-                        <li>
-                            <hr class="dropdown-divider" />
-                        </li>
-                        <li><a class="dropdown-item" href="page-114.html">Gift cards</a></li>
-                        <li class="px-3 text-muted">
-                            Bonstay credits can be applied to gift card
-                        </li>
-                        <li><a class="dropdown-item disabled text-black" href="#">Bonstay Credits</a></li>
-                        <li class="px-3 text-muted">
-                            Apply credits when making a reservation
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider" />
-                        </li>
-                        <li><a class="dropdown-item" href="page-35.html">Switch for hosting</a></li>
-                    </ul>
-                </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-
         <!-- Main Content -->
         <div class="container-fluid">
             <div class="row mt-4">
@@ -605,6 +640,38 @@
 
         </div>
     </div>
+
+
+    <div class="offcanvas offcanvas-start d-lg-none" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+        id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+
+        <div class="offcanvas-body">
+            <!-- Sidebar content with scroll -->
+            <div class="container off-canvas mt-1">
+                <!-- Heading with Settings Icon -->
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <h5><i class="fa-solid fa-chevron-left" data-bs-dismiss="offcanvas" aria-label="Close"></i> Menu</h5>
+                    
+                </div>
+            </div>
+
+            <!-- Tabs Section -->
+           <!-- Sidebar -->
+        <div class="sidebar">
+
+            <!-- Navigation Links -->
+            <a href="#" class="active"><i class="fas fa-home"></i> Cabins</a>
+            <a href="#"><i class="fas fa-water"></i> Beach Front</a>
+            <a href="#"><i class="fas fa-handshake"></i> Conference</a>
+            <a href="#"><img src="Assets/images/island_logo.png" alt=""> Islands</a>
+            <a href="#"><i class="fas fa-mountain"></i> Mountains</a>
+            <a href="#"><i class="fas fa-ship"></i> Lake</a>
+            <a href="#"><i class="fas fa-hotel"></i> Hotels</a>
+            <a href="#"><i class="fas fa-umbrella-beach"></i> Tropical</a>
+            <a href="#"><i class="fas fa-calendar"></i> Events</a>
+        </div>
+    </div>
+
     <!-- Bootstrap 5 JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
