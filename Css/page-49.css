@@ -321,54 +321,64 @@ input:checked + .custom-slider:before {
 /* right section */
 /* Container */
 .message-container {
-
-    padding: 30px;
-    height: 100vh; /* Increase height */
-    border-left: 1px solid black; /* Black border on the left */
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-left: 1px solid black;
+    
+    font-family: Arial, sans-serif;
 }
 
 /* Heading */
 .message-container h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-/* Example message */
+/* Example Text */
 .message-container p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 40px;
-    line-height: 1.5; /* Add some line spacing */
-    max-width: 400px; /* Force text to wrap */
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
 }
 
-/* Character counter */
+/* Textarea */
+.message-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+/* Character Counter */
 .char-counter {
     font-size: 0.9rem;
-    color: #888;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: start;
 }
 
-/* Buttons */
+/* Button Styling */
 .btn-group {
     display: flex;
-    justify-content: flex-start;
-    gap: 20px;
+    gap: 10px;
 }
 
-.btn-group button {
-    padding: 12px 20px;
+.btn-cancel, .btn-save {
+    padding: 10px 20px;
     font-size: 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 .btn-cancel {
-    background-color: #f2f2f2;
+    background-color: #ccc;
     color: #333;
 }
 
@@ -378,7 +388,7 @@ input:checked + .custom-slider:before {
 }
 
 .btn-cancel:hover {
-    background-color: #e0e0e0;
+    background-color: #bbb;
 }
 
 .btn-save:hover {
