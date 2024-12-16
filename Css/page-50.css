@@ -304,7 +304,7 @@ body {
 .invite-divider::after {
     content: '';
     display: inline-block;
-    width: 40%;
+    width: 22%;
     height: 1px;
     background-color: #ddd;
     vertical-align: middle;
