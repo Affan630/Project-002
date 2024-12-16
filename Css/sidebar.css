@@ -18,7 +18,7 @@
     padding: 20px;
     position: relative;
     transition: width 0.4s ease;
-    width: 40%;
+    width: 24%;
     overflow-x: hidden;
     overflow-y: scroll;
     border-right: 1px solid black;
@@ -277,4 +277,11 @@
 
 .content2.expanded {
     margin-left: 0;
+}
+
+@media (max-width: 1024px) {
+
+.sidebar{
+    width: 40%;
+}
 }
